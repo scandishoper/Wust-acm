@@ -1,0 +1,905 @@
+
+<!DOCTYPE html><html lang="zh-CN">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="hexo-theme" content="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.30.3" theme-name="Stellar" theme-version="1.30.3">
+  
+  <meta name="generator" content="Hexo 7.3.0">
+  <meta http-equiv='x-dns-prefetch-control' content='on' />
+  
+  <meta name="renderer" content="webkit">
+  <meta name="force-rendering" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="HandheldFriendly" content="True" >
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000">
+  <meta name="theme-color" content="#f9fafb">
+  
+  <title>博客搭建教程 - Wustacm</title>
+
+  
+    <meta name="description" content="本博文记录搭建类似本博客网站的方式，可以 0 经济成本完成整体过程 借助 hexo 框架使用现有主题直接形成网站基本框架，然后部署到 GitHub Pages 和 Cloudflare Pages 上。 1.准备阶段1.（必须）你需要注册一个 GitHub 账号（如果无法直接打开 github 试试 这个小玩意 2.（非必需）你可以注册一个Cloudflare Pages 它可以将博客的 C">
+<meta property="og:type" content="article">
+<meta property="og:title" content="博客搭建教程">
+<meta property="og:url" content="http://example.com/2025/06/18/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B/index.html">
+<meta property="og:site_name" content="Wustacm">
+<meta property="og:description" content="本博文记录搭建类似本博客网站的方式，可以 0 经济成本完成整体过程 借助 hexo 框架使用现有主题直接形成网站基本框架，然后部署到 GitHub Pages 和 Cloudflare Pages 上。 1.准备阶段1.（必须）你需要注册一个 GitHub 账号（如果无法直接打开 github 试试 这个小玩意 2.（非必需）你可以注册一个Cloudflare Pages 它可以将博客的 C">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/assets/1.png">
+<meta property="og:image" content="http://example.com/assets/111.png">
+<meta property="og:image" content="http://example.com/assets/1111.png">
+<meta property="og:image" content="http://example.com/assets/11111.png">
+<meta property="og:image" content="http://example.com/assets/111111.png">
+<meta property="og:image" content="http://example.com/assets/1111111.png">
+<meta property="og:image" content="http://example.com/assets/2.png">
+<meta property="og:image" content="http://example.com/assets/22.png">
+<meta property="og:image" content="http://example.com/assets/222.png">
+<meta property="og:image" content="http://example.com/assets/2222.png">
+<meta property="og:image" content="http://example.com/assets/22222.png">
+<meta property="og:image" content="http://example.com/assets/222222.png">
+<meta property="og:image" content="http://example.com/assets/3.png">
+<meta property="og:image" content="http://example.com/assets/2222222.png">
+<meta property="og:image" content="http://example.com/assets/33.png">
+<meta property="og:image" content="http://example.com/assets/333.png">
+<meta property="og:image" content="http://example.com/assets/3333.png">
+<meta property="og:image" content="http://example.com/assets/33333.png">
+<meta property="og:image" content="http://example.com/assets/333333.png">
+<meta property="og:image" content="http://example.com/assets/3333333.png">
+<meta property="og:image" content="http://example.com/assets/4.png">
+<meta property="og:image" content="http://example.com/assets/44.png">
+<meta property="og:image" content="http://example.com/assets/444.png">
+<meta property="og:image" content="http://example.com/assets/4444.png">
+<meta property="og:image" content="http://example.com/assets/444444.png">
+<meta property="og:image" content="http://example.com/assets/44444.png">
+<meta property="og:image" content="http://example.com/assets/4444444.png">
+<meta property="og:image" content="http://example.com/assets/5.png">
+<meta property="og:image" content="http://example.com/assets/55.png">
+<meta property="og:image" content="http://example.com/assets/555.png">
+<meta property="og:image" content="http://example.com/assets/66.png">
+<meta property="article:published_time" content="2025-06-17T19:55:48.124Z">
+<meta property="article:modified_time" content="2025-06-17T19:57:21.564Z">
+<meta property="article:author" content="wustacm">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="http://example.com/assets/1.png">
+  
+  
+  
+  
+
+  <!-- feed -->
+  
+
+  <link rel="stylesheet" href="/css/main.css?v=1.30.3">
+
+
+  
+
+  
+
+  
+</head>
+<body>
+
+<div class="l_body content" id="start" layout="post" type="tech" ><aside class="l_left"><div class="leftbar-container">
+
+
+<header class="header"><div class="logo-wrap"><a class="avatar" href="/about/"><div class="bg" style="opacity:0;background-image:url(https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/avatar/round/rainbow64@3x.webp);"></div><img no-lazy class="avatar" src="https://i.postimg.cc/W3bsBzfp/b-bc627c617ee9bf69e6955acca59274a8.jpg" onerror="javascript:this.classList.add('error');this.src='https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/image/2659360.svg';"></a><a class="title" href="/"><div class="main" ff="title">Wustacm</div></a></div></header>
+
+<div class="nav-area">
+<div class="search-wrapper" id="search-wrapper"><form class="search-form"><a class="search-button" onclick="document.getElementById(&quot;search-input&quot;).focus();"><svg t="1705074644177" viewBox="0 0 1025 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1560" width="200" height="200"><path d="M1008.839137 935.96571L792.364903 719.491476a56.783488 56.783488 0 0 0-80.152866 0 358.53545 358.53545 0 1 1 100.857314-335.166073 362.840335 362.840335 0 0 1-3.689902 170.145468 51.248635 51.248635 0 1 0 99.217358 26.444296 462.057693 462.057693 0 1 0-158.255785 242.303546l185.930047 185.725053a51.248635 51.248635 0 0 0 72.568068 0 51.248635 51.248635 0 0 0 0-72.978056z" p-id="1561"></path><path d="M616.479587 615.969233a50.428657 50.428657 0 0 0-61.498362-5.534852 174.655348 174.655348 0 0 1-177.525271 3.484907 49.403684 49.403684 0 0 0-58.833433 6.76482l-3.074918 2.869923a49.403684 49.403684 0 0 0 8.609771 78.10292 277.767601 277.767601 0 0 0 286.992355-5.739847 49.403684 49.403684 0 0 0 8.404776-76.667958z" p-id="1562"></path></svg></a><input type="text" class="search-input" id="search-input" placeholder="站内搜索"></form><div id="search-result"></div><div class="search-no-result">没有找到内容！</div></div>
+
+
+<nav class="menu dis-select"><a class="nav-item active" title="博客" href="/" style="color:#1BCDFC"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" d="M5.879 2.879C5 3.757 5 5.172 5 8v8c0 2.828 0 4.243.879 5.121C6.757 22 8.172 22 11 22h2c2.828 0 4.243 0 5.121-.879C19 20.243 19 18.828 19 16V8c0-2.828 0-4.243-.879-5.121C17.243 2 15.828 2 13 2h-2c-2.828 0-4.243 0-5.121.879M8.25 17a.75.75 0 0 1 .75-.75h3a.75.75 0 0 1 0 1.5H9a.75.75 0 0 1-.75-.75M9 12.25a.75.75 0 0 0 0 1.5h6a.75.75 0 0 0 0-1.5zM8.25 9A.75.75 0 0 1 9 8.25h6a.75.75 0 0 1 0 1.5H9A.75.75 0 0 1 8.25 9" clip-rule="evenodd"/><path fill="currentColor" d="M5.235 4.058C5 4.941 5 6.177 5 8v8c0 1.823 0 3.058.235 3.942L5 19.924c-.975-.096-1.631-.313-2.121-.803C2 18.243 2 16.828 2 14v-4c0-2.829 0-4.243.879-5.121c.49-.49 1.146-.707 2.121-.803zm13.53 15.884C19 19.058 19 17.822 19 16V8c0-1.823 0-3.059-.235-3.942l.235.018c.975.096 1.631.313 2.121.803C22 5.757 22 7.17 22 9.999v4c0 2.83 0 4.243-.879 5.122c-.49.49-1.146.707-2.121.803z" opacity=".5"/></svg></a><a class="nav-item" title="文档" href="/wiki/" style="color:#3DC550"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" d="M14.25 4.48v3.057c0 .111 0 .27.02.406a.936.936 0 0 0 .445.683a.96.96 0 0 0 .783.072c.13-.04.272-.108.378-.159L17 8.005l1.124.534c.106.05.248.119.378.16a.958.958 0 0 0 .783-.073a.936.936 0 0 0 .444-.683c.021-.136.021-.295.021-.406V3.031c.113-.005.224-.01.332-.013C21.154 2.98 22 3.86 22 4.933v11.21c0 1.112-.906 2.01-2.015 2.08c-.97.06-2.108.179-2.985.41c-1.082.286-1.99 1.068-3.373 1.436c-.626.167-1.324.257-1.627.323V5.174c.32-.079 1.382-.203 1.674-.371c.184-.107.377-.216.576-.323m5.478 8.338a.75.75 0 0 1-.546.91l-4 1a.75.75 0 0 1-.364-1.456l4-1a.75.75 0 0 1 .91.546" clip-rule="evenodd"/><path fill="currentColor" d="M18.25 3.151c-.62.073-1.23.18-1.75.336a8.2 8.2 0 0 0-.75.27v3.182l.75-.356l.008-.005a1.13 1.13 0 0 1 .492-.13c.047 0 .094.004.138.01c.175.029.315.1.354.12l.009.005l.749.356V3.647z"/><path fill="currentColor" d="M12 5.214c-.334-.064-1.057-.161-1.718-.339C8.938 4.515 8.05 3.765 7 3.487c-.887-.234-2.041-.352-3.018-.412C2.886 3.007 2 3.9 2 4.998v11.146c0 1.11.906 2.01 2.015 2.079c.97.06 2.108.179 2.985.41c.486.129 1.216.431 1.873.726c1.005.451 2.052.797 3.127 1.034z" opacity=".5"/><path fill="currentColor" d="M4.273 12.818a.75.75 0 0 1 .91-.545l4 1a.75.75 0 1 1-.365 1.455l-4-1a.75.75 0 0 1-.545-.91m.909-4.545a.75.75 0 1 0-.364 1.455l4 1a.75.75 0 0 0 .364-1.455z"/></svg></a><a class="nav-item" title="探索" href="/explore/" style="color:#FA6400"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M20 12a8 8 0 1 1-16 0a8 8 0 0 1 16 0" opacity=".5"/><path fill="currentColor" d="M17.712 5.453c1.047-.193 2.006-.259 2.797-.152c.77.103 1.536.393 1.956 1.064c.446.714.312 1.542-.012 2.258c-.33.728-.918 1.499-1.672 2.268c-1.516 1.547-3.836 3.226-6.597 4.697c-2.763 1.472-5.495 2.484-7.694 2.92c-1.095.217-2.098.299-2.923.201c-.8-.095-1.6-.383-2.032-1.075c-.47-.752-.296-1.63.07-2.379c.375-.768 1.032-1.586 1.872-2.403L4 12.416c0 .219.083.71.168 1.146c.045.23.09.444.123.596c-.652.666-1.098 1.263-1.339 1.756c-.277.567-.208.825-.145.925c.072.116.305.305.937.38c.609.073 1.44.018 2.455-.183c2.02-.4 4.613-1.351 7.28-2.772c2.667-1.42 4.85-3.015 6.23-4.423c.694-.707 1.15-1.334 1.377-1.836c.233-.515.167-.75.107-.844c-.07-.112-.289-.294-.883-.374c-.542-.072-1.272-.041-2.163.112L16.87 5.656c.338-.101.658-.17.842-.203"/></svg></a><a class="nav-item" title="社交" href="/friends/" style="color:#F44336"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="m13.629 20.472l-.542.916c-.483.816-1.69.816-2.174 0l-.542-.916c-.42-.71-.63-1.066-.968-1.262c-.338-.197-.763-.204-1.613-.219c-1.256-.021-2.043-.098-2.703-.372a5 5 0 0 1-2.706-2.706C2 14.995 2 13.83 2 11.5v-1c0-3.273 0-4.91.737-6.112a5 5 0 0 1 1.65-1.651C5.59 2 7.228 2 10.5 2h3c3.273 0 4.91 0 6.113.737a5 5 0 0 1 1.65 1.65C22 5.59 22 7.228 22 10.5v1c0 2.33 0 3.495-.38 4.413a5 5 0 0 1-2.707 2.706c-.66.274-1.447.35-2.703.372c-.85.015-1.275.022-1.613.219c-.338.196-.548.551-.968 1.262" opacity=".5"/><path fill="currentColor" d="M10.99 14.308c-1.327-.978-3.49-2.84-3.49-4.593c0-2.677 2.475-3.677 4.5-1.609c2.025-2.068 4.5-1.068 4.5 1.609c0 1.752-2.163 3.615-3.49 4.593c-.454.335-.681.502-1.01.502c-.329 0-.556-.167-1.01-.502"/></svg></a></nav>
+</div>
+<div class="widgets">
+
+
+<widget class="widget-wrapper post-list"><div class="widget-header dis-select"><span class="name">最近更新</span></div><div class="widget-body fs14"><a class="item title" href="/2025/06/18/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B/"><span class="title">博客搭建教程</span></a><a class="item title" href="/2025/06/18/%E8%87%AA%E5%8A%A8%E5%88%B7%E8%AF%BE/"><span class="title">自动刷课</span></a><a class="item title" href="/2025/06/18/wustoj-cpp%E5%8F%82%E8%80%83%E4%BB%A3%E7%A0%81/"><span class="title">wustoj-cpp参考代码</span></a><a class="item title" href="/2025/06/18/%E6%95%B0%E5%AD%97dfs/"><span class="title">数字dfs</span></a><a class="item title" href="/2025/06/18/LCA%E7%AC%94%E8%AE%B0/"><span class="title">LCA笔记</span></a></div></widget>
+</div>
+<footer class="footer dis-select"><div class="social-wrap"><a class="social" href="https://" target="_blank" rel="external nofollow noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/assets/placeholder/social/08a41b181ce68.svg"/></a><a class="social" href="https://" target="_blank" rel="external nofollow noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/assets/placeholder/social/3845874.svg"/></a><a class="social" href="https://" target="_blank" rel="external nofollow noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/assets/placeholder/social/3616429.svg"/></a><a class="social" href="https://" target="_blank" rel="external nofollow noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/assets/placeholder/social/942ebbf1a4b91.svg"/></a></div></footer>
+</div></aside><div class="l_main" id="main">
+
+
+
+
+
+<div class="article banner top"><img class="bg lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="workout,strava">
+  <div class="content">
+    <div class="top bread-nav footnote"><div class="left"><div class="flex-row" id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a>
+<span class="sep"></span><a class="cap breadcrumb" href="/">文章</a></div>
+<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2025-06-17T19:55:48.124Z">2025-06-18</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2025-06-17T19:57:21.564Z">2025-06-18</time></span></div></div></div>
+    
+    <div class="bottom only-title">
+      
+      <div class="text-area">
+        <h1 class="text title"><span>博客搭建教程</span></h1>
+        
+      </div>
+    </div>
+    
+  </div>
+  </div><article class="md-text content"> <span id="more"></span>
+
+<h1 id="本博文记录搭建类似本博客网站的方式，可以-0-经济成本完成"><a href="#本博文记录搭建类似本博客网站的方式，可以-0-经济成本完成" class="headerlink" title="本博文记录搭建类似本博客网站的方式，可以 0 经济成本完成"></a>本博文记录搭建类似本博客网站的方式，可以 0 经济成本完成</h1><p>整体过程 借助 hexo 框架使用现有主题直接形成网站基本框架，然后部署到 GitHub Pages 和 Cloudflare Pages 上。</p>
+<h2 id="1-准备阶段"><a href="#1-准备阶段" class="headerlink" title="1.准备阶段"></a>1.准备阶段</h2><p>1.（必须）你需要注册一个 <a target="_blank" rel="noopener" href="https://github.com/">GitHub</a> 账号（如果无法直接打开 github 试试 <a target="_blank" rel="noopener" href="https://hoa.moe/blog/access-github/">这个小玩意</a></p>
+<p>2.（非必需）你可以注册一个<a target="_blank" rel="noopener" href="https://dash.cloudflare.com/login">Cloudflare Pages</a> 它可以将博客的 CDN 加速</p>
+<h2 id="2-需要下载的软件"><a href="#2-需要下载的软件" class="headerlink" title="2.需要下载的软件"></a>2.需要下载的软件</h2><h3 id="2-1-安装-Node"><a href="#2-1-安装-Node" class="headerlink" title="2.1 安装 Node"></a>2.1 安装 Node</h3><p>1.打开 Node 官网，下载并安装和自己系统相配的 Node 的安装程序，否则会出现安装问题。下载地址：<a target="_blank" rel="noopener" href="https://nodejs.org/en">https://nodejs.org/en</a></p>
+<p>2.安装完成后，要检查看看是否安装成功。操作如下：在键盘按下 win + R 键，输入 CMD，然后回车，打开 CMD 窗口，执行下面的命令。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">node -v</span><br></pre></td></tr></table></figure>
+
+<p>看到类似下面的版本信息，则说明安装成功。<br><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/assets/1.png" alt="111"></p>
+<h3 id="2-2-安装-Git"><a href="#2-2-安装-Git" class="headerlink" title="2.2.安装 Git"></a>2.2.安装 Git</h3><p>1.打开 Git 官网，下载并安装和自己系统相配的 Git:<a target="_blank" rel="noopener" href="https://git-scm.com/downloads">https://git-scm.com/downloads</a></p>
+<p>2.点击电脑 window 开始按钮，可以搜索到 Git CMD，Git Bash，Git GUI。（主要使用 Git Bash</p>
+<h3 id="2-3-下载并安装-vscode-（这是一款轻量型的代码编辑器"><a href="#2-3-下载并安装-vscode-（这是一款轻量型的代码编辑器" class="headerlink" title="2.3 下载并安装 vscode （这是一款轻量型的代码编辑器"></a>2.3 下载并安装 <a target="_blank" rel="noopener" href="https://code.visualstudio.com/">vscode</a> （这是一款轻量型的代码编辑器</h3><hr>
+<h2 id="3-配置-Git-密钥并连接至-Github"><a href="#3-配置-Git-密钥并连接至-Github" class="headerlink" title="3.配置 Git 密钥并连接至 Github"></a>3.配置 Git 密钥并连接至 Github</h2><h3 id="3-1-打开-Git-Bash-如图"><a href="#3-1-打开-Git-Bash-如图" class="headerlink" title="3.1 打开 Git Bash 如图"></a>3.1 打开 Git Bash 如图</h3><p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/assets/111.png" alt="111"></p>
+<h3 id="3-2-配置用户名和邮箱"><a href="#3-2-配置用户名和邮箱" class="headerlink" title="3.2 配置用户名和邮箱"></a>3.2 配置用户名和邮箱</h3><p>用户名和邮箱可以自己随便取（不用真实也许<br>这里假设<br>用户名为：scandi<br>邮箱：<a href="mailto:&#x33;&#x35;&#54;&#x37;&#49;&#x34;&#x30;&#49;&#53;&#x31;&#64;&#113;&#x71;&#x2e;&#x63;&#111;&#109;">3567140151@qq.com</a><br>在上面打开的 Git Bash 中 依次输入下面命令然后回车</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name scandi</span><br><span class="line">git config --global user.email 3567140151@qq.com</span><br></pre></td></tr></table></figure>
+
+<p>然后通过下面命令检查是否配置成功。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config -l</span><br></pre></td></tr></table></figure>
+
+<p>类似下图即配置成功<br><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/assets/1111.png" alt="1111"></p>
+<h3 id="3-3-配置公钥连接-Github"><a href="#3-3-配置公钥连接-Github" class="headerlink" title="3.3 配置公钥连接 Github"></a>3.3 配置公钥连接 Github</h3><h4 id="3-3-1-执行以下命令生成-ssh-公钥，此公钥用于你的计算机连接-Github"><a href="#3-3-1-执行以下命令生成-ssh-公钥，此公钥用于你的计算机连接-Github" class="headerlink" title="3.3.1 执行以下命令生成 ssh 公钥，此公钥用于你的计算机连接 Github"></a>3.3.1 执行以下命令生成 ssh 公钥，此公钥用于你的计算机连接 Github</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C <span class="string">&quot;你的邮箱&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>提示 【Enter file in which to save the key】 直接一路回车即可。</p>
+<p>之后打开 C 盘下用户文件夹下的.ssh 的文件夹，会看到以下文件<br><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/assets/11111.png" alt="11111"><br>用记事本打开上述图片中的公钥 【id_rsa.pub】，复制里面的内容，然后开始在 github 中配置 ssh 密钥。</p>
+<h4 id="3-3-2-将-SSH-KEY-配置到-GitHub"><a href="#3-3-2-将-SSH-KEY-配置到-GitHub" class="headerlink" title="3.3.2 将 SSH KEY 配置到 GitHub"></a>3.3.2 将 SSH KEY 配置到 GitHub</h4><p>进入 github，点击右上角头像 选择 【settings】，进入设置页后选择 【SSH and GPG keys】，名字随便起，公钥填到 【Key】 那一栏。如图<br><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/assets/111111.png" alt="111111"></p>
+<h4 id="3-3-3-测试连接，输入以下命令"><a href="#3-3-3-测试连接，输入以下命令" class="headerlink" title="3.3.3 测试连接，输入以下命令"></a>3.3.3 测试连接，输入以下命令</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure>
+
+<p>第一次连接会提示【Are you sure you want to continue connecting (yes&#x2F;no&#x2F;[fingerprint])?】，输入 yes 即可<br>如图即连接成功<br><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/assets/1111111.png" alt="1111111"></p>
+<h3 id="如果是在公司或学校网络，可能会存在防火墙或代理限制，阻止了-SSH-连接。连接没有现实如图信息，则查看下面这篇博文尝试解决！！！"><a href="#如果是在公司或学校网络，可能会存在防火墙或代理限制，阻止了-SSH-连接。连接没有现实如图信息，则查看下面这篇博文尝试解决！！！" class="headerlink" title="如果是在公司或学校网络，可能会存在防火墙或代理限制，阻止了 SSH 连接。连接没有现实如图信息，则查看下面这篇博文尝试解决！！！"></a>如果是在公司或学校网络，可能会存在防火墙或代理限制，阻止了 SSH 连接。连接没有现实如图信息，则查看下面这篇博文尝试解决！！！</h3><p><a target="_blank" rel="noopener" href="https://scandidreams.top/2025/02/23/%E5%9C%A8%E5%AD%A6%E6%A0%A1%E5%86%85%E4%B8%8A%E4%BC%A0%E5%8D%9A%E6%96%87%E6%8A%A5%E9%94%99%E7%9A%84%E8%A7%A3%E5%86%B3/">解决博文</a></p>
+<hr>
+<h2 id="4-创建-GitHub-io-仓库"><a href="#4-创建-GitHub-io-仓库" class="headerlink" title="4.创建 GitHub.io 仓库"></a>4.创建 GitHub.io 仓库</h2><h3 id="4-1-点击右上角的-按钮，选择-New-repository，创建一个-github-io-的仓库。"><a href="#4-1-点击右上角的-按钮，选择-New-repository，创建一个-github-io-的仓库。" class="headerlink" title="4.1 点击右上角的+按钮，选择 New repository，创建一个&lt;用户名&gt;.github.io 的仓库。"></a>4.1 点击右上角的+按钮，选择 New repository，创建一个&lt;用户名&gt;.github.io 的仓库。</h3><h3 id="4-2-仓库名字的格式必须为：【-github-io】-注意：前缀必须为用户名，此为预览博客需要，后期可修改仓库名-（不要忘记加-github-io"><a href="#4-2-仓库名字的格式必须为：【-github-io】-注意：前缀必须为用户名，此为预览博客需要，后期可修改仓库名-（不要忘记加-github-io" class="headerlink" title="4.2 仓库名字的格式必须为：【&lt;用户名&gt;.github.io】 (注意：前缀必须为用户名，此为预览博客需要，后期可修改仓库名)（不要忘记加.github.io"></a>4.2 仓库名字的格式必须为：【&lt;用户名&gt;.github.io】 (注意：前缀必须为用户名，此为预览博客需要，后期可修改仓库名)（不要忘记加.github.io</h3><h3 id="4-3-可见性必须选择-【Public】-方便第一次部署检查问题，点击-Creat-repository-进行创建即可"><a href="#4-3-可见性必须选择-【Public】-方便第一次部署检查问题，点击-Creat-repository-进行创建即可" class="headerlink" title="4.3 可见性必须选择 【Public】 方便第一次部署检查问题，点击 Creat repository 进行创建即可"></a>4.3 可见性必须选择 【Public】 方便第一次部署检查问题，点击 Creat repository 进行创建即可</h3><h2 id=""><a href="#" class="headerlink" title=""></a><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/assets/2.png" alt="2"></h2><hr>
+<h2 id="5-初始化-Hexo-博客"><a href="#5-初始化-Hexo-博客" class="headerlink" title="5.初始化 Hexo 博客"></a>5.初始化 Hexo 博客</h2><h3 id="5-1-创建一个文件夹来保存博客源码（我这里选的路径为-D-college），在文件夹内右键鼠标，选择-【Open-Git-Bash-here】"><a href="#5-1-创建一个文件夹来保存博客源码（我这里选的路径为-D-college），在文件夹内右键鼠标，选择-【Open-Git-Bash-here】" class="headerlink" title="5.1 创建一个文件夹来保存博客源码（我这里选的路径为 D:&#x2F;college），在文件夹内右键鼠标，选择 【Open Git Bash here】"></a>5.1 创建一个文件夹来保存博客源码（我这里选的路径为 D:&#x2F;college），在文件夹内右键鼠标，选择 【Open Git Bash here】</h3><p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/assets/22.png" alt="1111111"></p>
+<h3 id="5-2-在【Git-BASH】输入如下命令安装-Hexo"><a href="#5-2-在【Git-BASH】输入如下命令安装-Hexo" class="headerlink" title="5.2 在【Git BASH】输入如下命令安装 Hexo"></a>5.2 在【Git BASH】输入如下命令安装 Hexo</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli &amp;&amp; hexo -v</span><br></pre></td></tr></table></figure>
+
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/assets/222.png" alt="1111111"></p>
+<h3 id="5-3-安装完后输入【hexo-v】验证是否安装成功。"><a href="#5-3-安装完后输入【hexo-v】验证是否安装成功。" class="headerlink" title="5.3 安装完后输入【hexo -v】验证是否安装成功。"></a>5.3 安装完后输入【hexo -v】验证是否安装成功。</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo -v</span><br></pre></td></tr></table></figure>
+
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/assets/2222.png" alt="1111111"></p>
+<h3 id="5-4-初始化-Hexo-项目安装相关依赖。"><a href="#5-4-初始化-Hexo-项目安装相关依赖。" class="headerlink" title="5.4 初始化 Hexo 项目安装相关依赖。"></a>5.4 初始化 Hexo 项目安装相关依赖。</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo init “自己取文件名”</span><br><span class="line"><span class="built_in">cd</span> “上面取的文件名”</span><br><span class="line">npm i</span><br></pre></td></tr></table></figure>
+
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/assets/22222.png" alt="1111111"></p>
+<h3 id="5-5-初始化项目后，college-文件夹中-有如下结构："><a href="#5-5-初始化项目后，college-文件夹中-有如下结构：" class="headerlink" title="5.5 初始化项目后，college 文件夹中 有如下结构："></a>5.5 初始化项目后，college 文件夹中 有如下结构：</h3><p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/assets/222222.png" alt="1111111"></p>
+<h3 id="5-6-输入-【hexo-cl-hexo-s】-启动项目"><a href="#5-6-输入-【hexo-cl-hexo-s】-启动项目" class="headerlink" title="5.6 输入 【hexo cl &amp;&amp; hexo s】 启动项目"></a>5.6 输入 【hexo cl &amp;&amp; hexo s】 启动项目</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo cl &amp;&amp; hexo s</span><br></pre></td></tr></table></figure>
+
+<p>出现如图<br><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/assets/3.png" alt="1111111"></p>
+<p>打开浏览器，输入地址：【<a target="_blank" rel="noopener" href="http://localhost:4000/">http://localhost:4000/</a> 】 ，看到下面的效果，说明你的博客已经构建成功了。</p>
+<h2 id="-1"><a href="#-1" class="headerlink" title=""></a><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/assets/2222222.png" alt="1111111"></h2><hr>
+<h2 id="6-将静态博客挂载到-GitHub-Pages"><a href="#6-将静态博客挂载到-GitHub-Pages" class="headerlink" title="6.将静态博客挂载到 GitHub Pages"></a>6.将静态博客挂载到 GitHub Pages</h2><h3 id="6-1-安装-hexo-deployer-git"><a href="#6-1-安装-hexo-deployer-git" class="headerlink" title="6.1 安装 hexo-deployer-git"></a>6.1 安装 hexo-deployer-git</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+
+<h3 id="6-2-修改-config-yml-文件"><a href="#6-2-修改-config-yml-文件" class="headerlink" title="6.2 修改 _config.yml 文件"></a>6.2 修改 _config.yml 文件</h3><p>在 college 目录下的_config.yml，就是整个 Hexo 框架的配置文件了。可以在里面修改大部分的配置。详细可参考官方的配置描述。<br><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/assets/33.png" alt="1111111"><br>找到最后一行的配置如图<br><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/assets/333.png" alt="1111111"><br>修改它像下面代码这样的格式</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  <span class="built_in">type</span>: git</span><br><span class="line">  repository:</span><br><span class="line">  branch: main</span><br></pre></td></tr></table></figure>
+
+<p>然后将 repository 修改为你自己的 github 项目地址即可，还有分支要改为 main 代表主分支（注意缩进）。<br>你自己的 github 项目地址在下面这里找<br><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/assets/3333.png" alt="1111111"><br>总体类似下面这样<br><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/assets/33333.png" alt="1111111"></p>
+<h3 id="6-3-修改好配置后，运行如下命令，将代码部署到-GitHub（Hexo-三连）。"><a href="#6-3-修改好配置后，运行如下命令，将代码部署到-GitHub（Hexo-三连）。" class="headerlink" title="6.3 修改好配置后，运行如下命令，将代码部署到 GitHub（Hexo 三连）。"></a>6.3 修改好配置后，运行如下命令，将代码部署到 GitHub（Hexo 三连）。</h3><p>（在 Git Bash 上用第一行那个命令，不要全部复制上去）</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">// Git BASH终端</span><br><span class="line">hexo clean &amp;&amp; hexo generate &amp;&amp; hexo deploy</span><br><span class="line"></span><br><span class="line">// 或者</span><br><span class="line"></span><br><span class="line">// VSCODE终端</span><br><span class="line">hexo cl; hexo g; hexo d</span><br></pre></td></tr></table></figure>
+
+<p>如果出现【Deploy done】，则说明部署成功了。<br><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/assets/333333.png" alt="1111111"></p>
+<h3 id="稍等两分钟，打开浏览器访问：https-college-github-io-（注意！这里要用你的仓库名字替换），这时候我们就可以看到博客内容了。"><a href="#稍等两分钟，打开浏览器访问：https-college-github-io-（注意！这里要用你的仓库名字替换），这时候我们就可以看到博客内容了。" class="headerlink" title="稍等两分钟，打开浏览器访问：https://college.github.io （注意！这里要用你的仓库名字替换），这时候我们就可以看到博客内容了。"></a>稍等两分钟，打开浏览器访问：<a target="_blank" rel="noopener" href="https://college.github.io/">https://college.github.io</a> （注意！这里要用你的仓库名字替换），这时候我们就可以看到博客内容了。</h3><p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/assets/3333333.png" alt="1111111"></p>
+<hr>
+<h2 id="7-将静态博客挂载到-Cloudflare-Pages"><a href="#7-将静态博客挂载到-Cloudflare-Pages" class="headerlink" title="7.将静态博客挂载到 Cloudflare Pages"></a>7.将静态博客挂载到 Cloudflare Pages</h2><h3 id="7-1-打开-Cloudflare-Pages，在-【Workers-和-Pages】-中选择-【Pages】-的-【连接到-Git】-如图"><a href="#7-1-打开-Cloudflare-Pages，在-【Workers-和-Pages】-中选择-【Pages】-的-【连接到-Git】-如图" class="headerlink" title="7.1 打开 Cloudflare Pages，在 【Workers 和 Pages】 中选择 【Pages】 的 【连接到 Git】 如图"></a>7.1 打开 Cloudflare Pages，在 【Workers 和 Pages】 中选择 【Pages】 的 【连接到 Git】 如图</h3><p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/assets/4.png" alt="1111111"><br>然后选择 连接 Github，登录账号，选择你要部署的仓库<br><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/assets/44.png" alt="1111111"><br>点击保存并部署后等待部署完成即可。<br><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/assets/444.png" alt="1111111"><br>提示【成功！您的项目已部署到以下区域：全球】后，浏览器访问：<a target="_blank" rel="noopener" href="https://college-github-io.pages.dev/">https://college-github-io.pages.dev</a> ，这时候我们就可以看到博客内容了。<br><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/assets/4444.png" alt="1111111"></p>
+<h3 id="这时你也就可以将你的【-github-io】的仓库设置为【Private】私库了（不改也行"><a href="#这时你也就可以将你的【-github-io】的仓库设置为【Private】私库了（不改也行" class="headerlink" title="这时你也就可以将你的【&lt;用户名&gt;.github.io】的仓库设置为【Private】私库了（不改也行"></a>这时你也就可以将你的【&lt;用户名&gt;.github.io】的仓库设置为【Private】私库了（不改也行</h3><hr>
+<h2 id="8-至此-你已经拥有自己的博客网站，不过它还很丑陋，我们接下来可以下载主题来美化它"><a href="#8-至此-你已经拥有自己的博客网站，不过它还很丑陋，我们接下来可以下载主题来美化它" class="headerlink" title="8.至此 你已经拥有自己的博客网站，不过它还很丑陋，我们接下来可以下载主题来美化它"></a>8.至此 你已经拥有自己的博客网站，不过它还很丑陋，我们接下来可以下载主题来美化它</h2><p>本博客网站采用的主题是【anzhiyu】<br>实际上 搜索【hexo 主题】，会有大量主题供你选择，挑一个喜欢的下载就行，每个主题都会提供下载命令，这里我以【next】主题为例（当然【anzhiyu】主题一样的流程，我同时举例</p>
+<h3 id="8-1-继续在刚才的-Git-Bash-上运行下面命令-下载【next】主题"><a href="#8-1-继续在刚才的-Git-Bash-上运行下面命令-下载【next】主题" class="headerlink" title="8.1 继续在刚才的 Git Bash 上运行下面命令 下载【next】主题"></a>8.1 继续在刚才的 Git Bash 上运行下面命令 下载【next】主题</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> hexo</span><br><span class="line">//下面这个是【next】</span><br><span class="line">git <span class="built_in">clone</span> https://github.com/theme-next/hexo-theme-next themes/next</span><br><span class="line"></span><br><span class="line">//下面这个是【anzhiyu】</span><br><span class="line">git <span class="built_in">clone</span> -b main https://github.com/anzhiyu-c/hexo-theme-anzhiyu.git themes/anzhiyu</span><br></pre></td></tr></table></figure>
+
+<p>如下图，即为下载成功<br><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/assets/444444.png" alt="1111111"></p>
+<h3 id="8-1-打开-vscode，-在-vscode-中打开项目文件夹"><a href="#8-1-打开-vscode，-在-vscode-中打开项目文件夹" class="headerlink" title="8.1 打开 vscode， 在 vscode 中打开项目文件夹"></a>8.1 打开 vscode， 在 vscode 中打开项目文件夹</h3><p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/assets/44444.png" alt="1111111"></p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/assets/4444444.png" alt="1111111"></p>
+<h3 id="8-2-新建终端，以后直接在-vscode-上运行命令"><a href="#8-2-新建终端，以后直接在-vscode-上运行命令" class="headerlink" title="8.2 新建终端，以后直接在 vscode 上运行命令"></a>8.2 新建终端，以后直接在 vscode 上运行命令</h3><p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/assets/5.png" alt="1111111"></p>
+<h3 id="8-3-第一次使用需要安装-pug-以及-stylus-的渲染器"><a href="#8-3-第一次使用需要安装-pug-以及-stylus-的渲染器" class="headerlink" title="8.3 第一次使用需要安装 pug 以及 stylus 的渲染器"></a>8.3 第一次使用需要安装 pug 以及 stylus 的渲染器</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-renderer-pug hexo-renderer-stylus --save</span><br></pre></td></tr></table></figure>
+
+<h3 id="8-4-打开-config-yml-文件，修改主题为【next】或者【anzhiyu】"><a href="#8-4-打开-config-yml-文件，修改主题为【next】或者【anzhiyu】" class="headerlink" title="8.4 打开_config.yml 文件，修改主题为【next】或者【anzhiyu】"></a>8.4 打开_config.yml 文件，修改主题为【next】或者【anzhiyu】</h3><p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/assets/55.png" alt="1111111"></p>
+<h3 id="8-5-覆盖配置"><a href="#8-5-覆盖配置" class="headerlink" title="8.5 覆盖配置"></a>8.5 覆盖配置</h3><p>手动将【&#x2F;themes&#x2F;next&#x2F;_config.yml】或者【&#x2F;themes&#x2F;anzhiyu&#x2F;_config.yml】复制到根目录下并重命名为【_config.next.yml】或者【_config.anzhiyu.yml】即可。<br>如图<br><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/assets/555.png" alt="1111111"></p>
+<hr>
+<h2 id="9-平时编辑博客和博文的一些基本操作"><a href="#9-平时编辑博客和博文的一些基本操作" class="headerlink" title="9.平时编辑博客和博文的一些基本操作"></a>9.平时编辑博客和博文的一些基本操作</h2><h3 id="9-1-每次在编译器上的修改，在网站上是不能同步的，你需要在每次修改后通过下面命令上传，才能反馈给网站产生变化"><a href="#9-1-每次在编译器上的修改，在网站上是不能同步的，你需要在每次修改后通过下面命令上传，才能反馈给网站产生变化" class="headerlink" title="9.1 每次在编译器上的修改，在网站上是不能同步的，你需要在每次修改后通过下面命令上传，才能反馈给网站产生变化"></a>9.1 每次在编译器上的修改，在网站上是不能同步的，你需要在每次修改后通过下面命令上传，才能反馈给网站产生变化</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">//本地预览</span><br><span class="line">hexo cl; hexo s</span><br><span class="line"></span><br><span class="line">//推送更新上线</span><br><span class="line">hexo cl; hexo g; hexo d</span><br></pre></td></tr></table></figure>
+
+<p>每次修改后，可以先运行【hexo cl; hexo s】命令，就会生成临时页面效果链接，打开就可以看临时效果，这时候不会对公开网站产生修改变化。<br>等你觉得修改没问题，想要上线完成修改，再运行【hexo cl; hexo g; hexo d】命令，推送更新上线。</p>
+<h3 id="9-2-新建一篇博文"><a href="#9-2-新建一篇博文" class="headerlink" title="9.2 新建一篇博文"></a>9.2 新建一篇博文</h3><p>终端中输入下面命令</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new <span class="string">&quot;博文名称&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>回车确认后，在总文件夹中的 source 文件夹的 _posts 文件夹中出现一个新的博文文件（markdown 格式）这样就可以直接对博文进行编辑</p>
+<h3 id="9-3-【-scaffolds】-目录下有几个模板文件，其中【post-md】是新建博文模板"><a href="#9-3-【-scaffolds】-目录下有几个模板文件，其中【post-md】是新建博文模板" class="headerlink" title="9.3 【&#x2F;scaffolds】 目录下有几个模板文件，其中【post.md】是新建博文模板"></a>9.3 【&#x2F;scaffolds】 目录下有几个模板文件，其中【post.md】是新建博文模板</h3><p>修改【post.md】模板 可以使得每次新建的博文文章，会有一段相同的初始化设置，免得每次都重复添加<br>post.md 模版，仅供参考（建议直接全部复制到 post.md 文件中</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: &#123;&#123; title &#125;&#125; <span class="comment">#【必需】页面标题</span></span><br><span class="line"><span class="built_in">date</span>: &#123;&#123; <span class="built_in">date</span> &#125;&#125; <span class="comment">#【必需】页面创建日期</span></span><br><span class="line">updated: <span class="comment">#【可选】页面更新日期</span></span><br><span class="line">tags: <span class="comment">#【可选】文章标签</span></span><br><span class="line">categories: <span class="comment">#【可选】文章分类</span></span><br><span class="line">keywords: <span class="comment">#【可选】文章关键字</span></span><br><span class="line">description: <span class="comment">#【可选】文章描述</span></span><br><span class="line">top: <span class="comment"># 1 置顶</span></span><br><span class="line">top_img: <span class="comment">#【可选】文章顶部图片</span></span><br><span class="line">comments: <span class="comment">#【可选】显示文章评论模块(默认 true)</span></span><br><span class="line">cover: https://img.090227.xyz/file/ae62475a131f3734a201c.png <span class="comment">#【可选】文章缩略图(如果没有设置 top_img,文章页顶部将显示缩略图，可设为 false/图片地址/留空)</span></span><br><span class="line">toc: <span class="comment">#【可选】显示文章 TOC(默认为设置中 toc 的 enable 配置)</span></span><br><span class="line">toc_number: <span class="comment">#【可选】显示 toc_number(默认为设置中 toc 的 number 配置)</span></span><br><span class="line">toc_style_simple: <span class="comment">#【可选】显示 toc 简洁模式</span></span><br><span class="line">copyright: <span class="comment">#【可选】显示文章版权模块(默认为设置中 post_copyright 的 enable 配置)</span></span><br><span class="line">copyright_author: <span class="comment">#【可选】文章版权模块的文章作者</span></span><br><span class="line">copyright_author_href: <span class="comment">#【可选】文章版权模块的文章作者链接</span></span><br><span class="line">copyright_url: <span class="comment">#【可选】文章版权模块的文章作者链接</span></span><br><span class="line">copyright_info: <span class="comment">#【可选】文章版权模块的版权声明文字</span></span><br><span class="line">mathjax: <span class="comment">#【可选】显示 mathjax(当设置 mathjax 的 per_page: false 时，才需要配置，默认 false)</span></span><br><span class="line">katex: <span class="comment">#【可选】显示 katex(当设置 katex 的 per_page: false 时，才需要配置，默认 false)</span></span><br><span class="line">aplayer: <span class="comment">#【可选】在需要的页面加载 aplayer 的 js 和 css,请参考文章下面的音乐 配置</span></span><br><span class="line">highlight_shrink: <span class="comment">#【可选】配置代码框是否展开(true/false)(默认为设置中 highlight_shrink 的配置)</span></span><br><span class="line">aside: <span class="comment">#【可选】显示侧边栏 (默认 true)</span></span><br><span class="line">swiper_index: 10 <span class="comment">#【可选】首页轮播图配置 index 索引，数字越小越靠前</span></span><br><span class="line">top_group_index: 10 <span class="comment">#【可选】首页右侧卡片组配置, 数字越小越靠前</span></span><br><span class="line">ai: <span class="comment">#【可选】文章ai摘要</span></span><br><span class="line">background: <span class="string">&quot;#fff&quot;</span> <span class="comment">#【可选】文章主色，必须是16进制颜色且有6位，不可缩减，例如#ffffff 不可写成#fff</span></span><br><span class="line">---</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="9-4-当然，主题还有许多功能，可以自行查看主题官方网站（直接搜索就行"><a href="#9-4-当然，主题还有许多功能，可以自行查看主题官方网站（直接搜索就行" class="headerlink" title="9.4 当然，主题还有许多功能，可以自行查看主题官方网站（直接搜索就行"></a>9.4 当然，主题还有许多功能，可以自行查看主题官方网站（直接搜索就行</h3><h3 id="9-5-平时我个人更改博客的一些小技巧"><a href="#9-5-平时我个人更改博客的一些小技巧" class="headerlink" title="9.5 平时我个人更改博客的一些小技巧"></a>9.5 平时我个人更改博客的一些小技巧</h3><p>首先打开网站，按键盘【f12】，点击如图红色框框的东西</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/assets/66.png" alt="1111111"></p>
+<p>然后再用鼠标对准网页中的元素，比如对准某张图片位置，既可以得到定义所选图片的代码，复制这些代码的部分关键词，然后再回到 vscode 的环境主题文件【_config.next.yml】或者【_config.anzhiyu.yml】中，按 ctrl+f，打开搜索功能，粘贴上刚才的代码关键词，就可以直接修改选中元素</p>
+<hr>
+<h2 id="至此！彻底结束喽，以上教程我自己实现的时候是零基础！并不需要任何高端的技能，一开始面对晦涩的名词多有不解，不过没事！我们目的本来就不是要学会它的原理，只是搭建一个较为自由的个人平台，方便自己记录些东西。刚开始可能会出现许多问题，遇到问题可以多问问-ai-详细描述你的困境，一般都能解决（我就是这样子。。。"><a href="#至此！彻底结束喽，以上教程我自己实现的时候是零基础！并不需要任何高端的技能，一开始面对晦涩的名词多有不解，不过没事！我们目的本来就不是要学会它的原理，只是搭建一个较为自由的个人平台，方便自己记录些东西。刚开始可能会出现许多问题，遇到问题可以多问问-ai-详细描述你的困境，一般都能解决（我就是这样子。。。" class="headerlink" title="至此！彻底结束喽，以上教程我自己实现的时候是零基础！并不需要任何高端的技能，一开始面对晦涩的名词多有不解，不过没事！我们目的本来就不是要学会它的原理，只是搭建一个较为自由的个人平台，方便自己记录些东西。刚开始可能会出现许多问题，遇到问题可以多问问 ai 详细描述你的困境，一般都能解决（我就是这样子。。。"></a>至此！彻底结束喽，以上教程我自己实现的时候是零基础！并不需要任何高端的技能，一开始面对晦涩的名词多有不解，不过没事！我们目的本来就不是要学会它的原理，只是搭建一个较为自由的个人平台，方便自己记录些东西。刚开始可能会出现许多问题，遇到问题可以多问问 ai 详细描述你的困境，一般都能解决（我就是这样子。。。</h2></article>
+<div class="article-footer">
+    <section id="license">
+      <div class="header"><span>许可协议</span></div>
+      <div class="body"><p>本文采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">署名-非商业性使用-相同方式共享 4.0 国际</a> 许可协议，转载请注明出处。</p>
+</div>
+    </section>
+    </div>
+
+<div class="related-wrap" id="read-next"><section class="body"><div class="item" id="prev"></div><div class="item" id="next"><div class="note">较早文章</div><a href="/2025/06/18/%E8%87%AA%E5%8A%A8%E5%88%B7%E8%AF%BE/">自动刷课</a></div></section></div>
+
+<div class="related-wrap" id="related-posts">
+    <section class='header'>
+      <div class='title cap theme'>您可能感兴趣的文章</div>
+    </section>
+    <section class='body'>
+    <div class="related-posts"><a class="item" href="\2025\06\18\LCA笔记\" title="LCA笔记"><span class="title">LCA笔记</span></a></div></section></div>
+
+
+  <div class="related-wrap md-text" id="comments">
+    <section class='header cmt-title cap theme'>
+      <p>快来参与讨论吧~</p>
+
+    </section>
+    <section class='body cmt-body beaudar'>
+      
+
+<svg class="loading" style="vertical-align:middle;fill:currentColor;overflow:hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2709"><path d="M832 512c0-176-144-320-320-320V128c211.2 0 384 172.8 384 384h-64zM192 512c0 176 144 320 320 320v64C300.8 896 128 723.2 128 512h64z" p-id="2710"></path></svg>
+
+<div id="beaudar" repo="xaoxuu/blog-comments" issue-term="pathname" theme="preferred-color-scheme" input-position="top" comment-order="desc" loading="false" branch="main"></div>
+
+    </section>
+  </div>
+
+
+
+<footer class="page-footer footnote"><hr><div class="text"><p>本站由 <a href="/">wustacm</a> 使用 <a target="_blank" rel="noopener" href="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.30.3">Stellar 1.30.3</a> 主题创建。<br>本博客所有文章除特别声明外，均采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 许可协议，转载请注明出处。</p>
+</div></footer>
+<div class="main-mask" onclick="sidebar.dismiss()"></div></div><aside class="l_right">
+<div class="widgets">
+
+
+
+<widget class="widget-wrapper toc" id="data-toc" collapse="false"><div class="widget-header dis-select"><span class="name">本文目录</span><a class="cap-action" onclick="sidebar.toggleTOC()" ><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6h11m-11 6h11m-11 6h11M4 6h1v4m-1 0h2m0 8H4c0-1 2-2 2-3s-1-1.5-2-1"/></svg></a></div><div class="widget-body"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%9C%AC%E5%8D%9A%E6%96%87%E8%AE%B0%E5%BD%95%E6%90%AD%E5%BB%BA%E7%B1%BB%E4%BC%BC%E6%9C%AC%E5%8D%9A%E5%AE%A2%E7%BD%91%E7%AB%99%E7%9A%84%E6%96%B9%E5%BC%8F%EF%BC%8C%E5%8F%AF%E4%BB%A5-0-%E7%BB%8F%E6%B5%8E%E6%88%90%E6%9C%AC%E5%AE%8C%E6%88%90"><span class="toc-text">本博文记录搭建类似本博客网站的方式，可以 0 经济成本完成</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E5%87%86%E5%A4%87%E9%98%B6%E6%AE%B5"><span class="toc-text">1.准备阶段</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E9%9C%80%E8%A6%81%E4%B8%8B%E8%BD%BD%E7%9A%84%E8%BD%AF%E4%BB%B6"><span class="toc-text">2.需要下载的软件</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-%E5%AE%89%E8%A3%85-Node"><span class="toc-text">2.1 安装 Node</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-%E5%AE%89%E8%A3%85-Git"><span class="toc-text">2.2.安装 Git</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-%E4%B8%8B%E8%BD%BD%E5%B9%B6%E5%AE%89%E8%A3%85-vscode-%EF%BC%88%E8%BF%99%E6%98%AF%E4%B8%80%E6%AC%BE%E8%BD%BB%E9%87%8F%E5%9E%8B%E7%9A%84%E4%BB%A3%E7%A0%81%E7%BC%96%E8%BE%91%E5%99%A8"><span class="toc-text">2.3 下载并安装 vscode （这是一款轻量型的代码编辑器</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E9%85%8D%E7%BD%AE-Git-%E5%AF%86%E9%92%A5%E5%B9%B6%E8%BF%9E%E6%8E%A5%E8%87%B3-Github"><span class="toc-text">3.配置 Git 密钥并连接至 Github</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-%E6%89%93%E5%BC%80-Git-Bash-%E5%A6%82%E5%9B%BE"><span class="toc-text">3.1 打开 Git Bash 如图</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-%E9%85%8D%E7%BD%AE%E7%94%A8%E6%88%B7%E5%90%8D%E5%92%8C%E9%82%AE%E7%AE%B1"><span class="toc-text">3.2 配置用户名和邮箱</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-3-%E9%85%8D%E7%BD%AE%E5%85%AC%E9%92%A5%E8%BF%9E%E6%8E%A5-Github"><span class="toc-text">3.3 配置公钥连接 Github</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#3-3-1-%E6%89%A7%E8%A1%8C%E4%BB%A5%E4%B8%8B%E5%91%BD%E4%BB%A4%E7%94%9F%E6%88%90-ssh-%E5%85%AC%E9%92%A5%EF%BC%8C%E6%AD%A4%E5%85%AC%E9%92%A5%E7%94%A8%E4%BA%8E%E4%BD%A0%E7%9A%84%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%BF%9E%E6%8E%A5-Github"><span class="toc-text">3.3.1 执行以下命令生成 ssh 公钥，此公钥用于你的计算机连接 Github</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-3-2-%E5%B0%86-SSH-KEY-%E9%85%8D%E7%BD%AE%E5%88%B0-GitHub"><span class="toc-text">3.3.2 将 SSH KEY 配置到 GitHub</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-3-3-%E6%B5%8B%E8%AF%95%E8%BF%9E%E6%8E%A5%EF%BC%8C%E8%BE%93%E5%85%A5%E4%BB%A5%E4%B8%8B%E5%91%BD%E4%BB%A4"><span class="toc-text">3.3.3 测试连接，输入以下命令</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A6%82%E6%9E%9C%E6%98%AF%E5%9C%A8%E5%85%AC%E5%8F%B8%E6%88%96%E5%AD%A6%E6%A0%A1%E7%BD%91%E7%BB%9C%EF%BC%8C%E5%8F%AF%E8%83%BD%E4%BC%9A%E5%AD%98%E5%9C%A8%E9%98%B2%E7%81%AB%E5%A2%99%E6%88%96%E4%BB%A3%E7%90%86%E9%99%90%E5%88%B6%EF%BC%8C%E9%98%BB%E6%AD%A2%E4%BA%86-SSH-%E8%BF%9E%E6%8E%A5%E3%80%82%E8%BF%9E%E6%8E%A5%E6%B2%A1%E6%9C%89%E7%8E%B0%E5%AE%9E%E5%A6%82%E5%9B%BE%E4%BF%A1%E6%81%AF%EF%BC%8C%E5%88%99%E6%9F%A5%E7%9C%8B%E4%B8%8B%E9%9D%A2%E8%BF%99%E7%AF%87%E5%8D%9A%E6%96%87%E5%B0%9D%E8%AF%95%E8%A7%A3%E5%86%B3%EF%BC%81%EF%BC%81%EF%BC%81"><span class="toc-text">如果是在公司或学校网络，可能会存在防火墙或代理限制，阻止了 SSH 连接。连接没有现实如图信息，则查看下面这篇博文尝试解决！！！</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E5%88%9B%E5%BB%BA-GitHub-io-%E4%BB%93%E5%BA%93"><span class="toc-text">4.创建 GitHub.io 仓库</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#4-1-%E7%82%B9%E5%87%BB%E5%8F%B3%E4%B8%8A%E8%A7%92%E7%9A%84-%E6%8C%89%E9%92%AE%EF%BC%8C%E9%80%89%E6%8B%A9-New-repository%EF%BC%8C%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AA-github-io-%E7%9A%84%E4%BB%93%E5%BA%93%E3%80%82"><span class="toc-text">4.1 点击右上角的+按钮，选择 New repository，创建一个&lt;用户名&gt;.github.io 的仓库。</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-2-%E4%BB%93%E5%BA%93%E5%90%8D%E5%AD%97%E7%9A%84%E6%A0%BC%E5%BC%8F%E5%BF%85%E9%A1%BB%E4%B8%BA%EF%BC%9A%E3%80%90-github-io%E3%80%91-%E6%B3%A8%E6%84%8F%EF%BC%9A%E5%89%8D%E7%BC%80%E5%BF%85%E9%A1%BB%E4%B8%BA%E7%94%A8%E6%88%B7%E5%90%8D%EF%BC%8C%E6%AD%A4%E4%B8%BA%E9%A2%84%E8%A7%88%E5%8D%9A%E5%AE%A2%E9%9C%80%E8%A6%81%EF%BC%8C%E5%90%8E%E6%9C%9F%E5%8F%AF%E4%BF%AE%E6%94%B9%E4%BB%93%E5%BA%93%E5%90%8D-%EF%BC%88%E4%B8%8D%E8%A6%81%E5%BF%98%E8%AE%B0%E5%8A%A0-github-io"><span class="toc-text">4.2 仓库名字的格式必须为：【&lt;用户名&gt;.github.io】 (注意：前缀必须为用户名，此为预览博客需要，后期可修改仓库名)（不要忘记加.github.io</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-3-%E5%8F%AF%E8%A7%81%E6%80%A7%E5%BF%85%E9%A1%BB%E9%80%89%E6%8B%A9-%E3%80%90Public%E3%80%91-%E6%96%B9%E4%BE%BF%E7%AC%AC%E4%B8%80%E6%AC%A1%E9%83%A8%E7%BD%B2%E6%A3%80%E6%9F%A5%E9%97%AE%E9%A2%98%EF%BC%8C%E7%82%B9%E5%87%BB-Creat-repository-%E8%BF%9B%E8%A1%8C%E5%88%9B%E5%BB%BA%E5%8D%B3%E5%8F%AF"><span class="toc-text">4.3 可见性必须选择 【Public】 方便第一次部署检查问题，点击 Creat repository 进行创建即可</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link"><span class="toc-text"></span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-%E5%88%9D%E5%A7%8B%E5%8C%96-Hexo-%E5%8D%9A%E5%AE%A2"><span class="toc-text">5.初始化 Hexo 博客</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#5-1-%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AA%E6%96%87%E4%BB%B6%E5%A4%B9%E6%9D%A5%E4%BF%9D%E5%AD%98%E5%8D%9A%E5%AE%A2%E6%BA%90%E7%A0%81%EF%BC%88%E6%88%91%E8%BF%99%E9%87%8C%E9%80%89%E7%9A%84%E8%B7%AF%E5%BE%84%E4%B8%BA-D-college%EF%BC%89%EF%BC%8C%E5%9C%A8%E6%96%87%E4%BB%B6%E5%A4%B9%E5%86%85%E5%8F%B3%E9%94%AE%E9%BC%A0%E6%A0%87%EF%BC%8C%E9%80%89%E6%8B%A9-%E3%80%90Open-Git-Bash-here%E3%80%91"><span class="toc-text">5.1 创建一个文件夹来保存博客源码（我这里选的路径为 D:&#x2F;college），在文件夹内右键鼠标，选择 【Open Git Bash here】</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-2-%E5%9C%A8%E3%80%90Git-BASH%E3%80%91%E8%BE%93%E5%85%A5%E5%A6%82%E4%B8%8B%E5%91%BD%E4%BB%A4%E5%AE%89%E8%A3%85-Hexo"><span class="toc-text">5.2 在【Git BASH】输入如下命令安装 Hexo</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-3-%E5%AE%89%E8%A3%85%E5%AE%8C%E5%90%8E%E8%BE%93%E5%85%A5%E3%80%90hexo-v%E3%80%91%E9%AA%8C%E8%AF%81%E6%98%AF%E5%90%A6%E5%AE%89%E8%A3%85%E6%88%90%E5%8A%9F%E3%80%82"><span class="toc-text">5.3 安装完后输入【hexo -v】验证是否安装成功。</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-4-%E5%88%9D%E5%A7%8B%E5%8C%96-Hexo-%E9%A1%B9%E7%9B%AE%E5%AE%89%E8%A3%85%E7%9B%B8%E5%85%B3%E4%BE%9D%E8%B5%96%E3%80%82"><span class="toc-text">5.4 初始化 Hexo 项目安装相关依赖。</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-5-%E5%88%9D%E5%A7%8B%E5%8C%96%E9%A1%B9%E7%9B%AE%E5%90%8E%EF%BC%8Ccollege-%E6%96%87%E4%BB%B6%E5%A4%B9%E4%B8%AD-%E6%9C%89%E5%A6%82%E4%B8%8B%E7%BB%93%E6%9E%84%EF%BC%9A"><span class="toc-text">5.5 初始化项目后，college 文件夹中 有如下结构：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-6-%E8%BE%93%E5%85%A5-%E3%80%90hexo-cl-hexo-s%E3%80%91-%E5%90%AF%E5%8A%A8%E9%A1%B9%E7%9B%AE"><span class="toc-text">5.6 输入 【hexo cl &amp;&amp; hexo s】 启动项目</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#-1"><span class="toc-text"></span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-%E5%B0%86%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2%E6%8C%82%E8%BD%BD%E5%88%B0-GitHub-Pages"><span class="toc-text">6.将静态博客挂载到 GitHub Pages</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#6-1-%E5%AE%89%E8%A3%85-hexo-deployer-git"><span class="toc-text">6.1 安装 hexo-deployer-git</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-2-%E4%BF%AE%E6%94%B9-config-yml-%E6%96%87%E4%BB%B6"><span class="toc-text">6.2 修改 _config.yml 文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-3-%E4%BF%AE%E6%94%B9%E5%A5%BD%E9%85%8D%E7%BD%AE%E5%90%8E%EF%BC%8C%E8%BF%90%E8%A1%8C%E5%A6%82%E4%B8%8B%E5%91%BD%E4%BB%A4%EF%BC%8C%E5%B0%86%E4%BB%A3%E7%A0%81%E9%83%A8%E7%BD%B2%E5%88%B0-GitHub%EF%BC%88Hexo-%E4%B8%89%E8%BF%9E%EF%BC%89%E3%80%82"><span class="toc-text">6.3 修改好配置后，运行如下命令，将代码部署到 GitHub（Hexo 三连）。</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A8%8D%E7%AD%89%E4%B8%A4%E5%88%86%E9%92%9F%EF%BC%8C%E6%89%93%E5%BC%80%E6%B5%8F%E8%A7%88%E5%99%A8%E8%AE%BF%E9%97%AE%EF%BC%9Ahttps-college-github-io-%EF%BC%88%E6%B3%A8%E6%84%8F%EF%BC%81%E8%BF%99%E9%87%8C%E8%A6%81%E7%94%A8%E4%BD%A0%E7%9A%84%E4%BB%93%E5%BA%93%E5%90%8D%E5%AD%97%E6%9B%BF%E6%8D%A2%EF%BC%89%EF%BC%8C%E8%BF%99%E6%97%B6%E5%80%99%E6%88%91%E4%BB%AC%E5%B0%B1%E5%8F%AF%E4%BB%A5%E7%9C%8B%E5%88%B0%E5%8D%9A%E5%AE%A2%E5%86%85%E5%AE%B9%E4%BA%86%E3%80%82"><span class="toc-text">稍等两分钟，打开浏览器访问：https:&#x2F;&#x2F;college.github.io （注意！这里要用你的仓库名字替换），这时候我们就可以看到博客内容了。</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-%E5%B0%86%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2%E6%8C%82%E8%BD%BD%E5%88%B0-Cloudflare-Pages"><span class="toc-text">7.将静态博客挂载到 Cloudflare Pages</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#7-1-%E6%89%93%E5%BC%80-Cloudflare-Pages%EF%BC%8C%E5%9C%A8-%E3%80%90Workers-%E5%92%8C-Pages%E3%80%91-%E4%B8%AD%E9%80%89%E6%8B%A9-%E3%80%90Pages%E3%80%91-%E7%9A%84-%E3%80%90%E8%BF%9E%E6%8E%A5%E5%88%B0-Git%E3%80%91-%E5%A6%82%E5%9B%BE"><span class="toc-text">7.1 打开 Cloudflare Pages，在 【Workers 和 Pages】 中选择 【Pages】 的 【连接到 Git】 如图</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%99%E6%97%B6%E4%BD%A0%E4%B9%9F%E5%B0%B1%E5%8F%AF%E4%BB%A5%E5%B0%86%E4%BD%A0%E7%9A%84%E3%80%90-github-io%E3%80%91%E7%9A%84%E4%BB%93%E5%BA%93%E8%AE%BE%E7%BD%AE%E4%B8%BA%E3%80%90Private%E3%80%91%E7%A7%81%E5%BA%93%E4%BA%86%EF%BC%88%E4%B8%8D%E6%94%B9%E4%B9%9F%E8%A1%8C"><span class="toc-text">这时你也就可以将你的【&lt;用户名&gt;.github.io】的仓库设置为【Private】私库了（不改也行</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-%E8%87%B3%E6%AD%A4-%E4%BD%A0%E5%B7%B2%E7%BB%8F%E6%8B%A5%E6%9C%89%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2%E7%BD%91%E7%AB%99%EF%BC%8C%E4%B8%8D%E8%BF%87%E5%AE%83%E8%BF%98%E5%BE%88%E4%B8%91%E9%99%8B%EF%BC%8C%E6%88%91%E4%BB%AC%E6%8E%A5%E4%B8%8B%E6%9D%A5%E5%8F%AF%E4%BB%A5%E4%B8%8B%E8%BD%BD%E4%B8%BB%E9%A2%98%E6%9D%A5%E7%BE%8E%E5%8C%96%E5%AE%83"><span class="toc-text">8.至此 你已经拥有自己的博客网站，不过它还很丑陋，我们接下来可以下载主题来美化它</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#8-1-%E7%BB%A7%E7%BB%AD%E5%9C%A8%E5%88%9A%E6%89%8D%E7%9A%84-Git-Bash-%E4%B8%8A%E8%BF%90%E8%A1%8C%E4%B8%8B%E9%9D%A2%E5%91%BD%E4%BB%A4-%E4%B8%8B%E8%BD%BD%E3%80%90next%E3%80%91%E4%B8%BB%E9%A2%98"><span class="toc-text">8.1 继续在刚才的 Git Bash 上运行下面命令 下载【next】主题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-1-%E6%89%93%E5%BC%80-vscode%EF%BC%8C-%E5%9C%A8-vscode-%E4%B8%AD%E6%89%93%E5%BC%80%E9%A1%B9%E7%9B%AE%E6%96%87%E4%BB%B6%E5%A4%B9"><span class="toc-text">8.1 打开 vscode， 在 vscode 中打开项目文件夹</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-2-%E6%96%B0%E5%BB%BA%E7%BB%88%E7%AB%AF%EF%BC%8C%E4%BB%A5%E5%90%8E%E7%9B%B4%E6%8E%A5%E5%9C%A8-vscode-%E4%B8%8A%E8%BF%90%E8%A1%8C%E5%91%BD%E4%BB%A4"><span class="toc-text">8.2 新建终端，以后直接在 vscode 上运行命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-3-%E7%AC%AC%E4%B8%80%E6%AC%A1%E4%BD%BF%E7%94%A8%E9%9C%80%E8%A6%81%E5%AE%89%E8%A3%85-pug-%E4%BB%A5%E5%8F%8A-stylus-%E7%9A%84%E6%B8%B2%E6%9F%93%E5%99%A8"><span class="toc-text">8.3 第一次使用需要安装 pug 以及 stylus 的渲染器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-4-%E6%89%93%E5%BC%80-config-yml-%E6%96%87%E4%BB%B6%EF%BC%8C%E4%BF%AE%E6%94%B9%E4%B8%BB%E9%A2%98%E4%B8%BA%E3%80%90next%E3%80%91%E6%88%96%E8%80%85%E3%80%90anzhiyu%E3%80%91"><span class="toc-text">8.4 打开_config.yml 文件，修改主题为【next】或者【anzhiyu】</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-5-%E8%A6%86%E7%9B%96%E9%85%8D%E7%BD%AE"><span class="toc-text">8.5 覆盖配置</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9-%E5%B9%B3%E6%97%B6%E7%BC%96%E8%BE%91%E5%8D%9A%E5%AE%A2%E5%92%8C%E5%8D%9A%E6%96%87%E7%9A%84%E4%B8%80%E4%BA%9B%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C"><span class="toc-text">9.平时编辑博客和博文的一些基本操作</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#9-1-%E6%AF%8F%E6%AC%A1%E5%9C%A8%E7%BC%96%E8%AF%91%E5%99%A8%E4%B8%8A%E7%9A%84%E4%BF%AE%E6%94%B9%EF%BC%8C%E5%9C%A8%E7%BD%91%E7%AB%99%E4%B8%8A%E6%98%AF%E4%B8%8D%E8%83%BD%E5%90%8C%E6%AD%A5%E7%9A%84%EF%BC%8C%E4%BD%A0%E9%9C%80%E8%A6%81%E5%9C%A8%E6%AF%8F%E6%AC%A1%E4%BF%AE%E6%94%B9%E5%90%8E%E9%80%9A%E8%BF%87%E4%B8%8B%E9%9D%A2%E5%91%BD%E4%BB%A4%E4%B8%8A%E4%BC%A0%EF%BC%8C%E6%89%8D%E8%83%BD%E5%8F%8D%E9%A6%88%E7%BB%99%E7%BD%91%E7%AB%99%E4%BA%A7%E7%94%9F%E5%8F%98%E5%8C%96"><span class="toc-text">9.1 每次在编译器上的修改，在网站上是不能同步的，你需要在每次修改后通过下面命令上传，才能反馈给网站产生变化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-2-%E6%96%B0%E5%BB%BA%E4%B8%80%E7%AF%87%E5%8D%9A%E6%96%87"><span class="toc-text">9.2 新建一篇博文</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-3-%E3%80%90-scaffolds%E3%80%91-%E7%9B%AE%E5%BD%95%E4%B8%8B%E6%9C%89%E5%87%A0%E4%B8%AA%E6%A8%A1%E6%9D%BF%E6%96%87%E4%BB%B6%EF%BC%8C%E5%85%B6%E4%B8%AD%E3%80%90post-md%E3%80%91%E6%98%AF%E6%96%B0%E5%BB%BA%E5%8D%9A%E6%96%87%E6%A8%A1%E6%9D%BF"><span class="toc-text">9.3 【&#x2F;scaffolds】 目录下有几个模板文件，其中【post.md】是新建博文模板</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-4-%E5%BD%93%E7%84%B6%EF%BC%8C%E4%B8%BB%E9%A2%98%E8%BF%98%E6%9C%89%E8%AE%B8%E5%A4%9A%E5%8A%9F%E8%83%BD%EF%BC%8C%E5%8F%AF%E4%BB%A5%E8%87%AA%E8%A1%8C%E6%9F%A5%E7%9C%8B%E4%B8%BB%E9%A2%98%E5%AE%98%E6%96%B9%E7%BD%91%E7%AB%99%EF%BC%88%E7%9B%B4%E6%8E%A5%E6%90%9C%E7%B4%A2%E5%B0%B1%E8%A1%8C"><span class="toc-text">9.4 当然，主题还有许多功能，可以自行查看主题官方网站（直接搜索就行</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-5-%E5%B9%B3%E6%97%B6%E6%88%91%E4%B8%AA%E4%BA%BA%E6%9B%B4%E6%94%B9%E5%8D%9A%E5%AE%A2%E7%9A%84%E4%B8%80%E4%BA%9B%E5%B0%8F%E6%8A%80%E5%B7%A7"><span class="toc-text">9.5 平时我个人更改博客的一些小技巧</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%87%B3%E6%AD%A4%EF%BC%81%E5%BD%BB%E5%BA%95%E7%BB%93%E6%9D%9F%E5%96%BD%EF%BC%8C%E4%BB%A5%E4%B8%8A%E6%95%99%E7%A8%8B%E6%88%91%E8%87%AA%E5%B7%B1%E5%AE%9E%E7%8E%B0%E7%9A%84%E6%97%B6%E5%80%99%E6%98%AF%E9%9B%B6%E5%9F%BA%E7%A1%80%EF%BC%81%E5%B9%B6%E4%B8%8D%E9%9C%80%E8%A6%81%E4%BB%BB%E4%BD%95%E9%AB%98%E7%AB%AF%E7%9A%84%E6%8A%80%E8%83%BD%EF%BC%8C%E4%B8%80%E5%BC%80%E5%A7%8B%E9%9D%A2%E5%AF%B9%E6%99%A6%E6%B6%A9%E7%9A%84%E5%90%8D%E8%AF%8D%E5%A4%9A%E6%9C%89%E4%B8%8D%E8%A7%A3%EF%BC%8C%E4%B8%8D%E8%BF%87%E6%B2%A1%E4%BA%8B%EF%BC%81%E6%88%91%E4%BB%AC%E7%9B%AE%E7%9A%84%E6%9C%AC%E6%9D%A5%E5%B0%B1%E4%B8%8D%E6%98%AF%E8%A6%81%E5%AD%A6%E4%BC%9A%E5%AE%83%E7%9A%84%E5%8E%9F%E7%90%86%EF%BC%8C%E5%8F%AA%E6%98%AF%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E8%BE%83%E4%B8%BA%E8%87%AA%E7%94%B1%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%B9%B3%E5%8F%B0%EF%BC%8C%E6%96%B9%E4%BE%BF%E8%87%AA%E5%B7%B1%E8%AE%B0%E5%BD%95%E4%BA%9B%E4%B8%9C%E8%A5%BF%E3%80%82%E5%88%9A%E5%BC%80%E5%A7%8B%E5%8F%AF%E8%83%BD%E4%BC%9A%E5%87%BA%E7%8E%B0%E8%AE%B8%E5%A4%9A%E9%97%AE%E9%A2%98%EF%BC%8C%E9%81%87%E5%88%B0%E9%97%AE%E9%A2%98%E5%8F%AF%E4%BB%A5%E5%A4%9A%E9%97%AE%E9%97%AE-ai-%E8%AF%A6%E7%BB%86%E6%8F%8F%E8%BF%B0%E4%BD%A0%E7%9A%84%E5%9B%B0%E5%A2%83%EF%BC%8C%E4%B8%80%E8%88%AC%E9%83%BD%E8%83%BD%E8%A7%A3%E5%86%B3%EF%BC%88%E6%88%91%E5%B0%B1%E6%98%AF%E8%BF%99%E6%A0%B7%E5%AD%90%E3%80%82%E3%80%82%E3%80%82"><span class="toc-text">至此！彻底结束喽，以上教程我自己实现的时候是零基础！并不需要任何高端的技能，一开始面对晦涩的名词多有不解，不过没事！我们目的本来就不是要学会它的原理，只是搭建一个较为自由的个人平台，方便自己记录些东西。刚开始可能会出现许多问题，遇到问题可以多问问 ai 详细描述你的困境，一般都能解决（我就是这样子。。。</span></a></li></ol></li></ol></div><div class="widget-footer">
+
+<a class="top" onclick="util.scrollTop()"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 12c0-4.714 0-7.071 1.464-8.536C4.93 2 7.286 2 12 2c4.714 0 7.071 0 8.535 1.464C22 4.93 22 7.286 22 12c0 4.714 0 7.071-1.465 8.535C19.072 22 16.714 22 12 22s-7.071 0-8.536-1.465C2 19.072 2 16.714 2 12Z"/><path stroke-linecap="round" stroke-linejoin="round" d="m9 15.5l3-3l3 3m-6-4l3-3l3 3"/></g></svg><span>回到顶部</span></a><a class="buttom" onclick="util.scrollComment()"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" d="M10.46 1.25h3.08c1.603 0 2.86 0 3.864.095c1.023.098 1.861.3 2.6.752a5.75 5.75 0 0 1 1.899 1.899c.452.738.654 1.577.752 2.6c.095 1.004.095 2.261.095 3.865v1.067c0 1.141 0 2.036-.05 2.759c-.05.735-.153 1.347-.388 1.913a5.75 5.75 0 0 1-3.112 3.112c-.805.334-1.721.408-2.977.43a10.81 10.81 0 0 0-.929.036c-.198.022-.275.054-.32.08c-.047.028-.112.078-.224.232c-.121.166-.258.396-.476.764l-.542.916c-.773 1.307-2.69 1.307-3.464 0l-.542-.916a10.605 10.605 0 0 0-.476-.764c-.112-.154-.177-.204-.224-.232c-.045-.026-.122-.058-.32-.08c-.212-.023-.49-.03-.93-.037c-1.255-.021-2.171-.095-2.976-.429A5.75 5.75 0 0 1 1.688 16.2c-.235-.566-.338-1.178-.389-1.913c-.049-.723-.049-1.618-.049-2.76v-1.066c0-1.604 0-2.86.095-3.865c.098-1.023.3-1.862.752-2.6a5.75 5.75 0 0 1 1.899-1.899c.738-.452 1.577-.654 2.6-.752C7.6 1.25 8.857 1.25 10.461 1.25M6.739 2.839c-.914.087-1.495.253-1.959.537A4.25 4.25 0 0 0 3.376 4.78c-.284.464-.45 1.045-.537 1.96c-.088.924-.089 2.11-.089 3.761v1c0 1.175 0 2.019.046 2.685c.045.659.131 1.089.278 1.441a4.25 4.25 0 0 0 2.3 2.3c.515.214 1.173.294 2.429.316h.031c.398.007.747.013 1.037.045c.311.035.616.104.909.274c.29.17.5.395.682.645c.169.232.342.525.538.856l.559.944a.52.52 0 0 0 .882 0l.559-.944c.196-.331.37-.624.538-.856c.182-.25.392-.476.682-.645c.293-.17.598-.24.909-.274c.29-.032.639-.038 1.037-.045h.032c1.255-.022 1.913-.102 2.428-.316a4.25 4.25 0 0 0 2.3-2.3c.147-.352.233-.782.278-1.441c.046-.666.046-1.51.046-2.685v-1c0-1.651 0-2.837-.089-3.762c-.087-.914-.253-1.495-.537-1.959a4.25 4.25 0 0 0-1.403-1.403c-.464-.284-1.045-.45-1.96-.537c-.924-.088-2.11-.089-3.761-.089h-3c-1.651 0-2.837 0-3.762.089" clip-rule="evenodd"/><path fill="currentColor" d="M9 11a1 1 0 1 1-2 0a1 1 0 0 1 2 0m4 0a1 1 0 1 1-2 0a1 1 0 0 1 2 0m4 0a1 1 0 1 1-2 0a1 1 0 0 1 2 0"/></svg><span>参与讨论</span></a></div></widget>
+</div></aside><div class='float-panel'>
+  <button type='button' style='display:none' class='laptop-only rightbar-toggle mobile' onclick='sidebar.rightbar()'>
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6h11m-11 6h11m-11 6h11M4 6h1v4m-1 0h2m0 8H4c0-1 2-2 2-3s-1-1.5-2-1"/></svg>
+  </button>
+  <button type='button' style='display:none' class='mobile-only leftbar-toggle mobile' onclick='sidebar.leftbar()'>
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 11c0-3.771 0-5.657 1.172-6.828C4.343 3 6.229 3 10 3h4c3.771 0 5.657 0 6.828 1.172C22 5.343 22 7.229 22 11v2c0 3.771 0 5.657-1.172 6.828C19.657 21 17.771 21 14 21h-4c-3.771 0-5.657 0-6.828-1.172C2 18.657 2 16.771 2 13z"/><path id="sep" stroke-linecap="round" d="M5.5 10h6m-5 4h4m4.5 7V3"/></g></svg>
+  </button>
+</div>
+</div><div class="scripts">
+<script type="text/javascript">
+  const ctx = {
+    date_suffix: {
+      just: `刚刚`,
+      min: `分钟前`,
+      hour: `小时前`,
+      day: `天前`,
+    },
+    root : `/`,
+    tag_plugins: {
+      chat: Object.assign({"api":"https://siteinfo.listentothewind.cn/api/v1"}),
+    }
+  };
+
+  // required plugins (only load if needs)
+  if (`local_search`) {
+    ctx.search = {};
+    ctx.search.service = `local_search`;
+    if (ctx.search.service == 'local_search') {
+      let service_obj = Object.assign({}, `{"field":"all","path":"/search.json","content":true,"skip_search":[],"codeblock":true,"sort":"-date"}`);
+      ctx.search[ctx.search.service] = service_obj;
+    }
+  }
+  const def = {
+    avatar: `https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/avatar/round/3442075.svg`,
+    cover: `https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/cover/76b86c0226ffd.svg`,
+  };
+  const deps = {
+    jquery: `https://gcore.jsdelivr.net/npm/jquery@3.7/dist/jquery.min.js`,
+    marked: `https://gcore.jsdelivr.net/npm/marked@13.0/lib/marked.umd.min.js`
+  }
+  
+
+</script>
+
+<script type="text/javascript">
+  function RunItem() {
+    this.list = []; // 存放回调函数
+    this.start = () => {
+      for (var i = 0; i < this.list.length; i++) {
+        this.list[i].run();
+      }
+    };
+    this.push = (fn, name, setRequestAnimationFrame = true) => {
+      let myfn = fn
+      if (setRequestAnimationFrame) {
+        myfn = () => {
+          utils.requestAnimationFrame(fn)
+        }
+      }
+      var f = new Item(myfn, name);
+      this.list.push(f);
+    };
+    this.remove = (name) => {
+      for (let index = 0; index < this.list.length; index++) {
+        const e = this.list[index];
+        if (e.name == name) {
+          this.list.splice(index, 1);
+        }
+      }
+    }
+    // 构造一个可以run的对象
+    function Item(fn, name) {
+      // 函数名称
+      this.name = name || fn.name;
+      // run方法
+      this.run = () => {
+        try {
+          fn()
+        } catch (error) {
+          console.log(error);
+        }
+      };
+    }
+  }
+
+  const utils = {
+    // 懒加载 css https://github.com/filamentgroup/loadCSS
+    css: (href, before, media, attributes) => {
+      var doc = window.document;
+      var ss = doc.createElement("link");
+      var ref;
+      if (before) {
+        ref = before;
+      } else {
+        var refs = (doc.body || doc.getElementsByTagName("head")[0]).childNodes;
+        ref = refs[refs.length - 1];
+      }
+      var sheets = doc.styleSheets;
+      if (attributes) {
+        for (var attributeName in attributes) {
+          if (attributes.hasOwnProperty(attributeName)) {
+            ss.setAttribute(attributeName, attributes[attributeName]);
+          }
+        }
+      }
+      ss.rel = "stylesheet";
+      ss.href = href;
+      ss.media = "only x";
+      function ready(cb) {
+        if (doc.body) {
+          return cb();
+        }
+        setTimeout(function () {
+          ready(cb);
+        });
+      }
+      ready(function () {
+        ref.parentNode.insertBefore(ss, before ? ref : ref.nextSibling);
+      });
+      var onloadcssdefined = function (cb) {
+        var resolvedHref = ss.href;
+        var i = sheets.length;
+        while (i--) {
+          if (sheets[i].href === resolvedHref) {
+            return cb();
+          }
+        }
+        setTimeout(function () {
+          onloadcssdefined(cb);
+        });
+      };
+      function loadCB() {
+        if (ss.addEventListener) {
+          ss.removeEventListener("load", loadCB);
+        }
+        ss.media = media || "all";
+      }
+      if (ss.addEventListener) {
+        ss.addEventListener("load", loadCB);
+      }
+      ss.onloadcssdefined = onloadcssdefined;
+      onloadcssdefined(loadCB);
+      return ss;
+    },
+
+    js: (src, opt) => new Promise((resolve, reject) => {
+      var script = document.createElement('script');
+      if (src.startsWith('/')) {
+        src = ctx.root + src.substring(1);
+      }
+      script.src = src;
+      if (opt) {
+        for (let key of Object.keys(opt)) {
+          script[key] = opt[key]
+        }
+      } else {
+        // 默认异步，如果需要同步，第二个参数传入 {} 即可
+        script.async = true
+      }
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function () {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    }),
+
+    jq: (fn) => {
+      if (typeof jQuery === 'undefined') {
+        utils.js(deps.jquery).then(fn)
+      } else {
+        fn()
+      }
+    },
+
+    onLoading: (el) => {
+      if (el) {
+        $(el).append('<div class="loading-wrap"><svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2"><path stroke-dasharray="60" stroke-dashoffset="60" stroke-opacity=".3" d="M12 3C16.9706 3 21 7.02944 21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3Z"><animate fill="freeze" attributeName="stroke-dashoffset" dur="1.3s" values="60;0"/></path><path stroke-dasharray="15" stroke-dashoffset="15" d="M12 3C16.9706 3 21 7.02944 21 12"><animate fill="freeze" attributeName="stroke-dashoffset" dur="0.3s" values="15;0"/><animateTransform attributeName="transform" dur="1.5s" repeatCount="indefinite" type="rotate" values="0 12 12;360 12 12"/></path></g></svg></div>');
+      }
+    },
+    onLoadSuccess: (el) => {
+      if (el) {
+        $(el).find('.loading-wrap').remove();
+      }
+    },
+    onLoadFailure: (el) => {
+      if (el) {
+        $(el).find('.loading-wrap svg').remove();
+        $(el).find('.loading-wrap').append('<svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path stroke-dasharray="60" stroke-dashoffset="60" d="M12 3L21 20H3L12 3Z"><animate fill="freeze" attributeName="stroke-dashoffset" dur="0.5s" values="60;0"/></path><path stroke-dasharray="6" stroke-dashoffset="6" d="M12 10V14"><animate fill="freeze" attributeName="stroke-dashoffset" begin="0.6s" dur="0.2s" values="6;0"/></path></g><circle cx="12" cy="17" r="1" fill="currentColor" fill-opacity="0"><animate fill="freeze" attributeName="fill-opacity" begin="0.8s" dur="0.4s" values="0;1"/></circle></svg>');
+        $(el).find('.loading-wrap').addClass('error');
+      }
+    },
+    request: (el, url, callback, onFailure) => {
+      let retryTimes = 3;
+      utils.onLoading(el);
+      function req() {
+        return new Promise((resolve, reject) => {
+          let status = 0; // 0 等待 1 完成 2 超时
+          let timer = setTimeout(() => {
+            if (status === 0) {
+              status = 2;
+              timer = null;
+              reject('请求超时');
+              if (retryTimes == 0) {
+                onFailure();
+              }
+            }
+          }, 5000);
+          fetch(url).then(function (response) {
+            if (status !== 2) {
+              clearTimeout(timer);
+              resolve(response);
+              timer = null;
+              status = 1;
+            }
+            if (response.ok) {
+              return response;
+            }
+            throw new Error('Network response was not ok.');
+          }).then(function (data) {
+            retryTimes = 0;
+            utils.onLoadSuccess(el);
+            callback(data);
+          }).catch(function (error) {
+            if (retryTimes > 0) {
+              retryTimes -= 1;
+              setTimeout(() => {
+                req();
+              }, 5000);
+            } else {
+              utils.onLoadFailure(el);
+              onFailure();
+            }
+          });
+        });
+      }
+      req();
+    },
+    /********************** requestAnimationFrame ********************************/
+    // 1、requestAnimationFrame 会把每一帧中的所有 DOM 操作集中起来，在一次重绘或回流中就完成，并且重绘或回流的时间间隔紧紧跟随浏览器的刷新频率，一般来说，这个频率为每秒60帧。
+    // 2、在隐藏或不可见的元素中，requestAnimationFrame 将不会进行重绘或回流，这当然就意味着更少的的 cpu，gpu 和内存使用量。
+    requestAnimationFrame: (fn) => {
+      if (!window.requestAnimationFrame) {
+        window.requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame;
+      }
+      window.requestAnimationFrame(fn)
+    },
+    dark: {},
+  };
+
+  // utils.dark.mode 当前模式 dark or light
+  // utils.dark.toggle() 暗黑模式触发器
+  // utils.dark.push(callBack[,"callBackName"]) 传入触发器回调函数
+  utils.dark.method = {
+    toggle: new RunItem(),
+  };
+  utils.dark = Object.assign(utils.dark, {
+    push: utils.dark.method.toggle.push,
+  });
+</script>
+<script>
+  const sidebar = {
+    leftbar: () => {
+      if (l_body) {
+        l_body.toggleAttribute('leftbar');
+        l_body.removeAttribute('rightbar');
+      }
+    },
+    rightbar: () => {
+      if (l_body) {
+        l_body.toggleAttribute('rightbar');
+        l_body.removeAttribute('leftbar');
+      }
+    },
+    dismiss: () => {
+      if (l_body) {
+        l_body.removeAttribute('leftbar');
+        l_body.removeAttribute('rightbar');
+      }
+    },
+    toggleTOC: () => {
+      document.querySelector('#data-toc').classList.toggle('collapse');
+    }
+  }
+</script>
+<script type="text/javascript">
+  (() => {
+    const tagSwitchers = document.querySelectorAll('.tag-subtree.parent-tag > a > .tag-switcher-wrapper')
+    for (const tagSwitcher of tagSwitchers) {
+      tagSwitcher.addEventListener('click', (e) => {
+        const parent = e.target.closest('.tag-subtree.parent-tag')
+        parent.classList.toggle('expanded')
+        e.preventDefault()
+      })
+    }
+
+    // Get active tag from query string, then activate it.
+    const urlParams = new URLSearchParams(window.location.search)
+    const activeTag = urlParams.get('tag')
+    if (activeTag) {
+      let tag = document.querySelector(`.tag-subtree[data-tag="${activeTag}"]`)
+      if (tag) {
+        tag.querySelector('a').classList.add('active')
+        
+        while (tag) {
+          tag.classList.add('expanded')
+          tag = tag.parentElement.closest('.tag-subtree.parent-tag')
+        }
+      }
+    }
+  })()
+</script>
+
+
+<!-- required -->
+<script src="/js/main.js?v=1.30.3" defer></script>
+
+<script type="text/javascript">
+  const applyTheme = (theme) => {
+    if (theme === 'auto') {
+      document.documentElement.removeAttribute('data-theme')
+    } else {
+      document.documentElement.setAttribute('data-theme', theme)
+    }
+
+    applyThemeToGiscus(theme)
+  }
+
+  const applyThemeToGiscus = (theme) => {
+    theme = theme === 'auto' ? 'preferred_color_scheme' : theme
+
+    const cmt = document.getElementById('giscus')
+    if (cmt) {
+      // This works before giscus load.
+      cmt.setAttribute('data-theme', theme)
+    }
+
+    const iframe = document.querySelector('#comments > section.giscus > iframe')
+    if (iframe) {
+      // This works after giscus loaded.
+      const src = iframe.src
+      const newSrc = src.replace(/theme=[\w]+/, `theme=${theme}`)
+      iframe.src = newSrc
+    }
+  }
+
+  const switchTheme = () => {
+    // light -> dark -> auto -> light -> ...
+    const currentTheme = document.documentElement.getAttribute('data-theme')
+    let newTheme;
+    switch (currentTheme) {
+      case 'light':
+        newTheme = 'dark'
+        break
+      case 'dark':
+        newTheme = 'auto'
+        break
+      default:
+        newTheme = 'light'
+    }
+    applyTheme(newTheme)
+    window.localStorage.setItem('Stellar.theme', newTheme)
+    utils.dark.mode = newTheme === 'auto' ? (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light") : newTheme;
+    utils.dark.method.toggle.start();
+
+    const messages = {
+      light: `切换到浅色模式`,
+      dark: `切换到深色模式`,
+      auto: `切换到跟随系统配色`,
+    }
+    hud?.toast?.(messages[newTheme])
+  }
+
+  (() => {
+    // Apply user's preferred theme, if any.
+    const theme = window.localStorage.getItem('Stellar.theme')
+    if (theme !== null) {
+      applyTheme(theme)
+    } else {
+      utils.dark.mode = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    }
+    utils.dark.method.toggle.start();
+  })()
+</script>
+
+
+<!-- optional -->
+
+  <script type="module">
+  const el = document.querySelector('#comments #beaudar');
+  util.viewportLazyload(el, load_beaudar, false);
+
+  function load_beaudar() {
+    if (!el) return;
+    try {
+      el.innerHTML = '';
+    } catch (error) {
+      console.error(error);
+    }
+    const script = document.createElement('script');
+    script.src = 'https://beaudar.lipk.org/client.js';
+    script.async = true;
+    for (const key of Object.keys(el.attributes)) {
+      const attr = el.attributes[key];
+      if (['class', 'id'].includes(attr.name) === false) {
+        script.setAttribute(attr.name, attr.value);
+      }
+    }
+    el.appendChild(script);
+  }
+</script>
+
+
+
+
+<script defer>
+  window.addEventListener('DOMContentLoaded', (event) => {
+    ctx.services = Object.assign({}, JSON.parse(`{"mdrender":{"js":"/js/services/mdrender.js"},"siteinfo":{"js":"/js/services/siteinfo.js","api":null},"ghinfo":{"js":"/js/services/ghinfo.js"},"sites":{"js":"/js/services/sites.js"},"friends":{"js":"/js/services/friends.js"},"friends_and_posts":{"js":"/js/services/friends_and_posts.js"},"timeline":{"js":"/js/services/timeline.js"},"fcircle":{"js":"/js/services/fcircle.js"},"weibo":{"js":"/js/services/weibo.js"},"memos":{"js":"/js/services/memos.js"},"voice":{"js":"/js/plugins/voice.js"},"video":{"js":"/js/plugins/video.js"},"download-file":{"js":"/js/plugins/download-file.js"},"twikoo":{"js":"/js/services/twikoo_latest_comment.js"},"waline":{"js":"/js/services/waline_latest_comment.js"},"artalk":{"js":"/js/services/artalk_latest_comment.js"},"giscus":{"js":"/js/services/giscus_latest_comment.js"}}`));
+    for (let id of Object.keys(ctx.services)) {
+      const js = ctx.services[id].js;
+      if (id == 'siteinfo') {
+        ctx.cardlinks = document.querySelectorAll('a.link-card[cardlink]');
+        if (ctx.cardlinks?.length > 0) {
+          utils.js(js, { defer: true }).then(function () {
+            setCardLink(ctx.cardlinks);
+          });
+        }
+      } else if (id == 'voice') {
+        ctx.voiceAudios = document.querySelectorAll('.voice>audio');
+        if (ctx.voiceAudios?.length > 0) {
+          utils.js(js, { defer: true }).then(function () {
+            createVoiceDom(ctx.voiceAudios);
+          });
+        }
+      } else if (id == 'video') {
+        ctx.videos = document.querySelectorAll('.video>video');
+        if (ctx.videos?.length > 0) {
+          utils.js(js, { defer: true }).then(function () {
+            videoEvents(ctx.videos);
+          });
+        }
+      } else if (id == 'download-file') {
+        ctx.files = document.querySelectorAll('.file');
+        if (ctx.files?.length > 0) {
+          utils.js(js, { defer: true }).then(function () {
+            downloadFileEvent(ctx.files);
+          });
+        }
+      } else {
+        const els = document.getElementsByClassName(`ds-${id}`);
+        if (els?.length > 0) {
+          utils.jq(() => {
+            if (id == 'timeline' || 'memos' || 'marked') {
+              utils.js(deps.marked).then(function () {
+                utils.js(js, { defer: true });
+              });
+            } else {
+              utils.js(js, { defer: true });
+            }
+          });
+        }
+      }
+    }
+
+    // chat iphone time
+    let phoneTimes = document.querySelectorAll('.chat .status-bar .time');
+
+    if (phoneTimes.length > 0) {
+      NowTime();
+      var date = new Date();
+      var sec = date.getSeconds();
+      var firstAdjustInterval = setInterval(firstAdjustTime, 1000 * (60 - sec));
+    }
+
+    function firstAdjustTime() {
+      NowTime();
+      clearInterval(firstAdjustInterval);
+      setInterval(NowTime, 1000 * 60);
+    }
+
+    function NowTime() {
+      for (let i = 0; i < phoneTimes.length; ++i) {
+        var timeSpan = phoneTimes[i];
+        var date = new Date();
+        var hour = date.getHours();
+        var min = date.getMinutes();
+        timeSpan.innerHTML = check(hour) + ":" + check(min);
+      }
+    };
+
+    function check(val) {
+      if (val < 10) {
+        return ("0" + val);
+      }
+      return (val);
+    }
+
+    // chat quote
+    const chat_quote_obverser = new IntersectionObserver((entries, observer) => {
+      entries.filter((entry) => { return entry.isIntersecting }).sort((a, b) => a.intersectionRect.y !== b.intersectionRect.y ? a.intersectionRect.y - b.intersectionRect.y : a.intersectionRect.x - b.intersectionRect.x).forEach((entry, index) => {
+          observer.unobserve(entry.target);
+          setTimeout(() => {
+            entry.target.classList.add('quote-blink');
+            setTimeout(() => {
+              entry.target.classList.remove('quote-blink');
+            }, 1000);
+          }, Math.max(100, 16) * (index + 1));
+        });
+    });
+
+    var chatQuotes = document.querySelectorAll(".chat .talk .quote");
+    chatQuotes.forEach((quote) => {
+      quote.addEventListener('click', function () {
+        var chatCellDom = document.getElementById("quote-" + quote.getAttribute("quotedCellTag"));
+        if (chatCellDom) {
+          var chatDiv = chatCellDom.parentElement;
+          var mid = chatDiv.clientHeight / 2;
+          var offsetTop = chatCellDom.offsetTop;
+          if (offsetTop > mid - chatCellDom.clientHeight / 2) {
+            chatDiv.scrollTo({
+              top: chatCellDom.offsetTop - mid + chatCellDom.clientHeight / 2,
+              behavior: "smooth"
+            });
+          } else {
+            chatDiv.scrollTo({
+              top: 0,
+              behavior: "smooth"
+            });
+          }
+          chat_quote_obverser.observe(chatCellDom);
+        }
+      });
+    });
+  });
+</script>
+
+<script>
+  window.addEventListener('DOMContentLoaded', (event) => {
+    ctx.search = {
+      path: `/search.json`,
+    }
+    utils.js('/js/search/local-search.js', { defer: true });
+  });
+</script><script>
+  window.FPConfig = {
+    delay: 0,
+    ignoreKeywords: [],
+    maxRPS: 5,
+    hoverDelay: 25
+  };
+</script>
+<script defer src="https://gcore.jsdelivr.net/npm/flying-pages@2/flying-pages.min.js"></script><script defer src="https://gcore.jsdelivr.net/npm/vanilla-lazyload@19.1/dist/lazyload.min.js"></script>
+<script>
+  // https://www.npmjs.com/package/vanilla-lazyload
+  // Set the options globally
+  // to make LazyLoad self-initialize
+  window.lazyLoadOptions = {
+    elements_selector: ".lazy",
+  };
+  // Listen to the initialization event
+  // and get the instance of LazyLoad
+  window.addEventListener(
+    "LazyLoad::Initialized",
+    function (event) {
+      window.lazyLoadInstance = event.detail.instance;
+    },
+    false
+  );
+  document.addEventListener('DOMContentLoaded', function () {
+    window.lazyLoadInstance?.update();
+  });
+</script><script>
+  ctx.fancybox = {
+    selector: `.timenode p>img`,
+    css: `https://gcore.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css`,
+    js: `https://gcore.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js`
+  };
+  var selector = '[data-fancybox]:not(.error)';
+  if (ctx.fancybox.selector) {
+    selector += `, ${ctx.fancybox.selector}`
+  }
+  var needFancybox = document.querySelectorAll(selector).length !== 0;
+  if (!needFancybox) {
+    const els = document.getElementsByClassName('ds-memos');
+    if (els != undefined && els.length > 0) {
+      needFancybox = true;
+    }
+  }
+  if (needFancybox) {
+    utils.css(ctx.fancybox.css);
+    utils.js(ctx.fancybox.js, { defer: true }).then(function () {
+      Fancybox.bind(selector, {
+        hideScrollbar: false,
+        Thumbs: {
+          autoStart: false,
+        },
+        caption: (fancybox, slide) => {
+          return slide.triggerEl.alt || slide.triggerEl.dataset.caption || null
+        }
+      });
+    })
+  }
+</script>
+<script>
+  window.addEventListener('DOMContentLoaded', (event) => {
+    const swiper_api = document.getElementById('swiper-api');
+    if (swiper_api != undefined) {
+      utils.css(`https://unpkg.com/swiper@10.3/swiper-bundle.min.css`);
+      utils.js(`https://unpkg.com/swiper@10.3/swiper-bundle.min.js`, { defer: true }).then(function () {
+        const effect = swiper_api.getAttribute('effect') || '';
+        var swiper = new Swiper('.swiper#swiper-api', {
+          slidesPerView: 'auto',
+          spaceBetween: 8,
+          centeredSlides: true,
+          effect: effect,
+          rewind: true,
+          pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+          },
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+          },
+        });
+      })
+    }
+  });
+</script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    window.codeElements = document.querySelectorAll('.code');
+    if (window.codeElements.length > 0) {
+      ctx.copycode = {
+        default_text: `Copy`,
+        success_text: `Copied`,
+        toast: `复制成功`,
+      };
+      utils.js('/js/plugins/copycode.js');
+    }
+  });
+</script>
+
+
+<!-- inject -->
+
+</div></body></html>
