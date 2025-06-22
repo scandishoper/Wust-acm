@@ -4485,7 +4485,7 @@ p>strong>span.tag-plugin.icon {
 }
 .tag-plugin.image .image-bg {
   text-align: center;
-  border-radius: 12px;
+  border-radius: 24px;
   position: relative;
   overflow: hidden;
 }
@@ -8212,7 +8212,7 @@ body>.sitebg .siteblur:hover {
   margin: var(--gap-p) 0;
 }
 .md-text img {
-  border-radius: 12px;
+  border-radius: 24px;
   margin: auto;
   display: block;
 }
