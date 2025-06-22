@@ -51,13 +51,13 @@
   --dynamic-color: hsla(var(--hue), var(--sat), var(--light), 1);
 }
 :root[data-theme="light"] {
-  --site-bg: #f9fafb;
+  --site-bg: #f7fafc;
   --card: #fff;
-  --block: #f1f2f3;
-  --block-border: #e3e5e8;
-  --block-hover: #e9eaec;
+  --block: #f2f3f1;
+  --block-border: #e5e8e3;
+  --block-hover: #eaece9;
   --theme-link-opa: rgba(32,148,243,0.2);
-  --leftbar-bg: #e3e5e8;
+  --leftbar-bg: #e5e8e3;
   --alpha20: rgba(255,255,255,0.2);
   --alpha50: rgba(255,255,255,0.5);
   --alpha60: rgba(255,255,255,0.6);
@@ -84,13 +84,13 @@
   --text-code: #14181f;
 }
 :root[data-theme="dark"] {
-  --site-bg: #1c1e21;
-  --card: #373d43;
-  --block: #26292c;
-  --block-border: #383d42;
-  --block-hover: #2f3337;
+  --site-bg: #171e26;
+  --card: #3b4337;
+  --block: #282c26;
+  --block-border: #3c4238;
+  --block-hover: #32372f;
   --theme-link-opa: rgba(32,148,243,0.4);
-  --leftbar-bg: #383d42;
+  --leftbar-bg: #3c4238;
   --alpha20: rgba(0,0,0,0.2);
   --alpha50: rgba(0,0,0,0.5);
   --alpha60: rgba(0,0,0,0.6);
@@ -122,13 +122,13 @@
   }
 }
 :root:not([data-theme]) {
-  --site-bg: #f9fafb;
+  --site-bg: #f7fafc;
   --card: #fff;
-  --block: #f1f2f3;
-  --block-border: #e3e5e8;
-  --block-hover: #e9eaec;
+  --block: #f2f3f1;
+  --block-border: #e5e8e3;
+  --block-hover: #eaece9;
   --theme-link-opa: rgba(32,148,243,0.2);
-  --leftbar-bg: #e3e5e8;
+  --leftbar-bg: #e5e8e3;
   --alpha20: rgba(255,255,255,0.2);
   --alpha50: rgba(255,255,255,0.5);
   --alpha60: rgba(255,255,255,0.6);
@@ -156,13 +156,13 @@
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme]) {
-    --site-bg: #1c1e21;
-    --card: #373d43;
-    --block: #26292c;
-    --block-border: #383d42;
-    --block-hover: #2f3337;
+    --site-bg: #171e26;
+    --card: #3b4337;
+    --block: #282c26;
+    --block-border: #3c4238;
+    --block-hover: #32372f;
     --theme-link-opa: rgba(32,148,243,0.4);
-    --leftbar-bg: #383d42;
+    --leftbar-bg: #3c4238;
     --alpha20: rgba(0,0,0,0.2);
     --alpha50: rgba(0,0,0,0.5);
     --alpha60: rgba(0,0,0,0.6);
@@ -6333,7 +6333,6 @@ details.toc[open] >div.body section .header+.doc_tree {
 .l_left {
   background-position: center;
   background-size: cover;
-  background-image: url("https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.13/image/sidebar-bg1@small.jpg");
 }
 .l_left .leftbar-container {
   height: calc(100vh - 16px);
@@ -6341,15 +6340,6 @@ details.toc[open] >div.body section .header+.doc_tree {
   flex-direction: column;
   word-break: break-all;
   text-align: justify;
-  --blur-px: 100px;
-  --blur-bg: var(--alpha60);
-}
-@supports ((-webkit-backdrop-filter: blur(var(--blur-px))) or (backdrop-filter: blur(var(--blur-px)))) {
-  .l_left .leftbar-container {
-    background: var(--blur-bg);
-    backdrop-filter: saturate(240%) blur(var(--blur-px));
-    -webkit-backdrop-filter: saturate(240%) blur(var(--blur-px));
-  }
 }
 .widget-body .linklist {
   display: grid;
