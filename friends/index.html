@@ -96,12 +96,12 @@
       <p>快来参与讨论吧~</p>
 
     </section>
-    <section class='body cmt-body beaudar'>
+    <section class='body cmt-body giscus'>
       
 
 <svg class="loading" style="vertical-align:middle;fill:currentColor;overflow:hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2709"><path d="M832 512c0-176-144-320-320-320V128c211.2 0 384 172.8 384 384h-64zM192 512c0 176 144 320 320 320v64C300.8 896 128 723.2 128 512h64z" p-id="2710"></path></svg>
 
-<div id="beaudar" repo="xaoxuu/blog-comments" issue-term="pathname" theme="preferred-color-scheme" input-position="top" comment-order="desc" loading="false" branch="main"></div>
+<div id="giscus" src="https://giscus.app/client.js" data-repo="scandishoper/Wust-acm" data-repo-id="R_kgDOO9TnIw" data-category="Q&A" data-category-id="DIC_kwDOO9TnI84Cr66b" data-mapping="pathname" data-strict="0" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="preferred_color_scheme" data-lang="zh-CN" data-loading="lazy" crossorigin="anonymous"></div>
 
     </section>
   </div>
@@ -502,26 +502,25 @@
 <!-- optional -->
 
   <script type="module">
-  const el = document.querySelector('#comments #beaudar');
-  util.viewportLazyload(el, load_beaudar, false);
+  const el = document.querySelector('#comments #giscus');
+  util.viewportLazyload(el, load_discus, false);
 
-  function load_beaudar() {
+  function load_discus() {
     if (!el) return;
     try {
-      el.innerHTML = '';
-    } catch (error) {
-      console.error(error);
-    }
-    const script = document.createElement('script');
-    script.src = 'https://beaudar.lipk.org/client.js';
-    script.async = true;
-    for (const key of Object.keys(el.attributes)) {
-      const attr = el.attributes[key];
-      if (['class', 'id'].includes(attr.name) === false) {
-        script.setAttribute(attr.name, attr.value);
+        el.innerHTML = '';
+      } catch (error) {
+        console.error(error);
       }
-    }
-    el.appendChild(script);
+      const script = document.createElement('script');
+      script.async = true;
+      for (const key of Object.keys(el.attributes)) {
+        const attr = el.attributes[key];
+        if (['class', 'id'].includes(attr.name) === false) {
+          script.setAttribute(attr.name, attr.value);
+        }
+      }
+      el.appendChild(script);
   }
 </script>
 
