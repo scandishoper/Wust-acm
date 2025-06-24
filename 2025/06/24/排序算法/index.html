@@ -20,15 +20,15 @@
   <title>排序算法 - WustACM</title>
 
   
-    <meta name="description" content="title: 排序算法 date: 2025.2.21 cover: assets&#x2F;2cb79efe667b08d4b12e3b103d67653.jpg swiper_index: 10 top_group_index: 10 background: “#fff” updated: tags: 排序 categories: 算法笔记 keywords: description: top: to">
+    <meta name="description" content="八种排序 三种 O(n ^ 2)的排序：冒泡，选择，插入 三种不基于比较的排序：桶，基数，计数 最后是：归并排序，快速排序  一.冒泡排序 较简单，直接代码注释结合理解即可 1234567891011121314151617181920212223242526272829#include &lt;iostream&gt;using namespace std;int main()&#123;">
 <meta property="og:type" content="article">
 <meta property="og:title" content="排序算法">
 <meta property="og:url" content="http://example.com/2025/06/24/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/index.html">
 <meta property="og:site_name" content="WustACM">
-<meta property="og:description" content="title: 排序算法 date: 2025.2.21 cover: assets&#x2F;2cb79efe667b08d4b12e3b103d67653.jpg swiper_index: 10 top_group_index: 10 background: “#fff” updated: tags: 排序 categories: 算法笔记 keywords: description: top: to">
+<meta property="og:description" content="八种排序 三种 O(n ^ 2)的排序：冒泡，选择，插入 三种不基于比较的排序：桶，基数，计数 最后是：归并排序，快速排序  一.冒泡排序 较简单，直接代码注释结合理解即可 1234567891011121314151617181920212223242526272829#include &lt;iostream&gt;using namespace std;int main()&#123;">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2025-06-24T14:05:13.127Z">
-<meta property="article:modified_time" content="2025-06-24T14:10:13.815Z">
+<meta property="article:modified_time" content="2025-06-24T14:33:48.687Z">
 <meta property="article:author" content="WustACM">
 <meta name="twitter:card" content="summary_large_image">
   
@@ -77,7 +77,7 @@
   <div class="content">
     <div class="top bread-nav footnote"><div class="left"><div class="flex-row" id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a>
 <span class="sep"></span><a class="cap breadcrumb" id="menu" href="/topic">专栏</a><span class="sep"></span><a class="cap breadcrumb" id="proj" href="/2025/06/24/%E5%BF%AB%E9%80%9F%E5%B9%82-%E9%80%86%E5%85%83-%E5%8F%96%E4%BD%99%E5%85%AC%E5%BC%8F/">算法</a></div>
-<div class="flex-row" id="post-meta"><a class="author" href="/author/scandi/index.html">scandi</a><span class="sep"></span><span class="text created"><time datetime="2025-06-24T14:05:13.127Z">2025-06-24</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2025-06-24T14:10:13.815Z">2025-06-24</time></span></div></div></div>
+<div class="flex-row" id="post-meta"><a class="author" href="/author/scandi/index.html">scandi</a><span class="sep"></span><span class="text created"><time datetime="2025-06-24T14:05:13.127Z">2025-06-24</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2025-06-24T14:33:48.687Z">2025-06-24</time></span></div></div></div>
     
     <div class="bottom only-title">
       
@@ -88,37 +88,7 @@
     </div>
     
   </div>
-  </div><article class="md-text content"><hr>
-<p>title: 排序算法<br>
-date: 2025.2.21<br>
-cover: assets/2cb79efe667b08d4b12e3b103d67653.jpg<br>
-swiper_index: 10<br>
-top_group_index: 10<br>
-background: “#fff”<br>
-updated:<br>
-tags: 排序<br>
-categories: 算法笔记<br>
-keywords:<br>
-description:<br>
-top:<br>
-top_img:<br>
-comments:<br>
-toc:<br>
-toc_number:<br>
-toc_style_simple:<br>
-copyright:<br>
-copyright_author:<br>
-copyright_author_href:<br>
-copyright_url:<br>
-copyright_info:<br>
-mathjax:<br>
-katex:<br>
-aplayer:<br>
-highlight_shrink:<br>
-aside:<br>
-ai:</p>
-<hr>
-<h1>八种排序</h1>
+  </div><article class="md-text content"><h1>八种排序</h1>
 <pre><code>三种 O(n ^ 2)的排序：冒泡，选择，插入
 三种不基于比较的排序：桶，基数，计数
 最后是：归并排序，快速排序
