@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="hexo-theme" content="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.30.3" theme-name="Stellar" theme-version="1.30.3">
-  <meta name="robots" content="noindex,follow">
+  
   <meta name="generator" content="Hexo 7.3.0">
   <meta http-equiv='x-dns-prefetch-control' content='on' />
   
@@ -17,18 +17,20 @@
   <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000">
   <meta name="theme-color" content="#f9fafb">
   
-  <title>归档 - WustACM</title>
+  <title>多校1题解I/区间dp - WustACM</title>
 
   
-    <meta name="description" content="独属于wustacm的记忆">
-<meta property="og:type" content="website">
-<meta property="og:title" content="归档">
-<meta property="og:url" content="http://example.com/archives/2025/06/index.html">
+    <meta name="description" content="区间 DP 豪题！ 题面 这道题目我们首先看 n 的取值范围n &lt;&#x3D; 420所以我们可以用区间 dp来解决这道题目 首先，我们定义一个数据类型为pair&lt;int, int&gt;（也可以用 array&lt;int, 2&gt; 都是一个道理的 ）的三维数组，pair&lt;int, int&gt; 的 first代表的是不平衡度 b， second代表的是代价，重点：dp[i][j]">
+<meta property="og:type" content="article">
+<meta property="og:title" content="多校1题解I&#x2F;区间dp">
+<meta property="og:url" content="http://example.com/2025/07/16/%E5%A4%9A%E6%A0%A11%E9%A2%98%E8%A7%A3I/index.html">
 <meta property="og:site_name" content="WustACM">
-<meta property="og:description" content="独属于wustacm的记忆">
+<meta property="og:description" content="区间 DP 豪题！ 题面 这道题目我们首先看 n 的取值范围n &lt;&#x3D; 420所以我们可以用区间 dp来解决这道题目 首先，我们定义一个数据类型为pair&lt;int, int&gt;（也可以用 array&lt;int, 2&gt; 都是一个道理的 ）的三维数组，pair&lt;int, int&gt; 的 first代表的是不平衡度 b， second代表的是代价，重点：dp[i][j]">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2025-07-16T11:52:12.631Z">
+<meta property="article:modified_time" content="2025-07-16T11:57:42.551Z">
 <meta property="article:author" content="WustACM">
-<meta name="twitter:card" content="summary">
+<meta name="twitter:card" content="summary_large_image">
   
   
   
@@ -48,7 +50,7 @@
 </head>
 <body>
 
-<div class="l_body index" id="start" layout="undefined" type="tech" ><aside class="l_left"><div class="leftbar-container">
+<div class="l_body content" id="start" layout="post" type="tech" ><aside class="l_left"><div class="leftbar-container">
 
 
 <header class="header"><div class="logo-wrap"><a class="avatar" href="/about/"><div class="bg" style="opacity:0;background-image:url(https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/avatar/round/rainbow64@3x.webp);"></div><img no-lazy class="avatar" src="https://i.postimg.cc/W3bsBzfp/b-bc627c617ee9bf69e6955acca59274a8.jpg" onerror="javascript:this.classList.add('error');this.src='https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/image/2659360.svg';"></a><a class="title" href="/"><div class="main" ff="title">WustACM</div><div class="sub normal cap">我们的独立博客</div><div class="sub hover cap" style="opacity:0"> deploy by scandi</div></a></div></header>
@@ -60,28 +62,87 @@
 <nav class="menu dis-select"><a class="nav-item active" title="博客" href="/" style="color:#1BCDFC"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" d="M5.879 2.879C5 3.757 5 5.172 5 8v8c0 2.828 0 4.243.879 5.121C6.757 22 8.172 22 11 22h2c2.828 0 4.243 0 5.121-.879C19 20.243 19 18.828 19 16V8c0-2.828 0-4.243-.879-5.121C17.243 2 15.828 2 13 2h-2c-2.828 0-4.243 0-5.121.879M8.25 17a.75.75 0 0 1 .75-.75h3a.75.75 0 0 1 0 1.5H9a.75.75 0 0 1-.75-.75M9 12.25a.75.75 0 0 0 0 1.5h6a.75.75 0 0 0 0-1.5zM8.25 9A.75.75 0 0 1 9 8.25h6a.75.75 0 0 1 0 1.5H9A.75.75 0 0 1 8.25 9" clip-rule="evenodd"/><path fill="currentColor" d="M5.235 4.058C5 4.941 5 6.177 5 8v8c0 1.823 0 3.058.235 3.942L5 19.924c-.975-.096-1.631-.313-2.121-.803C2 18.243 2 16.828 2 14v-4c0-2.829 0-4.243.879-5.121c.49-.49 1.146-.707 2.121-.803zm13.53 15.884C19 19.058 19 17.822 19 16V8c0-1.823 0-3.059-.235-3.942l.235.018c.975.096 1.631.313 2.121.803C22 5.757 22 7.17 22 9.999v4c0 2.83 0 4.243-.879 5.122c-.49.49-1.146.707-2.121.803z" opacity=".5"/></svg></a><a class="nav-item" title="文档" href="/wiki" style="color:#3DC550"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" d="M14.25 4.48v3.057c0 .111 0 .27.02.406a.936.936 0 0 0 .445.683a.96.96 0 0 0 .783.072c.13-.04.272-.108.378-.159L17 8.005l1.124.534c.106.05.248.119.378.16a.958.958 0 0 0 .783-.073a.936.936 0 0 0 .444-.683c.021-.136.021-.295.021-.406V3.031c.113-.005.224-.01.332-.013C21.154 2.98 22 3.86 22 4.933v11.21c0 1.112-.906 2.01-2.015 2.08c-.97.06-2.108.179-2.985.41c-1.082.286-1.99 1.068-3.373 1.436c-.626.167-1.324.257-1.627.323V5.174c.32-.079 1.382-.203 1.674-.371c.184-.107.377-.216.576-.323m5.478 8.338a.75.75 0 0 1-.546.91l-4 1a.75.75 0 0 1-.364-1.456l4-1a.75.75 0 0 1 .91.546" clip-rule="evenodd"/><path fill="currentColor" d="M18.25 3.151c-.62.073-1.23.18-1.75.336a8.2 8.2 0 0 0-.75.27v3.182l.75-.356l.008-.005a1.13 1.13 0 0 1 .492-.13c.047 0 .094.004.138.01c.175.029.315.1.354.12l.009.005l.749.356V3.647z"/><path fill="currentColor" d="M12 5.214c-.334-.064-1.057-.161-1.718-.339C8.938 4.515 8.05 3.765 7 3.487c-.887-.234-2.041-.352-3.018-.412C2.886 3.007 2 3.9 2 4.998v11.146c0 1.11.906 2.01 2.015 2.079c.97.06 2.108.179 2.985.41c.486.129 1.216.431 1.873.726c1.005.451 2.052.797 3.127 1.034z" opacity=".5"/><path fill="currentColor" d="M4.273 12.818a.75.75 0 0 1 .91-.545l4 1a.75.75 0 1 1-.365 1.455l-4-1a.75.75 0 0 1-.545-.91m.909-4.545a.75.75 0 1 0-.364 1.455l4 1a.75.75 0 0 0 .364-1.455z"/></svg></a><a class="nav-item" title="动态" href="/trends/" style="color:#FA6400"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M20 12a8 8 0 1 1-16 0a8 8 0 0 1 16 0" opacity=".5"/><path fill="currentColor" d="M17.712 5.453c1.047-.193 2.006-.259 2.797-.152c.77.103 1.536.393 1.956 1.064c.446.714.312 1.542-.012 2.258c-.33.728-.918 1.499-1.672 2.268c-1.516 1.547-3.836 3.226-6.597 4.697c-2.763 1.472-5.495 2.484-7.694 2.92c-1.095.217-2.098.299-2.923.201c-.8-.095-1.6-.383-2.032-1.075c-.47-.752-.296-1.63.07-2.379c.375-.768 1.032-1.586 1.872-2.403L4 12.416c0 .219.083.71.168 1.146c.045.23.09.444.123.596c-.652.666-1.098 1.263-1.339 1.756c-.277.567-.208.825-.145.925c.072.116.305.305.937.38c.609.073 1.44.018 2.455-.183c2.02-.4 4.613-1.351 7.28-2.772c2.667-1.42 4.85-3.015 6.23-4.423c.694-.707 1.15-1.334 1.377-1.836c.233-.515.167-.75.107-.844c-.07-.112-.289-.294-.883-.374c-.542-.072-1.272-.041-2.163.112L16.87 5.656c.338-.101.658-.17.842-.203"/></svg></a><a class="nav-item" title="社交" href="/friends/" style="color:#F44336"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="m13.629 20.472l-.542.916c-.483.816-1.69.816-2.174 0l-.542-.916c-.42-.71-.63-1.066-.968-1.262c-.338-.197-.763-.204-1.613-.219c-1.256-.021-2.043-.098-2.703-.372a5 5 0 0 1-2.706-2.706C2 14.995 2 13.83 2 11.5v-1c0-3.273 0-4.91.737-6.112a5 5 0 0 1 1.65-1.651C5.59 2 7.228 2 10.5 2h3c3.273 0 4.91 0 6.113.737a5 5 0 0 1 1.65 1.65C22 5.59 22 7.228 22 10.5v1c0 2.33 0 3.495-.38 4.413a5 5 0 0 1-2.707 2.706c-.66.274-1.447.35-2.703.372c-.85.015-1.275.022-1.613.219c-.338.196-.548.551-.968 1.262" opacity=".5"/><path fill="currentColor" d="M10.99 14.308c-1.327-.978-3.49-2.84-3.49-4.593c0-2.677 2.475-3.677 4.5-1.609c2.025-2.068 4.5-1.068 4.5 1.609c0 1.752-2.163 3.615-3.49 4.593c-.454.335-.681.502-1.01.502c-.329 0-.556-.167-1.01-.502"/></svg></a></nav>
 </div>
 <div class="widgets">
-<widget class="widget-wrapper markdown"><div class="widget-header dis-select"><span class="name">hello~</span></div><div class="widget-body fs14"><p>欢迎来到 WustACM 的博客网站，期待你们的加入~<br>
-快快 star 我们吧~</p>
-
-<div class="linklist center" style="grid-template-columns:repeat(1,1fr);">
-<a class="link" title="关于本站" target="_blank" rel="noopener" href="https://wustacm.scandidreams.top/about/"><div class="flex"><span>关于本站</span></div></a></div></div></widget>
+<widget class="widget-wrapper post-list"><div class="widget-header dis-select"><span class="name">专栏：题解</span></div><div class="widget-body"><a class="item active" href="/2025/07/16/%E5%A4%9A%E6%A0%A11%E9%A2%98%E8%A7%A3I/"><span class="title">多校1题解I/区间dp</span><svg class="active-icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M21 11.098v4.993c0 3.096 0 4.645-.734 5.321c-.35.323-.792.526-1.263.58c-.987.113-2.14-.907-4.445-2.946c-1.02-.901-1.529-1.352-2.118-1.47a2.225 2.225 0 0 0-.88 0c-.59.118-1.099.569-2.118 1.47c-2.305 2.039-3.458 3.059-4.445 2.945a2.238 2.238 0 0 1-1.263-.579C3 20.736 3 19.188 3 16.091v-4.994C3 6.81 3 4.666 4.318 3.333C5.636 2 7.758 2 12 2c4.243 0 6.364 0 7.682 1.332C21 4.665 21 6.81 21 11.098" opacity=".5"/><path fill="currentColor" d="M9 5.25a.75.75 0 0 0 0 1.5h6a.75.75 0 0 0 0-1.5z"/></svg></a></div></widget>
 
 <widget class="widget-wrapper post-list"><div class="widget-header dis-select"><span class="name">最近更新</span></div><div class="widget-body fs14"><a class="item title" href="/2025/07/16/%E5%A4%9A%E6%A0%A11%E9%A2%98%E8%A7%A3I/"><span class="title">多校1题解I/区间dp</span></a><a class="item title" href="/2025/06/24/%E9%AB%98%E7%B2%BE%E5%BA%A6%E7%AE%97%E6%B3%95/"><span class="title">高精度算法</span></a><a class="item title" href="/2025/06/24/%E5%BF%AB%E9%80%9F%E5%B9%82-%E9%80%86%E5%85%83-%E5%8F%96%E4%BD%99%E5%85%AC%E5%BC%8F/"><span class="title">快速幂-逆元-取余公式</span></a><a class="item title" href="/2025/06/18/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B/"><span class="title">博客搭建教程</span></a><a class="item title" href="/2025/06/21/Markdown%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/"><span class="title">Markdown使用方法</span></a></div></widget>
 </div>
 <footer class="footer dis-select"><div class="social-wrap"><a class="social" href="https://github.com/scandishoper/Wust-acm" target="_blank" rel="external nofollow noopener noreferrer"><img no-lazy src="https://pngimg.com/uploads/github/github_PNG40.png" / onerror="javascript:this.classList.add('error');this.src='https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/image/2659360.svg';"></a><a class="social" href="https://qm.qq.com/q/PCCZPXhKGk" target="_blank" rel="external nofollow noopener noreferrer"><img no-lazy src="https://soft.macx.cn/upload/softicon1/2015213161645.png" / onerror="javascript:this.classList.add('error');this.src='https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/image/2659360.svg';"></a><a class="social" href="https://oj.wust-acm.top/" target="_blank" rel="external nofollow noopener noreferrer">assets/屏幕截图 2025-07-08 225418.png</a><a class="social" href="https://csdiy.wiki/" target="_blank" rel="external nofollow noopener noreferrer">assets/favicon.png</a></div></footer>
 </div></aside><div class="l_main" id="main">
 
-<header class="header mobile-only"><div class="logo-wrap"><a class="avatar" href="/about/"><div class="bg" style="opacity:0;background-image:url(https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/avatar/round/rainbow64@3x.webp);"></div><img no-lazy class="avatar" src="https://i.postimg.cc/W3bsBzfp/b-bc627c617ee9bf69e6955acca59274a8.jpg" onerror="javascript:this.classList.add('error');this.src='https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/image/2659360.svg';"></a><a class="title" href="/"><div class="main" ff="title">WustACM</div><div class="sub normal cap">我们的独立博客</div><div class="sub hover cap" style="opacity:0"> deploy by scandi</div></a></div></header>
-
- 
 
 
-<div class="navbar top"><div class="navbar-blur"><div class="navbar-container"><nav class="post"><a href="/">近期发布</a><a href="/categories/">分类</a><a href="/tags/">标签</a><a href="/topic/">专栏</a><a class="active" href="/archives/">归档</a></nav></div></div></div><div class="post-list archives"><article class="" id="archive"><div class='archive-header h4'>2025</div><div class="archive-list"><a class='post fs14' href="/2025/07/16/%E5%A4%9A%E6%A0%A11%E9%A2%98%E8%A7%A3I/"><time>07-16</time><span>多校1题解I/区间dp</span></a></div><div class="archive-list"><a class='post fs14' href="/2025/07/08/%E6%9B%BC%E5%93%88%E9%A1%BF%E8%B7%9D%E7%A6%BB%E4%B8%8E%E5%88%87%E6%AF%94%E9%9B%AA%E5%A4%AB%E8%B7%9D%E7%A6%BB%E7%9A%84%E8%BD%AC%E6%8D%A2/"><time>07-08</time><span>曼哈顿距离与切比雪夫距离的转换</span></a></div><div class="archive-list"><a class='post fs14' href="/2025/06/24/%E5%BF%AB%E9%80%9F%E5%B9%82-%E9%80%86%E5%85%83-%E5%8F%96%E4%BD%99%E5%85%AC%E5%BC%8F/"><time>06-24</time><span>快速幂-逆元-取余公式</span></a></div><div class="archive-list"><a class='post fs14' href="/2025/06/24/%E9%AB%98%E7%B2%BE%E5%BA%A6%E7%AE%97%E6%B3%95/"><time>06-24</time><span>高精度算法</span></a></div><div class="archive-list"><a class='post fs14' href="/2025/06/24/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/"><time>06-24</time><span>排序算法</span></a></div><div class="archive-list"><a class='post fs14' href="/2025/06/24/%E4%BA%8C%E5%88%86-%E4%B8%89%E5%88%86/"><time>06-24</time><span>二分\三分</span></a></div><div class="archive-list"><a class='post fs14' href="/2025/06/24/%E5%90%91%E9%87%8F%E4%BB%A3%E6%95%B0%E4%B8%8E%E7%A9%BA%E9%97%B4%E8%A7%A3%E6%9E%90%E5%87%A0%E4%BD%95/"><time>06-24</time><span>向量代数与空间解析几何</span></a></div><div class="archive-list"><a class='post fs14' href="/2025/06/24/%E5%A4%9A%E5%85%83%E5%87%BD%E6%95%B0%E5%BE%AE%E5%88%86/"><time>06-24</time><span>多元函数微分</span></a></div><div class="archive-list"><a class='post fs14' href="/2025/06/24/%E5%B9%B6%E6%9F%A5%E9%9B%86/"><time>06-24</time><span>并查集</span></a></div><div class="archive-list"><a class='post fs14' href="/2025/06/24/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E5%BA%8F%E7%90%86%E8%AE%BA/"><time>06-24</time><span>离散数学序理论</span></a></div><div class="archive-list"><a class='post fs14' href="/2025/06/21/Markdown%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/"><time>06-21</time><span>Markdown使用方法</span></a></div><div class="archive-list"><a class='post fs14' href="/2025/06/18/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B/"><time>06-18</time><span>博客搭建教程</span></a></div><div class="archive-list"><a class='post fs14' href="/2025/06/18/%E8%87%AA%E5%8A%A8%E5%88%B7%E8%AF%BE/"><time>06-18</time><span>自动刷课</span></a></div><div class="archive-list"><a class='post fs14' href="/2025/06/18/wustoj-cpp%E5%8F%82%E8%80%83%E4%BB%A3%E7%A0%81/"><time>06-18</time><span>wustoj-cpp参考代码</span></a></div><div class="archive-list"><a class='post fs14' href="/2025/06/18/LCA%E7%AC%94%E8%AE%B0/"><time>06-18</time><span>LCA笔记</span></a></div><div class="archive-list"><a class='post fs14' href="/2025/06/18/%E6%95%B0%E5%AD%97dfs/"><time>06-18</time><span>数字dfs</span></a></div></article></div>
+
+
+<div class="article banner top"><img class="bg lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://i.postimg.cc/ZnCzZKvr/2cb79efe667b08d4b12e3b103d67653.jpg">
+  <div class="content">
+    <div class="top bread-nav footnote"><div class="left"><div class="flex-row" id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a>
+<span class="sep"></span><a class="cap breadcrumb" id="menu" href="/topic">专栏</a><span class="sep"></span><a class="cap breadcrumb" id="proj" href="/2025/07/16/%E5%A4%9A%E6%A0%A11%E9%A2%98%E8%A7%A3I/">题解</a></div>
+<div class="flex-row" id="post-meta"><a class="author" href="/author/fanan/index.html">fanan</a><span class="sep"></span><span class="text created"><time datetime="2025-07-16T11:52:12.631Z">2025-07-16</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2025-07-16T11:57:42.551Z">2025-07-16</time></span></div></div></div>
+    
+    <div class="bottom only-title">
+      
+      <div class="text-area">
+        <h1 class="text title"><span>多校1题解I/区间dp</span></h1>
+        
+      </div>
+    </div>
+    
+  </div>
+  </div><article class="md-text content"><p>区间 DP 豪题！</p>
+<h3 id="题面"><a target="_blank" rel="noopener" href="https://ac.nowcoder.com/acm/contest/108298/I">题面</a></h3>
+<p>这道题目我们首先看 n 的取值范围<code>n &lt;= 420</code>所以我们可以用<strong>区间 dp</strong>来解决这道题目</p>
+<p>首先，我们定义一个数据类型为<code>pair&lt;int, int&gt;</code>（也可以用 <code>array&lt;int, 2&gt;</code> 都是一个道理的 ）的<strong>三维</strong>数组，<code>pair&lt;int, int&gt;</code> 的 <code>first</code>代表的是不平衡度 <code>b</code>， <code>second</code>代表的是代价，<strong>重点</strong>：<code>dp[i][j][k]</code> 中的 <code>k</code>代表的是有多少个 <code>pair&lt;int, int&gt;</code> 数据，每一个数据代表的是第 <code>i</code> 个铁棒到第 <code>j</code> 个铁棒这一个长铁棒，用两个小铁棒组成当前长铁棒<strong>平衡度小于等于</strong> <code>dp[i][j][k].first</code> 的<strong>最小代价</strong><code>dp[i][j][k].second</code>是多少，所以我们每次在结束状态转移的后，我们会对 <code>dp[i][j]</code> 按照 <code>dp[i][j][k].first</code> 从小到大进行排序，然后遍历一遍将当前数据的 <code>dp[i][j][k].second</code> 与前一个数据进行 <code>min</code> 操作。</p>
+<p>然后，我可以遍历一遍长铁棒的“长度”（就是由几个铁棒组成），长铁棒的起始点，还有长铁棒分成两个短铁棒的切割位置（前一段短铁棒到哪个位置），这个就是我们代码中的。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">for(int len = 1; len &lt;= n; len ++) &#123;</span><br><span class="line">	for(int i  = 1; i + len - 1 &lt;= n; i ++) &#123;</span><br><span class="line">		for(int k = i; k &lt; j; k ++) &#123;</span><br><span class="line">			int x = k;</span><br><span class="line">			//前一段短铁棒就是第i个铁棒到第x个铁棒</span><br><span class="line">			//后一段短铁棒就是第x + 1个铁棒到第j个铁棒</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>我们很好想到，假如 <code>len == 1</code> 的情况下实际上是不需要任何代价的，所以我们只需要向其中加入 <code>&#123;0, 0&#125;</code>即可。但是当 <code>len != 1</code> 时，我们就要找到我们的状态转移方程了，首先我们需要计算出他们的平衡度 <code>b</code> 我们需要求出两段短铁棒的长度，但是一个一个加很明显不是一个明智的选择，所以我们使用前缀和来进行优化，<code>sum[i]</code>代表前 i 个铁棒的长度和。那么我们就可以得出他们的平衡度应该是 <code>b = (sum[j] - sum[x] - (sum[x] - sum[i - 1])) = sum[j] + sum[i -1] - sum[x] * 2</code>，然后我们就计算他们的<strong>代价</strong> <code>cost = i到x这个铁棒平衡度小于等于b且最接近b的情况下的最小代价 + (x + 1)到j这个铁棒平衡度小于等于b且最接近b的情况下的最小代价 + 当前切割代价 </code>。那么我们该如何得到”<strong>i 到 x 这个铁棒平衡度小于等于 b 且最接近 b 的情况下的最小代价</strong>“呢？这个就要追溯到我们前面讲的 <code>dp[i][j][k]</code> 的意义了，这个代表的是从第 <code>i</code> 个铁棒到第 <code>j</code> 个铁棒组成的长铁棒，在用两个小铁棒组成长铁棒<strong>平衡度</strong>小于等于 <code>dp[i][j][k].first</code> 的情况下所需要的最小代价是 <code>dp[i][j][k].second</code>。这里可能很多朋友回想我这两个小铁棒的<strong>平衡度</strong> <code>dp[i][j][k].first</code>会不会起冲突，这个肯定是不会的，题目中要求平衡度 <code>b1 &gt; b2 &gt;...... &gt; bn - 1</code>，但是谁先谁后又没有规定，谁大谁先呗，反正他们的<strong>平衡度</strong>肯定都是<strong>小于等于</strong>我当前两小铁棍的<strong>平衡度</strong>，所以我们不需要担心这个问题。还有一点我们为什么要找<strong>平衡度</strong>最接近 <code>b</code>的数据呢，因为数据越多代价数据也就越多，可能我想要的<strong>最小代价</strong>就在最近 <code>b</code>的<strong>平衡度</strong>的位置呢，所以我为了找到这个数据，我使用二分查找来找（我的 <code>dp[i][j]</code>中的数据是有序的）。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">auto find = [&amp;](int i, int j, int b) -&gt; int &#123;</span><br><span class="line">    if (dp[i][j].empty()) return INF;</span><br><span class="line">    if (dp[i][j][0][0] &gt; b) return INF;</span><br><span class="line"></span><br><span class="line">    int l = 0, r = (int)dp[i][j].size() - 1;</span><br><span class="line">    int ans = 0;</span><br><span class="line">    while (l &lt;= r) &#123;</span><br><span class="line">        int mid = l + (r - l) / 2;</span><br><span class="line">        if (dp[i][j][mid][0] &lt;= b) &#123;</span><br><span class="line">            l   = mid + 1;</span><br><span class="line">            ans = mid;</span><br><span class="line">        &#125;</span><br><span class="line">        else</span><br><span class="line">            r = mid - 1;</span><br><span class="line">    &#125;</span><br><span class="line">    return dp[i][j][ans][1];</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>那么，我的 <code>find(i, x, b)</code> 代表的就是 ”<strong>i 到 x 这个铁棒平衡度小于等于 b 且最接近 b 的情况下的最小代价</strong>“，那我的代价应该是 <code>find(i, x, b) + find(x + 1, j, b) + min(sum[j] - sum[x], sum[x] - sum[i - 1]) * log2((sum[j] - sum[i - 1]) * 2 - 1)</code>，然后将这一组 <code>&#123;b, cost&#125;</code>数据 <code>push_back</code> 到 <code>dp[i][j]</code>中。</p>
+<p>最后，我们对 <code>dp[i][j]</code>进行排序，然后从头到尾遍历 <code>dp[i][j][k].second = min(dp[i][j][k].second, dp[i][j][k - 1].second)</code>。</p>
+<p>其他的就没啥问题了，我们要找的答案应该是从第 1 个铁棒到第 <code>n</code>个铁棒，从第 k 个铁棒截断，所需要的最小价值，也就是 <code>find(i, k, b) + find(x + 1, n, b) + log2(...) * min(...)</code>。</p>
+<p>下面是源代码：</p>
+<p>我用的是<code>array&lt;int, 2&gt;</code>，要是要用 <code>pair&lt;int, int&gt;</code> 的话可以自己换一下。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;bits/stdc++.h&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">#define int long long</span><br><span class="line">using ll  = long long;</span><br><span class="line">using ull = unsigned long long;</span><br><span class="line"></span><br><span class="line">const int N = 2e5 + 5;</span><br><span class="line">// const int M   = 1e2 + 5;</span><br><span class="line">const int MOD = 998244353;</span><br><span class="line">const int INF = 1e15;</span><br><span class="line"></span><br><span class="line">void solve() &#123;</span><br><span class="line">    int n;</span><br><span class="line">    cin &gt;&gt; n;</span><br><span class="line">    vector&lt;int&gt; sum(n + 5, 0);</span><br><span class="line">    for (int i = 1; i &lt;= n; i++) &#123;</span><br><span class="line">        cin &gt;&gt; sum[i];</span><br><span class="line">        sum[i] += sum[i - 1];</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    vector dp(n + 5, vector&lt;vector&lt;array&lt;int, 2&gt;&gt;&gt;(n + 5));</span><br><span class="line"></span><br><span class="line">    auto find = [&amp;](int i, int j, int b) -&gt; int &#123;</span><br><span class="line">        if (dp[i][j].empty()) return INF;</span><br><span class="line">        if (dp[i][j][0][0] &gt; b) return INF;</span><br><span class="line"></span><br><span class="line">        int l = 0, r = (int)dp[i][j].size() - 1;</span><br><span class="line">        int ans = 0;</span><br><span class="line">        while (l &lt;= r) &#123;</span><br><span class="line">            int mid = l + (r - l) / 2;</span><br><span class="line">            if (dp[i][j][mid][0] &lt;= b) &#123;</span><br><span class="line">                l   = mid + 1;</span><br><span class="line">                ans = mid;</span><br><span class="line">            &#125;</span><br><span class="line">            else</span><br><span class="line">                r = mid - 1;</span><br><span class="line">        &#125;</span><br><span class="line">        return dp[i][j][ans][1];</span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line">    vector&lt;int&gt; ans(n + 5, INF);</span><br><span class="line">    for (int len = 1; len &lt;= n; len++) &#123;</span><br><span class="line">        for (int i = 1; i + len - 1 &lt;= n; i++) &#123;</span><br><span class="line">            int j = i + len - 1;</span><br><span class="line">            // cout &lt;&lt; i &lt;&lt; &quot; &quot; &lt;&lt; j &lt;&lt; &quot;\n&quot;;</span><br><span class="line">            if (len == 1)</span><br><span class="line">                dp[i][j].push_back(&#123;0, 0&#125;);</span><br><span class="line">            else &#123;</span><br><span class="line">                // int p = dp[i][j].size();</span><br><span class="line">                // cout &lt;&lt; p &lt;&lt; &quot;f\n&quot;;</span><br><span class="line">                for (int k = i; k &lt; j; k++) &#123;</span><br><span class="line">                    int x   = k;</span><br><span class="line">                    int b   = abs(sum[j] + sum[i - 1] - 2 * sum[x]);</span><br><span class="line">                    int lg = log2((sum[j] - sum[i - 1]) * 2 - 1);</span><br><span class="line">                    int cost  = find(i, x, b) + find(x + 1, j, b) +</span><br><span class="line">                             min(sum[j] - sum[x], sum[x] - sum[i - 1]) * lg;</span><br><span class="line">                    ans[k] = cost;</span><br><span class="line">                    ans[k] = min(INF, ans[k]);</span><br><span class="line">                    dp[i][j].push_back(&#123;b, cost&#125;);</span><br><span class="line">                &#125;</span><br><span class="line"></span><br><span class="line">                sort(dp[i][j].begin(), dp[i][j].end());</span><br><span class="line"></span><br><span class="line">                for (int k = 1; k &lt; dp[i][j].size(); k++)</span><br><span class="line">                    dp[i][j][k][1] = min(dp[i][j][k][1], dp[i][j][k - 1][1]);</span><br><span class="line"></span><br><span class="line">                if (i == 1 &amp;&amp; j == n) &#123;</span><br><span class="line">                    for (int k = 1; k &lt; n; k++) &#123;</span><br><span class="line">                        if (ans[k] == INF)</span><br><span class="line">                            cout &lt;&lt; &quot;-1 &quot;;</span><br><span class="line">                        else</span><br><span class="line">                            cout &lt;&lt; ans[k] &lt;&lt; &quot; &quot;;</span><br><span class="line">                    &#125;</span><br><span class="line">                    cout &lt;&lt; &quot;\n&quot;;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">signed main() &#123;</span><br><span class="line">#ifdef local</span><br><span class="line">    freopen(&quot;in.txt&quot;, &quot;r&quot;, stdin);</span><br><span class="line">    freopen(&quot;out.txt&quot;, &quot;w&quot;, stdout);</span><br><span class="line">#endif</span><br><span class="line">    ios::sync_with_stdio(false);</span><br><span class="line">    cin.tie(0), cout.tie(0);</span><br><span class="line"></span><br><span class="line">    int __;</span><br><span class="line">    __ = 1;</span><br><span class="line">    cin &gt;&gt; __;</span><br><span class="line">    while (__--) &#123;</span><br><span class="line">        solve();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</article>
+<div class="article-footer">
+    <section id="license">
+      <div class="header"><span>许可协议</span></div>
+      <div class="body"><p>本文采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">署名-非商业性使用-相同方式共享 4.0 国际</a> 许可协议，转载请注明出处。</p>
+</div>
+    </section>
+    </div>
+
+<div class="related-wrap" id="read-next"><section class="body"><div class="item" id="prev"></div><div class="item" id="next"><div class="note">较早文章</div><a href="/2025/07/08/%E6%9B%BC%E5%93%88%E9%A1%BF%E8%B7%9D%E7%A6%BB%E4%B8%8E%E5%88%87%E6%AF%94%E9%9B%AA%E5%A4%AB%E8%B7%9D%E7%A6%BB%E7%9A%84%E8%BD%AC%E6%8D%A2/">曼哈顿距离与切比雪夫距离的转换</a></div></section></div>
+
+<div class="related-wrap" id="related-posts"></div>
+
+
+  <div class="related-wrap md-text" id="comments">
+    <section class='header cmt-title cap theme'>
+      <p>快来参与讨论吧~</p>
+
+    </section>
+    <section class='body cmt-body giscus'>
+      
+
+<svg class="loading" style="vertical-align:middle;fill:currentColor;overflow:hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2709"><path d="M832 512c0-176-144-320-320-320V128c211.2 0 384 172.8 384 384h-64zM192 512c0 176 144 320 320 320v64C300.8 896 128 723.2 128 512h64z" p-id="2710"></path></svg>
+
+<div id="giscus" src="https://giscus.app/client.js" data-repo="scandishoper/Wust-acm" data-repo-id="R_kgDOO9TnIw" data-category="Q&A" data-category-id="DIC_kwDOO9TnI84Cr66b" data-mapping="pathname" data-strict="0" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="preferred_color_scheme" data-lang="zh-CN" data-loading="lazy" crossorigin="anonymous"></div>
+
+    </section>
+  </div>
+
+
+
 <footer class="page-footer footnote"><hr><div class="text"><p>本站由 <a href="/">WustACM</a> 使用 <a target="_blank" rel="noopener" href="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.30.3">Stellar 1.30.3</a> 主题创建。<br>
 本博客所有文章除特别声明外，均采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 许可协议，转载请注明出处。</p>
 </div></footer>
 <div class="main-mask" onclick="sidebar.dismiss()"></div></div><aside class="l_right">
-</aside><div class='float-panel'>
+<div class="widgets">
+
+<widget class="widget-wrapper toc" id="data-toc" collapse="false"><div class="widget-header dis-select"><span class="name">本文目录</span><a class="cap-action" onclick="sidebar.toggleTOC()" ><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6h11m-11 6h11m-11 6h11M4 6h1v4m-1 0h2m0 8H4c0-1 2-2 2-3s-1-1.5-2-1"/></svg></a></div><div class="widget-body"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A2%98%E9%9D%A2"><span class="toc-text">题面</span></a></li></ol></div><div class="widget-footer">
+
+<a class="top" onclick="util.scrollTop()"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 12c0-4.714 0-7.071 1.464-8.536C4.93 2 7.286 2 12 2c4.714 0 7.071 0 8.535 1.464C22 4.93 22 7.286 22 12c0 4.714 0 7.071-1.465 8.535C19.072 22 16.714 22 12 22s-7.071 0-8.536-1.465C2 19.072 2 16.714 2 12Z"/><path stroke-linecap="round" stroke-linejoin="round" d="m9 15.5l3-3l3 3m-6-4l3-3l3 3"/></g></svg><span>回到顶部</span></a><a class="buttom" onclick="util.scrollComment()"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" d="M10.46 1.25h3.08c1.603 0 2.86 0 3.864.095c1.023.098 1.861.3 2.6.752a5.75 5.75 0 0 1 1.899 1.899c.452.738.654 1.577.752 2.6c.095 1.004.095 2.261.095 3.865v1.067c0 1.141 0 2.036-.05 2.759c-.05.735-.153 1.347-.388 1.913a5.75 5.75 0 0 1-3.112 3.112c-.805.334-1.721.408-2.977.43a10.81 10.81 0 0 0-.929.036c-.198.022-.275.054-.32.08c-.047.028-.112.078-.224.232c-.121.166-.258.396-.476.764l-.542.916c-.773 1.307-2.69 1.307-3.464 0l-.542-.916a10.605 10.605 0 0 0-.476-.764c-.112-.154-.177-.204-.224-.232c-.045-.026-.122-.058-.32-.08c-.212-.023-.49-.03-.93-.037c-1.255-.021-2.171-.095-2.976-.429A5.75 5.75 0 0 1 1.688 16.2c-.235-.566-.338-1.178-.389-1.913c-.049-.723-.049-1.618-.049-2.76v-1.066c0-1.604 0-2.86.095-3.865c.098-1.023.3-1.862.752-2.6a5.75 5.75 0 0 1 1.899-1.899c.738-.452 1.577-.654 2.6-.752C7.6 1.25 8.857 1.25 10.461 1.25M6.739 2.839c-.914.087-1.495.253-1.959.537A4.25 4.25 0 0 0 3.376 4.78c-.284.464-.45 1.045-.537 1.96c-.088.924-.089 2.11-.089 3.761v1c0 1.175 0 2.019.046 2.685c.045.659.131 1.089.278 1.441a4.25 4.25 0 0 0 2.3 2.3c.515.214 1.173.294 2.429.316h.031c.398.007.747.013 1.037.045c.311.035.616.104.909.274c.29.17.5.395.682.645c.169.232.342.525.538.856l.559.944a.52.52 0 0 0 .882 0l.559-.944c.196-.331.37-.624.538-.856c.182-.25.392-.476.682-.645c.293-.17.598-.24.909-.274c.29-.032.639-.038 1.037-.045h.032c1.255-.022 1.913-.102 2.428-.316a4.25 4.25 0 0 0 2.3-2.3c.147-.352.233-.782.278-1.441c.046-.666.046-1.51.046-2.685v-1c0-1.651 0-2.837-.089-3.762c-.087-.914-.253-1.495-.537-1.959a4.25 4.25 0 0 0-1.403-1.403c-.464-.284-1.045-.45-1.96-.537c-.924-.088-2.11-.089-3.761-.089h-3c-1.651 0-2.837 0-3.762.089" clip-rule="evenodd"/><path fill="currentColor" d="M9 11a1 1 0 1 1-2 0a1 1 0 0 1 2 0m4 0a1 1 0 1 1-2 0a1 1 0 0 1 2 0m4 0a1 1 0 1 1-2 0a1 1 0 0 1 2 0"/></svg><span>参与讨论</span></a></div></widget>
+</div></aside><div class='float-panel'>
   <button type='button' style='display:none' class='laptop-only rightbar-toggle mobile' onclick='sidebar.rightbar()'>
     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6h11m-11 6h11m-11 6h11M4 6h1v4m-1 0h2m0 8H4c0-1 2-2 2-3s-1-1.5-2-1"/></svg>
   </button>
@@ -471,6 +532,30 @@
 
 <!-- optional -->
 
+  <script type="module">
+  const el = document.querySelector('#comments #giscus');
+  util.viewportLazyload(el, load_discus, false);
+
+  function load_discus() {
+    if (!el) return;
+    try {
+        el.innerHTML = '';
+      } catch (error) {
+        console.error(error);
+      }
+      const script = document.createElement('script');
+      script.async = true;
+      for (const key of Object.keys(el.attributes)) {
+        const attr = el.attributes[key];
+        if (['class', 'id'].includes(attr.name) === false) {
+          script.setAttribute(attr.name, attr.value);
+        }
+      }
+      el.appendChild(script);
+  }
+</script>
+
+
 
 
 <script defer>
@@ -686,6 +771,26 @@
       })
     }
   });
+</script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+    processEscapes: true
+  }
+});
+MathJax.Hub.Config({
+  tex2jax: {
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+  }
+});
+MathJax.Hub.Queue(function() {
+  var all = MathJax.Hub.getAllJax(), i;
+  for(i=0; i < all.length; i += 1) {
+    all[i].SourceElement().parentNode.className += ' has-jax';
+  }
+});
 </script>
 <script>
   document.addEventListener('DOMContentLoaded', function () {
