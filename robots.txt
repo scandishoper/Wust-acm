@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Sitemap: https://blog.wustacm.org/sitemap.xml
+Sitemap: https://blog.wustacm.org/baidusitemap.xml
