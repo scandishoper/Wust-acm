@@ -20,12 +20,12 @@
   <title>vscode配置教程 - WustACM</title>
 
   
-    <meta name="description" content="VScode 配置 C&#x2F;C++编译运行环境 效果预览 本文旨在通过介绍个人对 VScode 的配置及使用来帮助大家理解 VScode 配置的大致思路。 当然，如果你觉得我的使用方法很对你胃口的话，直接照搬也无妨。 我的工作区（名为）中包含了四类文件夹  .vscode ：存放配置文件(调试用，本文不涉及) io：存放输入输出文件 src（及同类）：存放源代码 compiled：存放可执行文件">
+    <meta name="description" content="vscode 配置   VScode配置C&#x2F;C++编译运行环境&nbsp;效果预览本文旨在通过介绍个人对VScode的配置及使用来帮助大家理解VScode配置的大致思路。当然，如果你觉得我的使用方法很对你胃口的话，直接照搬也无妨。&nbsp;我的工作区（名为）中包含了四类文件夹.vscode ：存放配置文件(调试用，本文不涉及)io：存放输入输出文件src（及同类）：存放源代码compiled：存">
 <meta property="og:type" content="article">
 <meta property="og:title" content="vscode配置教程">
 <meta property="og:url" content="http://example.com/2025/08/01/vscode%E9%85%8D%E7%BD%AE/index.html">
 <meta property="og:site_name" content="WustACM">
-<meta property="og:description" content="VScode 配置 C&#x2F;C++编译运行环境 效果预览 本文旨在通过介绍个人对 VScode 的配置及使用来帮助大家理解 VScode 配置的大致思路。 当然，如果你觉得我的使用方法很对你胃口的话，直接照搬也无妨。 我的工作区（名为）中包含了四类文件夹  .vscode ：存放配置文件(调试用，本文不涉及) io：存放输入输出文件 src（及同类）：存放源代码 compiled：存放可执行文件">
+<meta property="og:description" content="vscode 配置   VScode配置C&#x2F;C++编译运行环境&nbsp;效果预览本文旨在通过介绍个人对VScode的配置及使用来帮助大家理解VScode配置的大致思路。当然，如果你觉得我的使用方法很对你胃口的话，直接照搬也无妨。&nbsp;我的工作区（名为）中包含了四类文件夹.vscode ：存放配置文件(调试用，本文不涉及)io：存放输入输出文件src（及同类）：存放源代码compiled：存">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://youke1.picui.cn/s1/2025/07/31/688b84524b416.png">
 <meta property="og:image" content="https://youke1.picui.cn/s1/2025/07/31/688b8453cbd83.png">
@@ -37,8 +37,13 @@
 <meta property="og:image" content="https://youke1.picui.cn/s1/2025/07/31/688b845721bea.png">
 <meta property="og:image" content="https://youke1.picui.cn/s1/2025/07/31/688b84577fb19.png">
 <meta property="og:image" content="https://youke1.picui.cn/s1/2025/07/31/688b8458c808e.png">
+<meta property="og:image" content="https://youke1.picui.cn/s1/2025/07/31/688b8455c582b.png">
+<meta property="og:image" content="https://youke1.picui.cn/s1/2025/07/31/688b845719592.png">
+<meta property="og:image" content="https://youke1.picui.cn/s1/2025/07/31/688b845721bea.png">
+<meta property="og:image" content="https://youke1.picui.cn/s1/2025/07/31/688b84577fb19.png">
+<meta property="og:image" content="https://youke1.picui.cn/s1/2025/07/31/688b8458c808e.png">
 <meta property="article:published_time" content="2025-07-31T17:19:11.436Z">
-<meta property="article:modified_time" content="2025-08-06T04:41:34.961Z">
+<meta property="article:modified_time" content="2025-08-06T04:47:41.318Z">
 <meta property="article:author" content="WustACM">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://youke1.picui.cn/s1/2025/07/31/688b84524b416.png">
@@ -90,7 +95,7 @@
   <div class="content">
     <div class="top bread-nav footnote"><div class="left"><div class="flex-row" id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a>
 <span class="sep"></span><a class="cap breadcrumb" id="menu" href="/topic">专栏</a><span class="sep"></span><a class="cap breadcrumb" id="proj" href="/2025/08/01/vscode%E9%85%8D%E7%BD%AE/">技术分享</a></div>
-<div class="flex-row" id="post-meta"><a class="author" href="/author/yz/index.html">yz</a><span class="sep"></span><span class="text created"><time datetime="2025-07-31T17:19:11.436Z">2025-08-01</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2025-08-06T04:41:34.961Z">2025-08-06</time></span></div></div></div>
+<div class="flex-row" id="post-meta"><a class="author" href="/author/yz/index.html">yz</a><span class="sep"></span><span class="text created"><time datetime="2025-07-31T17:19:11.436Z">2025-08-01</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2025-08-06T04:47:41.318Z">2025-08-06</time></span></div></div></div>
     
     <div class="bottom only-title">
       
@@ -101,64 +106,96 @@
     </div>
     
   </div>
-  </div><article class="md-text content"><h2 id="VScode-配置-C-C-编译运行环境">VScode 配置 C/C++编译运行环境</h2>
-<h3 id="效果预览">效果预览</h3>
-<p>本文旨在通过介绍个人对 VScode 的配置及使用来帮助大家理解 VScode 配置的大致思路。</p>
-<p>当然，如果你觉得我的使用方法很对你胃口的话，直接照搬也无妨。</p>
-<p>我的工作区（名为）中包含了四类文件夹</p>
-<ul>
-<li><code>.vscode</code> ：存放配置文件(调试用，本文不涉及)</li>
-<li><code>io</code>：存放输入输出文件</li>
-<li><code>src</code>（及同类）：存放源代码</li>
-<li><code>compiled</code>：存放可执行文件</li>
-</ul>
-<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://youke1.picui.cn/s1/2025/07/31/688b84524b416.png" alt="图1"></p>
-<p>日常写题的时候 belike：</p>
-<ul>
-<li>在 <code>src</code> 中新建一个文件（这里用 <code>practice.cpp</code> 为例子）</li>
-<li>在 <code>in.txt</code> 文件里输入样例的数据</li>
-<li>在原文件里 <s>乱写一通</s> 编写代码</li>
-<li>将文件编译运行</li>
-<li>在 <code>out.txt</code> 文件中查看输出结果</li>
-<li><s>接下来大概率要改屎了</s></li>
-</ul>
-<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://youke1.picui.cn/s1/2025/07/31/688b8453cbd83.png" alt="图2"></p>
-<p>好了差不多就是这样，如果你看到这里觉得很有信心，那么我们可以开始了！</p>
-<h3 id="从目的出发">从目的出发</h3>
-<p>懒得看的话可以直接跳到 正式开始部分</p>
-<p>不难发现，上文写题步骤中的第四步就是关键（对于配置环境而言）。</p>
-<p>细分来看，我们要能让源代码能够顺利的</p>
-<ul>
-<li>被编译、运行</li>
-<li>成功的读取输入</li>
-<li>输出到正确的地方</li>
-</ul>
-<p>那么 <strong>HOW ?</strong></p>
-<p>先别急，我们先来看看一个 C/CPP 的源文件 <s>的一生</s></p>
-<p>让我们先在桌面新建一个 <code>practice.txt</code> ，写点简单的小程序，之后将文件扩展名改为<code>.cpp</code>。</p>
-<p>然后打开你的 cmd （<code>WIN + R</code>，输入 <code>cmd</code> ，回车），敲两个命令</p>
-<ul>
-<li><code>cd Desktop</code></li>
-<li><code>type practice.cpp</code></li>
-</ul>
-<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://youke1.picui.cn/s1/2025/07/31/688b845302d53.png" alt="图3"></p>
-<p>大概就会看到这些东西 (</p>
-<h3 id="下载编译器">下载编译器</h3>
-<p>那么怎么编译运行呢？这时候就需要掏出我们的编译器了。编译器的安装可以参考<a target="_blank" rel="noopener" href="https://oi-wiki.org/tools/compiler/">编译器 - OI Wiki</a></p>
-<p>懒得点进去？那直接点<a target="_blank" rel="noopener" href="https://github.com/brechtsanders/winlibs_mingw/releases/download/14.2.0posix-12.0.0-ucrt-r3/winlibs-x86_64-posix-seh-gcc-14.2.0-mingw-w64ucrt-12.0.0-r3.zip">这里</a>下载吧。(大家也可以在群里找找，没准哪天顺手放上去了</p>
-<p>我们一般会直接使用 GCC (大家大概率用的都是 Windows)，对其他编译器感兴趣的话可以点上面的 OI WIKI 链接看看。</p>
-<p>安装好后找到你安装的地方，打开他，再打开 <code>bin</code> 文件夹。复制文件夹路径，如 <code>D:\mingw64\bin</code> 。</p>
-<p>安装的时候<strong>注意一下安装的位置</strong>，你的路径和我的可能不一样。</p>
-<p>接下来打开系统设置，搜索 <strong>编辑系统环境变量</strong> ，点击环境变量，打开 Path，点击新建，把路径粘贴上去，点击确定。</p>
-<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://youke1.picui.cn/s1/2025/07/31/688b8452d64ed.png" alt="图4"></p>
-<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://youke1.picui.cn/s1/2025/07/31/688b8453163c0.png" alt="图5"></p>
-<p>接下来打开终端， 输入 gcc -v，没啥问题的话应该就没啥问题了(</p>
-<h3 id="回到命令行">回到命令行</h3>
-<p>现在我们有源代码了，也有编译器了，那么可以开始了。</p>
-<p>首先我们来看编译器的基本用法：</p>
-<blockquote>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">g++ [选项] 源文件 -o 输出文件</span><br></pre></td></tr></table></figure>
-</blockquote>
+  </div><article class="md-text content"><p></style><title>vscode 配置</title></p>
+</head>
+<body class='typora-export os-windows'><div class='typora-export-content'>
+<div id='write'  class=''><h2 id='vscode配置cc编译运行环境'><span>VScode配置C/C++编译运行环境</span></h2><p>&nbsp;</p><h3 id='效果预览'><span>效果预览</span></h3><p><span>本文旨在通过介绍个人对VScode的配置及使用来帮助大家理解VScode配置的大致思路。</span></p><p><span>当然，如果你觉得我的使用方法很对你胃口的话，直接照搬也无妨。</span></p><p>&nbsp;</p><p><span>我的工作区（名为）中包含了四类文件夹</span></p><ul><li><p><code>.vscode</code><span> ：存放配置文件(调试用，本文不涉及)</span></p></li><li><p><code>io</code><span>：存放输入输出文件</span></p></li><li><p><code>src</code><span>（及同类）：存放源代码</span></p></li><li><p><code>compiled</code><span>：存放可执行文件</span></p></li></ul><p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://youke1.picui.cn/s1/2025/07/31/688b84524b416.png" referrerpolicy="no-referrer" alt="图1"></p><p>&nbsp;</p><p><span>日常写题的时候 belike：</span></p><ul><li><p><span>在 </span><code>src</code><span> 中新建一个文件（这里用 </span><code>practice.cpp</code><span> 为例子）</span></p></li><li><p><span>在 </span><code>in.txt</code><span> 文件里输入样例的数据</span></p></li><li><p><span>在原文件里 </span><del><span>乱写一通</span></del><span> 编写代码</span></p></li><li><p><span>将文件编译运行</span></p></li><li><p><span>在 </span><code>out.txt</code><span> 文件中查看输出结果</span></p></li><li><p><del><span>接下来大概率要改屎了</span></del></p></li></ul><p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://youke1.picui.cn/s1/2025/07/31/688b8453cbd83.png" referrerpolicy="no-referrer" alt="图2"></p><p><span>好了差不多就是这样，如果你看到这里觉得很有信心，那么我们可以开始了！</span></p><p>&nbsp;</p><h3 id='从目的出发'><span>从目的出发</span></h3><p><span>懒得看的话可以直接跳到</span><a href='#正式开始'><span>这里</span></a></p><p><span>不难发现，上文写题步骤中的第四步就是关键（对于配置环境而言）。</span></p><p><span>细分来看，我们要能让源代码能够顺利的</span></p><ul><li><p><span>被编译、运行</span></p></li><li><p><span>成功的读取输入</span></p></li><li><p><span>输出到正确的地方</span></p></li></ul><p><span>那么 </span><strong><span>HOW ?</span></strong></p><p>&nbsp;</p><p><span>先别急，我们先来看看一个 C/CPP 的源文件 </span><del><span>的一生</span></del><span> </span></p><p><span>让我们先在桌面新建一个 </span><code>practice.txt</code><span> ，写点简单的小程序，之后将文件扩展名改为</span><code>.cpp</code><span>。</span></p><p><span>然后打开你的cmd （</span><code>WIN + R</code><span>，输入 </span><code>cmd</code><span> ，回车），敲两个命令</span></p><ul><li><p><code>cd Desktop</code></p></li><li><p><code>type practice.cpp</code></p></li></ul><p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://youke1.picui.cn/s1/2025/07/31/688b845302d53.png" referrerpolicy="no-referrer" alt="图3"></p><p><span>大概就会看到这些东西 (</span></p><p>&nbsp;</p><h3 id='下载编译器'><span>下载编译器</span></h3><p><span>那么怎么编译运行呢？这时候就需要掏出我们的编译器了。编译器的安装可以参考</span><a target="_blank" rel="noopener" href='https://oi-wiki.org/tools/compiler/'><span>编译器 - OI Wiki</span></a></p><p><span>懒得点进去？那直接点</span><a target="_blank" rel="noopener" href='https://github.com/brechtsanders/winlibs_mingw/releases/download/14.2.0posix-12.0.0-ucrt-r3/winlibs-x86_64-posix-seh-gcc-14.2.0-mingw-w64ucrt-12.0.0-r3.zip'><span>这里</span></a><span>下载吧。(大家也可以在群里找找，没准哪天顺手放上去了</span></p><p>&nbsp;</p><p><span>我们一般会直接使用 GCC (大家大概率用的都是Windows)，对其他编译器感兴趣的话可以点上面的 OI WIKI 链接看看。</span></p><p><span>安装好后找到你安装的地方，打开他，再打开 </span><code>bin</code><span> 文件夹。复制文件夹路径，如 </span><code>D:\mingw64\bin</code><span> 。</span></p><p><span>安装的时候</span><strong><span>注意一下安装的位置</span></strong><span>，你的路径和我的可能不一样。</span></p><p>&nbsp;</p><p><span>接下来打开系统设置，搜索 </span><strong><span>编辑系统环境变量</span></strong><span> ，点击环境变量，打开 Path，点击新建，把路径粘贴上去，点击确定。</span></p><p>&nbsp;</p><p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://youke1.picui.cn/s1/2025/07/31/688b8452d64ed.png" referrerpolicy="no-referrer" alt="图4"></p><p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://youke1.picui.cn/s1/2025/07/31/688b8453163c0.png" referrerpolicy="no-referrer" alt="图5"></p><p><span>接下来打开终端， 输入gcc -v，没啥问题的话应该就没啥问题了(</span></p><p>&nbsp;</p><h3 id='回到命令行'><span>回到命令行</span></h3><p><span>现在我们有源代码了，也有编译器了，那么可以开始了。</span></p><p><span>首先我们来看编译器的基本用法：</span></p><blockquote><pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false" lang="bash"><div class="CodeMirror cm-s-inner cm-s-null-scroll CodeMirror-wrap" lang="bash"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 9.51562px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">g<span class="cm-operator">++</span> [选项] 源文件 <span class="cm-attribute">-o</span> 输出文件</span></pre></div></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 23px;"></div><div class="CodeMirror-gutters" style="display: none; height: 23px;"></div></div></div></pre></blockquote><p>&nbsp;</p><p><span>让我们一步步来</span></p><p><span>首先在终端里输入 </span><code>g++ practice.cpp</code><span>，我们会发现在桌面上多了一个名为 </span><code>a.exe</code><span> 的可执行文件。</span></p><p><span>是的， g++ 默认给你把编译出来的文件命名为 a 了。</span></p><p>&nbsp;</p><p><span>想自定义输出文件怎么办？ 让我们加上后半句，输入  ： </span><code>g++ practice.cpp -o practice</code></p><p><span>如何，是不是多了个 </span><code>practice.exe</code><span> 那么我们就能顺利的找到并运行他了。</span></p><p>&nbsp;</p><p><span>那么怎么让他编译完了顺便运行一下呢 ？输入指令 ： </span><code>g++ practice.cpp -o practice &amp;&amp; practice</code><span>  就好了。</span></p><p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://youke1.picui.cn/s1/2025/07/31/688b8455c582b.png" referrerpolicy="no-referrer" alt="图6"></p><p>&nbsp;</p><p>&nbsp;</p><p><span>那么说了这么多，跟我们配置vscode有什么关系呢？ </span></p><p><del><span>很明显</span></del><span> 这一套操作就是 vscode 编译运行代码时的底层操作，我们正是需要对这些命令进行定制来达到自己想要的效果。</span></p><p>&nbsp;</p><h3 id='正式开始'><span>正式开始</span></h3><p><span>首先为什么是 VScode 而不是别的 IDE 呢。答案很多 </span><del><span>自己去百度吧</span></del></p><p><span>我们要知道的是，VScode 有丰富的插件生态，我们只需要下个插件就能实现很多功能（比如我的壁纸），可以实现高度的自定义。</span></p><p>&nbsp;</p><p><span>本教程利用了插件 </span><code>code runner</code></p><p><span>另：个人使用的插件如图</span></p><p><span>没需求的话下载 </span><code>code runner</code><span> 就好了，看不太懂英语界面的话可以再下载图中倒三的汉化插件</span></p><p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://youke1.picui.cn/s1/2025/07/31/688b845719592.png" referrerpolicy="no-referrer" alt="图7"></p><p>&nbsp;</p><p><span>下好插件后重启一下，接下来就需要对 </span><code>code runner</code><span> 下手了。</span></p><p>&nbsp;</p><p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://youke1.picui.cn/s1/2025/07/31/688b845721bea.png" referrerpolicy="no-referrer" alt="图8"></p><p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://youke1.picui.cn/s1/2025/07/31/688b84577fb19.png" referrerpolicy="no-referrer" alt="图9"></p><p><span>点击设置，下拉找到这一栏，点击 </span><code>在 settings.json 中编辑</code><span> </span></p><p><span>找到 </span><code>cpp</code><span> 那一栏， 将双引号内替换为：</span></p><p><span> </span><code>cd $dir &amp;&amp; g++ -std=c++23 $fileName -o ..\\compiled\\$fileNameWithoutExt &amp;&amp;  ..\\compiled\\$fileNameWithoutExt &lt; ..\\io\\in.txt &gt; ..\\io\\out.txt</code></p><p>&nbsp;</p><p><span>替换后整行为 ：</span></p><p><span> </span><code>&quot;cpp&quot;: &quot;cd $dir &amp;&amp; g++ -std=c++23 $fileName -o ..\\compiled\\$fileNameWithoutExt &amp;&amp;  ..\\compiled\\$fileNameWithoutExt &lt; ..\\io\\in.txt &gt; ..\\io\\out.txt&quot;,</code></p><p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://youke1.picui.cn/s1/2025/07/31/688b8458c808e.png" referrerpolicy="no-referrer" alt="图10"></p><p><span>具体效果如上图中绿色的被注释掉的部分，如果想使用 clang 的话可以参照前文下好 LLVM 后敲入下面一行。</span></p><p><code>&quot;cpp&quot;: &quot;cd $dir &amp;&amp; clang++ --target=x86_64-w64-mingw32 -std=c++23 $fileName -o ..\\compiled\\$fileNameWithoutExt &amp;&amp;  ..\\compiled\\$fileNameWithoutExt &lt; ..\\io\\in.txt &gt; ..\\io\\out.txt&quot;,</code></p><p><span>那么现在 </span><code>code runner</code><span> 就调好了，仿照</span><a href='#效果预览'><span>本文第一部分</span></a><span>建好文件夹，编辑完代码后点击 </span><code>CTRL + ALT + N</code><span> 即可编译运行。</span></p><p><span>（</span><code>CTRL + ALT + N</code><span> 是 </span><code>code runner</code><span> 的默认快捷键，也可以设置为自己习惯的快捷键）</span></p><p>&nbsp;</p><p><span>那么这行命令是干啥的呢，让我们拆开来看：</span></p><ul><li><p><code>cd $dir</code><span> ：先把当前工作目录切换到变量 </span><code>$dir</code><span> 指定的路径</span></p></li><li><p><code>g++ -std=c++20 $fileName -o ..\\compiled\\$fileNameWithoutExt</code><span>：</span></p><p><span>基本编译语句，采用c++20标准，将文件编译并输出到 当前文件夹的 上级文件夹下的  </span><code>compiled</code><span> 文件夹内</span></p></li><li><p><code>..\\compiled\\$fileNameWithoutExt</code><span> ：</span></p></li></ul><p><span>	</span><span>运行刚刚编译出来的可执行文件</span></p><ul><li><p><code>&lt; ..\\io\\in.txt &gt; ..\\io\\out.txt</code></p><p><span>对输入和输出重定向，想直接在黑框中完成输入输出的话可以直接删掉这句</span></p></li></ul><p>&nbsp;</p><p><span>另外，</span><code>code runner</code><span> 默认使用 </span><code>cmd</code><span> 运行，而不是 </span><code>powershell</code><span>。由于本教程也更推荐使用 </span><code>cmd</code><span> 以避免</span><code>poweshell</code><span> 通过管道设置输入时可能造成的问题。如果实在想用 </span><code>poweshell</code><span> (比如需要clang带高亮的报错)这里给出在 </span><code>poweshell</code><span> 里使用 </span><code>cmd</code><span> 子进程运行程序的解决方案：</span></p><p><code>&quot;cpp&quot;: &quot;cmd /c  &#39;cd $dir &amp; clang++ --target=x86_64-w64-mingw32 -std=c++23 $fileName -o ..\\compiled\\$fileNameWithoutExt &amp;  ..\\compiled\\$fileNameWithoutExt &lt; ..\\io\\in.txt &gt; ..\\io\\out.txt&#39;&quot;,</code></p><p>&nbsp;</p><h3 id='几点提示'><span>几点提示</span></h3><ul><li><p><span>如果在Windows电脑上想使用 Clang 的话需要注意 </span></p></li></ul><blockquote><p><span>由于 LLVM 在 Windows 上缺失标准库，所以你仍需安装 MSVC 或 GCC。</span></p></blockquote><ul><li><p><span>对比GCC，Clang 有几个优点：</span></p><ul><li><p><span>编译速度快</span></p></li><li><p><span>内存占用小</span></p></li><li><p><span>错误提示更清晰</span></p></li></ul></li><li><p><span>本文参考：</span><a target="_blank" rel="noopener" href='https://blog.csdn.net/Resot/article/details/147296133'><span>【竞赛工具】——vscode xcpc竞赛向配置教程</span></a></p></li><li><p><span>本文未包括程序调式的配置方法，有需求的话需要等等了，之后随缘更新。</span></p></li><li><p><span>大家在配置的时候出现的各种问题有两种解决方法</span></p><ul><li><p><span>重启一下 VScode</span></p></li><li><p><span>把报错发给 AI， 让 AI 看看</span></p></li></ul></li></ul><p>&nbsp;</p></div></div>
+</body>
+</html>
+<!-- ## VScode 配置 C/C++编译运行环境
+
+### 效果预览
+
+本文旨在通过介绍个人对 VScode 的配置及使用来帮助大家理解 VScode 配置的大致思路。
+
+当然，如果你觉得我的使用方法很对你胃口的话，直接照搬也无妨。
+
+我的工作区（名为）中包含了四类文件夹
+
+- `.vscode` ：存放配置文件(调试用，本文不涉及)
+- `io`：存放输入输出文件
+- `src`（及同类）：存放源代码
+- `compiled`：存放可执行文件
+
+![图1](https://youke1.picui.cn/s1/2025/07/31/688b84524b416.png)
+
+日常写题的时候 belike：
+
+- 在 `src` 中新建一个文件（这里用 `practice.cpp` 为例子）
+- 在 `in.txt` 文件里输入样例的数据
+- 在原文件里 ~~乱写一通~~ 编写代码
+- 将文件编译运行
+- 在 `out.txt` 文件中查看输出结果
+- ~~接下来大概率要改屎了~~
+
+![图2](https://youke1.picui.cn/s1/2025/07/31/688b8453cbd83.png)
+
+好了差不多就是这样，如果你看到这里觉得很有信心，那么我们可以开始了！
+
+### 从目的出发
+
+懒得看的话可以直接跳到 正式开始部分
+
+不难发现，上文写题步骤中的第四步就是关键（对于配置环境而言）。
+
+细分来看，我们要能让源代码能够顺利的
+
+- 被编译、运行
+- 成功的读取输入
+- 输出到正确的地方
+
+那么 **HOW ?**
+
+先别急，我们先来看看一个 C/CPP 的源文件 ~~的一生~~
+
+让我们先在桌面新建一个 `practice.txt` ，写点简单的小程序，之后将文件扩展名改为`.cpp`。
+
+然后打开你的 cmd （`WIN + R`，输入 `cmd` ，回车），敲两个命令
+
+- `cd Desktop`
+- `type practice.cpp`
+
+![图3](https://youke1.picui.cn/s1/2025/07/31/688b845302d53.png)
+
+大概就会看到这些东西 (
+
+### 下载编译器
+
+那么怎么编译运行呢？这时候就需要掏出我们的编译器了。编译器的安装可以参考[编译器 - OI Wiki](https://oi-wiki.org/tools/compiler/)
+
+懒得点进去？那直接点[这里](https://github.com/brechtsanders/winlibs_mingw/releases/download/14.2.0posix-12.0.0-ucrt-r3/winlibs-x86_64-posix-seh-gcc-14.2.0-mingw-w64ucrt-12.0.0-r3.zip)下载吧。(大家也可以在群里找找，没准哪天顺手放上去了
+
+我们一般会直接使用 GCC (大家大概率用的都是 Windows)，对其他编译器感兴趣的话可以点上面的 OI WIKI 链接看看。
+
+安装好后找到你安装的地方，打开他，再打开 `bin` 文件夹。复制文件夹路径，如 `D:\mingw64\bin` 。
+
+安装的时候**注意一下安装的位置**，你的路径和我的可能不一样。
+
+接下来打开系统设置，搜索 **编辑系统环境变量** ，点击环境变量，打开 Path，点击新建，把路径粘贴上去，点击确定。
+
+![图4](https://youke1.picui.cn/s1/2025/07/31/688b8452d64ed.png)
+
+![图5](https://youke1.picui.cn/s1/2025/07/31/688b8453163c0.png)
+
+接下来打开终端， 输入 gcc -v，没啥问题的话应该就没啥问题了(
+
+### 回到命令行
+
+现在我们有源代码了，也有编译器了，那么可以开始了。
+
+首先我们来看编译器的基本用法：
+
+> <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">g++ [选项] 源文件 -o 输出文件</span><br></pre></td></tr></table></figure>
 <p>让我们一步步来</p>
 <p>首先在终端里输入 <code>g++ practice.cpp</code>，我们会发现在桌面上多了一个名为 <code>a.exe</code> 的可执行文件。</p>
 <p>是的， g++ 默认给你把编译出来的文件命名为 a 了。</p>
@@ -240,6 +277,7 @@
 </ul>
 </li>
 </ul>
+<p>— --&gt;</p>
 </article>
 <div class="article-footer">
     <section id="license">
@@ -282,7 +320,7 @@
 <div class="main-mask" onclick="sidebar.dismiss()"></div></div><aside class="l_right">
 <div class="widgets">
 
-<widget class="widget-wrapper toc" id="data-toc" collapse="false"><div class="widget-header dis-select"><span class="name">本文目录</span><a class="cap-action" onclick="sidebar.toggleTOC()" ><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6h11m-11 6h11m-11 6h11M4 6h1v4m-1 0h2m0 8H4c0-1 2-2 2-3s-1-1.5-2-1"/></svg></a></div><div class="widget-body"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#VScode-%E9%85%8D%E7%BD%AE-C-C-%E7%BC%96%E8%AF%91%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83"><span class="toc-text">VScode 配置 C&#x2F;C++编译运行环境</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%88%E6%9E%9C%E9%A2%84%E8%A7%88"><span class="toc-text">效果预览</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%8E%E7%9B%AE%E7%9A%84%E5%87%BA%E5%8F%91"><span class="toc-text">从目的出发</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%8B%E8%BD%BD%E7%BC%96%E8%AF%91%E5%99%A8"><span class="toc-text">下载编译器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%9E%E5%88%B0%E5%91%BD%E4%BB%A4%E8%A1%8C"><span class="toc-text">回到命令行</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%AD%A3%E5%BC%8F%E5%BC%80%E5%A7%8B"><span class="toc-text">正式开始</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%87%A0%E7%82%B9%E6%8F%90%E7%A4%BA"><span class="toc-text">几点提示</span></a></li></ol></li></ol></div><div class="widget-footer">
+<widget class="widget-wrapper toc" id="data-toc" collapse="false"><div class="widget-header dis-select"><span class="name">本文目录</span><a class="cap-action" onclick="sidebar.toggleTOC()" ><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6h11m-11 6h11m-11 6h11M4 6h1v4m-1 0h2m0 8H4c0-1 2-2 2-3s-1-1.5-2-1"/></svg></a></div><div class="widget-body"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#vscode%E9%85%8D%E7%BD%AEcc%E7%BC%96%E8%AF%91%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83"><span class="toc-text">VScode配置C&#x2F;C++编译运行环境</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%88%E6%9E%9C%E9%A2%84%E8%A7%88"><span class="toc-text">效果预览</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%8E%E7%9B%AE%E7%9A%84%E5%87%BA%E5%8F%91"><span class="toc-text">从目的出发</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%8B%E8%BD%BD%E7%BC%96%E8%AF%91%E5%99%A8"><span class="toc-text">下载编译器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%9E%E5%88%B0%E5%91%BD%E4%BB%A4%E8%A1%8C"><span class="toc-text">回到命令行</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%AD%A3%E5%BC%8F%E5%BC%80%E5%A7%8B"><span class="toc-text">正式开始</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%87%A0%E7%82%B9%E6%8F%90%E7%A4%BA"><span class="toc-text">几点提示</span></a></li></ol></li></ol></div><div class="widget-footer">
 
 <a class="top" onclick="util.scrollTop()"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 12c0-4.714 0-7.071 1.464-8.536C4.93 2 7.286 2 12 2c4.714 0 7.071 0 8.535 1.464C22 4.93 22 7.286 22 12c0 4.714 0 7.071-1.465 8.535C19.072 22 16.714 22 12 22s-7.071 0-8.536-1.465C2 19.072 2 16.714 2 12Z"/><path stroke-linecap="round" stroke-linejoin="round" d="m9 15.5l3-3l3 3m-6-4l3-3l3 3"/></g></svg><span>回到顶部</span></a><a class="buttom" onclick="util.scrollComment()"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" d="M10.46 1.25h3.08c1.603 0 2.86 0 3.864.095c1.023.098 1.861.3 2.6.752a5.75 5.75 0 0 1 1.899 1.899c.452.738.654 1.577.752 2.6c.095 1.004.095 2.261.095 3.865v1.067c0 1.141 0 2.036-.05 2.759c-.05.735-.153 1.347-.388 1.913a5.75 5.75 0 0 1-3.112 3.112c-.805.334-1.721.408-2.977.43a10.81 10.81 0 0 0-.929.036c-.198.022-.275.054-.32.08c-.047.028-.112.078-.224.232c-.121.166-.258.396-.476.764l-.542.916c-.773 1.307-2.69 1.307-3.464 0l-.542-.916a10.605 10.605 0 0 0-.476-.764c-.112-.154-.177-.204-.224-.232c-.045-.026-.122-.058-.32-.08c-.212-.023-.49-.03-.93-.037c-1.255-.021-2.171-.095-2.976-.429A5.75 5.75 0 0 1 1.688 16.2c-.235-.566-.338-1.178-.389-1.913c-.049-.723-.049-1.618-.049-2.76v-1.066c0-1.604 0-2.86.095-3.865c.098-1.023.3-1.862.752-2.6a5.75 5.75 0 0 1 1.899-1.899c.738-.452 1.577-.654 2.6-.752C7.6 1.25 8.857 1.25 10.461 1.25M6.739 2.839c-.914.087-1.495.253-1.959.537A4.25 4.25 0 0 0 3.376 4.78c-.284.464-.45 1.045-.537 1.96c-.088.924-.089 2.11-.089 3.761v1c0 1.175 0 2.019.046 2.685c.045.659.131 1.089.278 1.441a4.25 4.25 0 0 0 2.3 2.3c.515.214 1.173.294 2.429.316h.031c.398.007.747.013 1.037.045c.311.035.616.104.909.274c.29.17.5.395.682.645c.169.232.342.525.538.856l.559.944a.52.52 0 0 0 .882 0l.559-.944c.196-.331.37-.624.538-.856c.182-.25.392-.476.682-.645c.293-.17.598-.24.909-.274c.29-.032.639-.038 1.037-.045h.032c1.255-.022 1.913-.102 2.428-.316a4.25 4.25 0 0 0 2.3-2.3c.147-.352.233-.782.278-1.441c.046-.666.046-1.51.046-2.685v-1c0-1.651 0-2.837-.089-3.762c-.087-.914-.253-1.495-.537-1.959a4.25 4.25 0 0 0-1.403-1.403c-.464-.284-1.045-.45-1.96-.537c-.924-.088-2.11-.089-3.761-.089h-3c-1.651 0-2.837 0-3.762.089" clip-rule="evenodd"/><path fill="currentColor" d="M9 11a1 1 0 1 1-2 0a1 1 0 0 1 2 0m4 0a1 1 0 1 1-2 0a1 1 0 0 1 2 0m4 0a1 1 0 1 1-2 0a1 1 0 0 1 2 0"/></svg><span>参与讨论</span></a></div></widget>
 </div></aside><div class='float-panel'>
