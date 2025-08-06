@@ -38,7 +38,7 @@
 <meta property="og:image" content="https://youke1.picui.cn/s1/2025/07/31/688b84577fb19.png">
 <meta property="og:image" content="https://youke1.picui.cn/s1/2025/07/31/688b8458c808e.png">
 <meta property="article:published_time" content="2025-07-31T17:19:11.436Z">
-<meta property="article:modified_time" content="2025-08-01T01:16:43.812Z">
+<meta property="article:modified_time" content="2025-08-06T04:38:25.060Z">
 <meta property="article:author" content="WustACM">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://youke1.picui.cn/s1/2025/07/31/688b84524b416.png">
@@ -90,7 +90,7 @@
   <div class="content">
     <div class="top bread-nav footnote"><div class="left"><div class="flex-row" id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a>
 <span class="sep"></span><a class="cap breadcrumb" id="menu" href="/topic">专栏</a><span class="sep"></span><a class="cap breadcrumb" id="proj" href="/2025/08/01/vscode%E9%85%8D%E7%BD%AE/">技术分享</a></div>
-<div class="flex-row" id="post-meta"><a class="author" href="/author/yz/index.html">yz</a><span class="sep"></span><span class="text created"><time datetime="2025-07-31T17:19:11.436Z">2025-08-01</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2025-08-01T01:16:43.812Z">2025-08-01</time></span></div></div></div>
+<div class="flex-row" id="post-meta"><a class="author" href="/author/yz/index.html">yz</a><span class="sep"></span><span class="text created"><time datetime="2025-07-31T17:19:11.436Z">2025-08-01</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2025-08-06T04:38:25.060Z">2025-08-06</time></span></div></div></div>
     
     <div class="bottom only-title">
       
@@ -125,6 +125,7 @@
 <p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://youke1.picui.cn/s1/2025/07/31/688b8453cbd83.png" alt="图2"></p>
 <p>好了差不多就是这样，如果你看到这里觉得很有信心，那么我们可以开始了！</p>
 <h3 id="从目的出发">从目的出发</h3>
+<p>懒得看的话可以直接跳到[这里](# 正式开始)</p>
 <p>不难发现，上文写题步骤中的第四步就是关键（对于配置环境而言）。</p>
 <p>细分来看，我们要能让源代码能够顺利的</p>
 <ul>
@@ -134,8 +135,8 @@
 </ul>
 <p>那么 <strong>HOW ?</strong></p>
 <p>先别急，我们先来看看一个 C/CPP 的源文件 <s>的一生</s></p>
-<p>让我们先在桌面新建一个 <code>practice.txt</code> ，用记事本打开它并写点简单的小程序， 然后将它的后缀改为<code>.cpp</code> 即改为 <code>practice.cpp</code></p>
-<p>然后打开你的终端 （<code>WIN + R</code>，输入 <code>cmd</code> ，回车），敲两个命令</p>
+<p>让我们先在桌面新建一个 <code>practice.txt</code> ，写点简单的小程序，之后将文件扩展名改为<code>.cpp</code>。</p>
+<p>然后打开你的 cmd （<code>WIN + R</code>，输入 <code>cmd</code> ，回车），敲两个命令</p>
 <ul>
 <li><code>cd Desktop</code></li>
 <li><code>type practice.cpp</code></li>
@@ -161,7 +162,7 @@
 <p>让我们一步步来</p>
 <p>首先在终端里输入 <code>g++ practice.cpp</code>，我们会发现在桌面上多了一个名为 <code>a.exe</code> 的可执行文件。</p>
 <p>是的， g++ 默认给你把编译出来的文件命名为 a 了。</p>
-<p>想自定义输出文件怎么办？ 让我们加上后半句，在终端里输入 ： <code>g++ practice.cpp -o practice</code></p>
+<p>想自定义输出文件怎么办？ 让我们加上后半句，输入 ： <code>g++ practice.cpp -o practice</code></p>
 <p>如何，是不是多了个 <code>practice.exe</code> 那么我们就能顺利的找到并运行他了。</p>
 <p>那么怎么让他编译完了顺便运行一下呢 ？输入指令 ： <code>g++ practice.cpp -o practice &amp;&amp; practice</code> 就好了。</p>
 <p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://youke1.picui.cn/s1/2025/07/31/688b8455c582b.png" alt="图6"></p>
@@ -179,12 +180,13 @@
 <p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://youke1.picui.cn/s1/2025/07/31/688b84577fb19.png" alt="图9"></p>
 <p>点击设置，下拉找到这一栏，点击 <code>在 settings.json 中编辑</code></p>
 <p>找到 <code>cpp</code> 那一栏， 将双引号内替换为：</p>
-<p><code>cd $dir &amp;&amp; g++ -std=c++20 $fileName -o ..\\compiled\\$fileNameWithoutExt &amp;&amp;  ..\\compiled\\$fileNameWithoutExt &lt; ..\\io\\in.txt &gt; ..\\io\\out.txt</code></p>
+<p><code>cd $dir &amp;&amp; g++ -std=c++23 $fileName -o ..\\compiled\\$fileNameWithoutExt &amp;&amp;  ..\\compiled\\$fileNameWithoutExt &lt; ..\\io\\in.txt &gt; ..\\io\\out.txt</code></p>
 <p>替换后整行为 ：</p>
-<p><code>&quot;cpp&quot;: &quot;cd $dir &amp;&amp; g++ -std=c++20 $fileName -o ..\\compiled\\$fileNameWithoutExt &amp;&amp;  ..\\compiled\\$fileNameWithoutExt &lt; ..\\io\\in.txt &gt; ..\\io\\out.txt&quot;,</code></p>
+<p><code>&quot;cpp&quot;: &quot;cd $dir &amp;&amp; g++ -std=c++23 $fileName -o ..\\compiled\\$fileNameWithoutExt &amp;&amp;  ..\\compiled\\$fileNameWithoutExt &lt; ..\\io\\in.txt &gt; ..\\io\\out.txt&quot;,</code></p>
 <p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://youke1.picui.cn/s1/2025/07/31/688b8458c808e.png" alt="图10"></p>
 <p>具体效果如上图中绿色的被注释掉的部分，如果想使用 clang 的话可以参照前文下好 LLVM 后敲入下面一行。</p>
-<p>那么现在就可以顺利使用了，编辑完代码后点击 <code>CTRL + ALT + N</code> 即可编译运行。</p>
+<p><code>&quot;cpp&quot;: &quot;cd $dir &amp;&amp; clang++ --target=x86_64-w64-mingw32 -std=c++23 $fileName -o ..\\compiled\\$fileNameWithoutExt &amp;&amp;  ..\\compiled\\$fileNameWithoutExt &lt; ..\\io\\in.txt &gt; ..\\io\\out.txt&quot;,</code></p>
+<p>那么现在 <code>code runner</code> 就调好了，仿照[本文第一部分](# 效果预览)建好文件夹，编辑完代码后点击 <code>CTRL + ALT + N</code> 即可编译运行。</p>
 <p>（<code>CTRL + ALT + N</code> 是 <code>code runner</code> 的默认快捷键，也可以设置为自己习惯的快捷键）</p>
 <p>那么这行命令是干啥的呢，让我们拆开来看：</p>
 <ul>
@@ -193,7 +195,7 @@
 </li>
 <li>
 <p><code>g++ -std=c++20 $fileName -o ..\\compiled\\$fileNameWithoutExt</code>：</p>
-<p>基本编译语句，采用 c++20 标准，将文件编译并输出到 <code>compiled</code> 文件夹内</p>
+<p>基本编译语句，采用 c++20 标准，将文件编译并输出到 当前文件夹的 上级文件夹下的 <code>compiled</code> 文件夹内</p>
 </li>
 <li>
 <p><code>..\\compiled\\$fileNameWithoutExt</code> ：</p>
@@ -206,14 +208,16 @@
 <p>对输入和输出重定向，想直接在黑框中完成输入输出的话可以直接删掉这句</p>
 </li>
 </ul>
+<p>另外，<code>code runner</code> 默认使用 <code>cmd</code> 运行，而不是 <code>powershell</code>。由于本教程也更推荐使用 <code>cmd</code> 以避免<code>poweshell</code> 通过管道设置输入时可能造成的问题。如果实在想用 <code>poweshell</code> (比如需要 clang 带高亮的报错)这里给出在 <code>poweshell</code> 里使用 <code>cmd</code> 子进程运行程序的解决方案：</p>
+<p><code> &quot;cpp&quot;: &quot;cmd /c  'cd $dir &amp; clang++ --target=x86_64-w64-mingw32 -std=c++23 $fileName -o ..\\compiled\\$fileNameWithoutExt &amp;  ..\\compiled\\$fileNameWithoutExt &lt; ..\\io\\in.txt &gt; ..\\io\\out.txt'&quot;,</code></p>
 <h3 id="几点提示">几点提示</h3>
 <ul>
-<li>
-<p>如果在 Windows 电脑上想使用 Clang 的话需要注意</p>
+<li>如果在 Windows 电脑上想使用 Clang 的话需要注意</li>
+</ul>
 <blockquote>
 <p>由于 LLVM 在 Windows 上缺失标准库，所以你仍需安装 MSVC 或 GCC。</p>
 </blockquote>
-</li>
+<ul>
 <li>
 <p>对比 GCC，Clang 有几个优点：</p>
 <ul>
