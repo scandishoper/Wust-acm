@@ -2,6 +2,33 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://example.com/wiki/Algorithm_template/p2.html</loc>
+    
+    <lastmod>2025-08-19</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/wiki/Algorithm_template/p1.html</loc>
+    
+    <lastmod>2025-08-19</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/wiki/Algorithm_template/p0.html</loc>
+    
+    <lastmod>2025-08-19</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://example.com/wiki/Algorithm_template/p3.html</loc>
     
     <lastmod>2025-08-19</lastmod>
@@ -194,33 +221,6 @@
     <loc>http://example.com/wiki/Survival_Guide/p8.html</loc>
     
     <lastmod>2025-07-26</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://example.com/wiki/Algorithm_template/p1.html</loc>
-    
-    <lastmod>2025-07-23</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://example.com/wiki/Algorithm_template/p2.html</loc>
-    
-    <lastmod>2025-07-23</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://example.com/wiki/Algorithm_template/p0.html</loc>
-    
-    <lastmod>2025-07-23</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
