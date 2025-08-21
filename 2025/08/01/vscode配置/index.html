@@ -20,12 +20,12 @@
   <title>vscode配置教程 - WustACM</title>
 
   
-    <meta name="description" content="&lt;!doctype html&gt;    vscode配置  VScode配置C&#x2F;C++编译运行环境 &nbsp; 效果预览 本文旨在通过介绍个人对VScode的配置及使用来帮助大家理解VScode配置的大致思路。 当然，如果你觉得我的使用方法很对你胃口的话，直接照搬也无妨。 &nbsp; 我的工作区（名为）中包含了四类文件夹  .vscode ：存放配置文件(调试用，本文不涉及) io：">
+    <meta name="description" content="vscode配置  VScode配置C&#x2F;C++编译运行环境 &nbsp; 效果预览 本文旨在通过介绍个人对VScode的配置及使用来帮助大家理解VScode配置的大致思路。 当然，如果你觉得我的使用方法很对你胃口的话，直接照搬也无妨。 &nbsp; 我的工作区（名为）中包含了四类文件夹  .vscode ：存放配置文件(调试用，本文不涉及) io：存放输入输出文件 src（及同类）：存放源代">
 <meta property="og:type" content="article">
 <meta property="og:title" content="vscode配置教程">
 <meta property="og:url" content="http://example.com/2025/08/01/vscode%E9%85%8D%E7%BD%AE/index.html">
 <meta property="og:site_name" content="WustACM">
-<meta property="og:description" content="&lt;!doctype html&gt;    vscode配置  VScode配置C&#x2F;C++编译运行环境 &nbsp; 效果预览 本文旨在通过介绍个人对VScode的配置及使用来帮助大家理解VScode配置的大致思路。 当然，如果你觉得我的使用方法很对你胃口的话，直接照搬也无妨。 &nbsp; 我的工作区（名为）中包含了四类文件夹  .vscode ：存放配置文件(调试用，本文不涉及) io：">
+<meta property="og:description" content="vscode配置  VScode配置C&#x2F;C++编译运行环境 &nbsp; 效果预览 本文旨在通过介绍个人对VScode的配置及使用来帮助大家理解VScode配置的大致思路。 当然，如果你觉得我的使用方法很对你胃口的话，直接照搬也无妨。 &nbsp; 我的工作区（名为）中包含了四类文件夹  .vscode ：存放配置文件(调试用，本文不涉及) io：存放输入输出文件 src（及同类）：存放源代">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://i.postimg.cc/Rh40kR54/001.png">
 <meta property="og:image" content="https://i.postimg.cc/bvnNdMqq/002.png">
@@ -37,8 +37,13 @@
 <meta property="og:image" content="https://i.postimg.cc/wjZjqH8W/008.png">
 <meta property="og:image" content="https://i.postimg.cc/DyfZ5BPc/009.png">
 <meta property="og:image" content="https://i.postimg.cc/fWfyx6mL/010.png">
+<meta property="og:image" content="https://i.postimg.cc/NM1MCnnd/006.png">
+<meta property="og:image" content="https://i.postimg.cc/0QgjfvV6/007.png">
+<meta property="og:image" content="https://i.postimg.cc/wjZjqH8W/008.png">
+<meta property="og:image" content="https://i.postimg.cc/DyfZ5BPc/009.png">
+<meta property="og:image" content="https://i.postimg.cc/fWfyx6mL/010.png">
 <meta property="article:published_time" content="2025-07-31T17:19:11.436Z">
-<meta property="article:modified_time" content="2025-08-21T13:05:37.013Z">
+<meta property="article:modified_time" content="2025-08-21T13:10:50.747Z">
 <meta property="article:author" content="WustACM">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://i.postimg.cc/Rh40kR54/001.png">
@@ -90,7 +95,7 @@
   <div class="content">
     <div class="top bread-nav footnote"><div class="left"><div class="flex-row" id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a>
 <span class="sep"></span><a class="cap breadcrumb" id="menu" href="/topic">专栏</a><span class="sep"></span><a class="cap breadcrumb" id="proj" href="/2025/08/01/vscode%E9%85%8D%E7%BD%AE/">技术分享</a></div>
-<div class="flex-row" id="post-meta"><a class="author" href="/author/yz/index.html">yz</a><span class="sep"></span><span class="text created"><time datetime="2025-07-31T17:19:11.436Z">2025-08-01</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2025-08-21T13:05:37.013Z">2025-08-21</time></span></div></div></div>
+<div class="flex-row" id="post-meta"><a class="author" href="/author/yz/index.html">yz</a><span class="sep"></span><span class="text created"><time datetime="2025-07-31T17:19:11.436Z">2025-08-01</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2025-08-21T13:10:50.747Z">2025-08-21</time></span></div></div></div>
     
     <div class="bottom only-title">
       
@@ -101,8 +106,7 @@
     </div>
     
   </div>
-  </div><article class="md-text content"><p>&lt;!doctype html&gt;</p>
-<html>
+  </div><article class="md-text content"><html>
 <head>
 <meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
 <title>vscode配置</title>
@@ -228,7 +232,7 @@
 <p>	运行刚刚编译出来的可执行文件</p>
 <ul>
 <li><p><code>&lt; ..\\io\\in.txt &gt; ..\\io\\out.txt</code></p>
-<p>对输入和输出重定向，想直接在黑框中完成输入输出的话可以直接删掉这句</p>
+<p>对输入和输出重定向</p>
 </li>
 </ul>
 <p>&nbsp;</p>
@@ -263,6 +267,192 @@
 <p>&nbsp;</p>
 </body>
 </html>
+<!-- ## VScode配置C/C++编译运行环境
+
+
+
+### 效果预览
+
+本文旨在通过介绍个人对VScode的配置及使用来帮助大家理解VScode配置的大致思路。
+
+当然，如果你觉得我的使用方法很对你胃口的话，直接照搬也无妨。
+
+
+
+我的工作区（名为）中包含了四类文件夹
+
+- `.vscode` ：存放配置文件(调试用，本文不涉及)
+- `io`：存放输入输出文件
+- `src`（及同类）：存放源代码
+- `compiled`：存放可执行文件
+
+![图1](https://i.postimg.cc/Rh40kR54/001.png)
+
+
+
+日常写题的时候 belike：
+
+- 在 `src` 中新建一个文件（这里用 `practice.cpp` 为例子）
+- 在 `in.txt` 文件里输入样例的数据
+- 在原文件里 ~~乱写一通~~ 编写代码
+- 将文件编译运行
+- 在 `out.txt` 文件中查看输出结果
+- ~~接下来大概率要改屎了~~
+
+![图2](https://i.postimg.cc/bvnNdMqq/002.png)
+
+好了差不多就是这样，如果你看到这里觉得很有信心，那么我们可以开始了！
+
+
+
+### 从目的出发
+
+懒得看的话可以直接跳到[这里](# 正式开始)
+
+不难发现，上文写题步骤中的第四步就是关键（对于配置环境而言）。
+
+细分来看，我们要能让源代码能够顺利的
+
+- 被编译、运行
+- 成功的读取输入
+- 输出到正确的地方
+
+那么 **HOW ?**
+
+
+
+先别急，我们先来看看一个 C/CPP 的源文件 ~~的一生~~ 
+
+让我们先在桌面新建一个 `practice.txt` ，写点简单的小程序，之后将文件扩展名改为`.cpp`。
+
+然后打开你的cmd （`WIN + R`，输入 `cmd` ，回车），敲两个命令
+
+- `cd Desktop`
+- `type practice.cpp`
+
+![图3](https://i.postimg.cc/kgB5PGZ6/003.png)
+
+大概就会看到这些东西 (
+
+
+
+### 下载编译器
+
+那么怎么编译运行呢？这时候就需要掏出我们的编译器了。编译器的安装可以参考[编译器 - OI Wiki](https://oi-wiki.org/tools/compiler/)
+
+懒得点进去？那直接点[这里](https://github.com/brechtsanders/winlibs_mingw/releases/download/14.2.0posix-12.0.0-ucrt-r3/winlibs-x86_64-posix-seh-gcc-14.2.0-mingw-w64ucrt-12.0.0-r3.zip)下载吧。(大家也可以在群里找找，没准哪天顺手放上去了
+
+
+
+我们一般会直接使用 GCC (大家大概率用的都是Windows)，对其他编译器感兴趣的话可以点上面的 OI WIKI 链接看看。
+
+安装好后找到你安装的地方，打开他，再打开 `bin` 文件夹。复制文件夹路径，如 `D:\mingw64\bin` 。
+
+安装的时候**注意一下安装的位置**，你的路径和我的可能不一样。
+
+
+
+接下来打开系统设置，搜索 **编辑系统环境变量** ，点击环境变量，打开 Path，点击新建，把路径粘贴上去，点击确定。
+
+
+
+![图4](https://i.postimg.cc/hPCGYTCR/004.png)
+
+![图5](https://i.postimg.cc/Rhd04H4f/005.png)
+
+接下来打开终端， 输入gcc -v，没啥问题的话应该就没啥问题了(
+
+
+
+### 回到命令行
+
+现在我们有源代码了，也有编译器了，那么可以开始了。
+
+首先我们来看编译器的基本用法：
+
+> <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">g++ [选项] 源文件 -o 输出文件</span><br></pre></td></tr></table></figure>
+<p>让我们一步步来</p>
+<p>首先在终端里输入 <code>g++ practice.cpp</code>，我们会发现在桌面上多了一个名为 <code>a.exe</code> 的可执行文件。</p>
+<p>是的， g++ 默认给你把编译出来的文件命名为 a 了。</p>
+<p>想自定义输出文件怎么办？ 让我们加上后半句，输入  ： <code>g++ practice.cpp -o practice</code></p>
+<p>如何，是不是多了个 <code>practice.exe</code> 那么我们就能顺利的找到并运行他了。</p>
+<p>那么怎么让他编译完了顺便运行一下呢 ？输入指令 ： <code>g++ practice.cpp -o practice &amp;&amp; practice</code>  就好了。</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://i.postimg.cc/NM1MCnnd/006.png" alt="图6"></p>
+<p>那么说了这么多，跟我们配置vscode有什么关系呢？</p>
+<p><s>很明显</s> 这一套操作就是 vscode 编译运行代码时的底层操作，我们正是需要对这些命令进行定制来达到自己想要的效果。</p>
+<h3 id="正式开始">正式开始</h3>
+<p>首先为什么是 VScode 而不是别的 IDE 呢。答案很多 <s>自己去百度吧</s></p>
+<p>我们要知道的是，VScode 有丰富的插件生态，我们只需要下个插件就能实现很多功能（比如我的壁纸），可以实现高度的自定义。</p>
+<p>本教程利用了插件 <code>code runner</code></p>
+<p>另：个人使用的插件如图</p>
+<p>没需求的话下载 <code>code runner</code> 就好了，看不太懂英语界面的话可以再下载图中倒三的汉化插件</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://i.postimg.cc/0QgjfvV6/007.png" alt="图7"></p>
+<p>下好插件后重启一下，接下来就需要对 <code>code runner</code> 下手了。</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://i.postimg.cc/wjZjqH8W/008.png" alt="图8"></p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://i.postimg.cc/DyfZ5BPc/009.png" alt="图9"></p>
+<p>点击设置，下拉找到这一栏，点击 <code>在 settings.json 中编辑</code></p>
+<p>找到 <code>cpp</code> 那一栏， 将双引号内替换为：</p>
+<p><code>cd $dir &amp;&amp; g++ -std=c++23 $fileName -o ..\\compiled\\$fileNameWithoutExt &amp;&amp;  ..\\compiled\\$fileNameWithoutExt &lt; ..\\io\\in.txt &gt; ..\\io\\out.txt</code></p>
+<p>替换后整行为 ：</p>
+<p><code>&quot;cpp&quot;: &quot;cd $dir &amp;&amp; g++ -std=c++23 $fileName -o ..\\compiled\\$fileNameWithoutExt &amp;&amp;  ..\\compiled\\$fileNameWithoutExt &lt; ..\\io\\in.txt &gt; ..\\io\\out.txt&quot;,</code></p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://i.postimg.cc/fWfyx6mL/010.png" alt="图10"></p>
+<p>具体效果如上图中绿色的被注释掉的部分，如果想使用 clang 的话可以参照前文下好 LLVM 后敲入下面一行。</p>
+<p><code>&quot;cpp&quot;: &quot;cd $dir &amp;&amp; clang++ --target=x86_64-w64-mingw32 -std=c++23 $fileName -o ..\\compiled\\$fileNameWithoutExt &amp;&amp;  ..\\compiled\\$fileNameWithoutExt &lt; ..\\io\\in.txt &gt; ..\\io\\out.txt&quot;,</code></p>
+<p>那么现在 <code>code runner</code> 就调好了，仿照[本文第一部分](# 效果预览)建好文件夹，编辑完代码后点击 <code>CTRL + ALT + N</code> 即可编译运行。</p>
+<p>（<code>CTRL + ALT + N</code> 是 <code>code runner</code> 的默认快捷键，也可以设置为自己习惯的快捷键）</p>
+<p>那么这行命令是干啥的呢，让我们拆开来看：</p>
+<ul>
+<li>
+<p><code>cd $dir</code> ：先把当前工作目录切换到变量 <code>$dir</code> 指定的路径</p>
+</li>
+<li>
+<p><code>g++ -std=c++20 $fileName -o ..\\compiled\\$fileNameWithoutExt</code>：</p>
+<p>基本编译语句，采用c++20标准，将文件编译并输出到 当前文件夹的 上级文件夹下的  <code>compiled</code> 文件夹内</p>
+</li>
+<li>
+<p><code>..\\compiled\\$fileNameWithoutExt</code> ：</p>
+</li>
+</ul>
+<p>​	运行刚刚编译出来的可执行文件</p>
+<ul>
+<li>
+<p><code>&lt; ..\\io\\in.txt &gt; ..\\io\\out.txt</code></p>
+<p>对输入和输出重定向</p>
+</li>
+</ul>
+<p>另外，<code>code runner</code> 默认使用 <code>cmd</code> 运行，而不是 <code>powershell</code>。由于本教程也更推荐使用 <code>cmd</code> 以避免<code>poweshell</code> 通过管道设置输入时可能造成的问题。如果实在想用 <code>poweshell</code> (比如需要clang带高亮的报错)这里给出在 <code>poweshell</code> 里使用 <code>cmd</code> 子进程运行程序的解决方案：</p>
+<p><code> &quot;cpp&quot;: &quot;cmd /c  'cd $dir &amp; clang++ --target=x86_64-w64-mingw32 -std=c++23 $fileName -o ..\\compiled\\$fileNameWithoutExt &amp;  ..\\compiled\\$fileNameWithoutExt &lt; ..\\io\\in.txt &gt; ..\\io\\out.txt'&quot;,</code></p>
+<h3 id="几点提示">几点提示</h3>
+<ul>
+<li>如果在Windows电脑上想使用 Clang 的话需要注意</li>
+</ul>
+<blockquote>
+<p>由于 LLVM 在 Windows 上缺失标准库，所以你仍需安装 MSVC 或 GCC。</p>
+</blockquote>
+<ul>
+<li>
+<p>对比GCC，Clang 有几个优点：</p>
+<ul>
+<li>编译速度快</li>
+<li>内存占用小</li>
+<li>错误提示更清晰</li>
+</ul>
+</li>
+<li>
+<p>本文参考：<a target="_blank" rel="noopener" href="https://blog.csdn.net/Resot/article/details/147296133">【竞赛工具】——vscode xcpc竞赛向配置教程</a></p>
+</li>
+<li>
+<p>本文未包括程序调式的配置方法，有需求的话需要等等了，之后随缘更新。</p>
+</li>
+<li>
+<p>大家在配置的时候出现的各种问题有两种解决方法</p>
+<ul>
+<li>重启一下 VScode</li>
+<li>把报错发给 AI， 让 AI 看看<br>
+–&gt;</li>
+</ul>
+</li>
+</ul>
 </article>
 <div class="article-footer">
     <section id="license">
