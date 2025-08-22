@@ -20,49 +20,49 @@
   <title>博客搭建教程 - WustACM</title>
 
   
-    <meta name="description" content="由于此博文转载自我个人博客，故在此，如文中图片无法正常加载，请移步我个人博客传送门 本博文记录搭建类似本博客网站的方式，可以 0 经济成本完成 整体过程 借助 hexo 框架使用现有主题直接形成网站基本框架，然后部署到 GitHub Pages 和 Cloudflare Pages 上。 1.准备阶段 1.（必须）你需要注册一个 GitHub 账号（如果无法直接打开 github 试试 这个小">
+    <meta name="description" content="本博文记录搭建类似本博客网站的方式，可以 0 经济成本完成 整体过程 借助 hexo 框架使用现有主题直接形成网站基本框架，然后部署到 GitHub Pages 和 Cloudflare Pages 上。 1.准备阶段 1.（必须）你需要注册一个 GitHub 账号（如果无法直接打开 github 试试 这个小玩意 2.（非必需）你可以注册一个Cloudflare Pages 它可以将博客的">
 <meta property="og:type" content="article">
 <meta property="og:title" content="博客搭建教程">
 <meta property="og:url" content="http://example.com/2025/06/18/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B/index.html">
 <meta property="og:site_name" content="WustACM">
-<meta property="og:description" content="由于此博文转载自我个人博客，故在此，如文中图片无法正常加载，请移步我个人博客传送门 本博文记录搭建类似本博客网站的方式，可以 0 经济成本完成 整体过程 借助 hexo 框架使用现有主题直接形成网站基本框架，然后部署到 GitHub Pages 和 Cloudflare Pages 上。 1.准备阶段 1.（必须）你需要注册一个 GitHub 账号（如果无法直接打开 github 试试 这个小">
+<meta property="og:description" content="本博文记录搭建类似本博客网站的方式，可以 0 经济成本完成 整体过程 借助 hexo 框架使用现有主题直接形成网站基本框架，然后部署到 GitHub Pages 和 Cloudflare Pages 上。 1.准备阶段 1.（必须）你需要注册一个 GitHub 账号（如果无法直接打开 github 试试 这个小玩意 2.（非必需）你可以注册一个Cloudflare Pages 它可以将博客的">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://example.com/2025/06/18/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B/assets/1.png">
-<meta property="og:image" content="http://example.com/2025/06/18/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B/assets/111.png">
-<meta property="og:image" content="http://example.com/2025/06/18/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B/assets/1111.png">
-<meta property="og:image" content="http://example.com/2025/06/18/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B/assets/11111.png">
-<meta property="og:image" content="http://example.com/2025/06/18/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B/assets/111111.png">
-<meta property="og:image" content="http://example.com/2025/06/18/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B/assets/1111111.png">
-<meta property="og:image" content="http://example.com/2025/06/18/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B/assets/2.png">
-<meta property="og:image" content="http://example.com/2025/06/18/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B/assets/22.png">
-<meta property="og:image" content="http://example.com/2025/06/18/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B/assets/222.png">
-<meta property="og:image" content="http://example.com/2025/06/18/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B/assets/2222.png">
-<meta property="og:image" content="http://example.com/2025/06/18/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B/assets/22222.png">
-<meta property="og:image" content="http://example.com/2025/06/18/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B/assets/222222.png">
-<meta property="og:image" content="http://example.com/2025/06/18/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B/assets/3.png">
-<meta property="og:image" content="http://example.com/2025/06/18/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B/assets/2222222.png">
-<meta property="og:image" content="http://example.com/2025/06/18/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B/assets/33.png">
-<meta property="og:image" content="http://example.com/2025/06/18/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B/assets/333.png">
-<meta property="og:image" content="http://example.com/2025/06/18/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B/assets/3333.png">
-<meta property="og:image" content="http://example.com/2025/06/18/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B/assets/33333.png">
-<meta property="og:image" content="http://example.com/2025/06/18/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B/assets/333333.png">
-<meta property="og:image" content="http://example.com/2025/06/18/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B/assets/3333333.png">
-<meta property="og:image" content="http://example.com/2025/06/18/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B/assets/4.png">
-<meta property="og:image" content="http://example.com/2025/06/18/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B/assets/44.png">
-<meta property="og:image" content="http://example.com/2025/06/18/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B/assets/444.png">
-<meta property="og:image" content="http://example.com/2025/06/18/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B/assets/4444.png">
-<meta property="og:image" content="http://example.com/2025/06/18/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B/assets/444444.png">
-<meta property="og:image" content="http://example.com/2025/06/18/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B/assets/44444.png">
-<meta property="og:image" content="http://example.com/2025/06/18/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B/assets/4444444.png">
-<meta property="og:image" content="http://example.com/2025/06/18/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B/assets/5.png">
-<meta property="og:image" content="http://example.com/2025/06/18/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B/assets/55.png">
-<meta property="og:image" content="http://example.com/2025/06/18/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B/assets/555.png">
-<meta property="og:image" content="http://example.com/2025/06/18/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B/assets/66.png">
+<meta property="og:image" content="http://example.com/assets/1.png">
+<meta property="og:image" content="http://example.com/assets/111.png">
+<meta property="og:image" content="http://example.com/assets/1111.png">
+<meta property="og:image" content="http://example.com/assets/11111.png">
+<meta property="og:image" content="http://example.com/assets/111111.png">
+<meta property="og:image" content="http://example.com/assets/1111111.png">
+<meta property="og:image" content="http://example.com/assets/2.png">
+<meta property="og:image" content="http://example.com/assets/22.png">
+<meta property="og:image" content="http://example.com/assets/222.png">
+<meta property="og:image" content="http://example.com/assets/2222.png">
+<meta property="og:image" content="http://example.com/assets/22222.png">
+<meta property="og:image" content="http://example.com/assets/222222.png">
+<meta property="og:image" content="http://example.com/assets/3.png">
+<meta property="og:image" content="http://example.com/assets/2222222.png">
+<meta property="og:image" content="http://example.com/assets/33.png">
+<meta property="og:image" content="http://example.com/assets/333.png">
+<meta property="og:image" content="http://example.com/assets/3333.png">
+<meta property="og:image" content="http://example.com/assets/33333.png">
+<meta property="og:image" content="http://example.com/assets/333333.png">
+<meta property="og:image" content="http://example.com/assets/3333333.png">
+<meta property="og:image" content="http://example.com/assets/4.png">
+<meta property="og:image" content="http://example.com/assets/44.png">
+<meta property="og:image" content="http://example.com/assets/444.png">
+<meta property="og:image" content="http://example.com/assets/4444.png">
+<meta property="og:image" content="http://example.com/assets/444444.png">
+<meta property="og:image" content="http://example.com/assets/44444.png">
+<meta property="og:image" content="http://example.com/assets/4444444.png">
+<meta property="og:image" content="http://example.com/assets/5.png">
+<meta property="og:image" content="http://example.com/assets/55.png">
+<meta property="og:image" content="http://example.com/assets/555.png">
+<meta property="og:image" content="http://example.com/assets/66.png">
 <meta property="article:published_time" content="2025-06-17T19:55:48.124Z">
-<meta property="article:modified_time" content="2025-08-09T14:42:55.071Z">
+<meta property="article:modified_time" content="2025-08-22T10:26:16.418Z">
 <meta property="article:author" content="WustACM">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="http://example.com/2025/06/18/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B/assets/1.png">
+<meta name="twitter:image" content="http://example.com/assets/1.png">
   
   
   
@@ -98,7 +98,7 @@
 <div class="widgets">
 <widget class="widget-wrapper post-list"><div class="widget-header dis-select"><span class="name">专栏：技术分享</span></div><div class="widget-body"><a class="item" href="/2025/08/01/vscode%E9%85%8D%E7%BD%AE/"><span class="title">vscode配置教程</span></a><a class="item" href="/2025/06/21/Markdown%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/"><span class="title">Markdown使用方法</span></a><a class="item active" href="/2025/06/18/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B/"><span class="title">博客搭建教程</span><svg class="active-icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M21 11.098v4.993c0 3.096 0 4.645-.734 5.321c-.35.323-.792.526-1.263.58c-.987.113-2.14-.907-4.445-2.946c-1.02-.901-1.529-1.352-2.118-1.47a2.225 2.225 0 0 0-.88 0c-.59.118-1.099.569-2.118 1.47c-2.305 2.039-3.458 3.059-4.445 2.945a2.238 2.238 0 0 1-1.263-.579C3 20.736 3 19.188 3 16.091v-4.994C3 6.81 3 4.666 4.318 3.333C5.636 2 7.758 2 12 2c4.243 0 6.364 0 7.682 1.332C21 4.665 21 6.81 21 11.098" opacity=".5"/><path fill="currentColor" d="M9 5.25a.75.75 0 0 0 0 1.5h6a.75.75 0 0 0 0-1.5z"/></svg></a></div></widget>
 
-<widget class="widget-wrapper post-list"><div class="widget-header dis-select"><span class="name">最近更新</span></div><div class="widget-body fs14"><a class="item title" href="/2025/08/01/vscode%E9%85%8D%E7%BD%AE/"><span class="title">vscode配置教程</span></a><a class="item title" href="/2025/08/17/%E5%AF%B9%E6%8B%8D/"><span class="title">对拍</span></a><a class="item title" href="/2025/06/18/%E6%95%B0%E5%AD%97dfs/"><span class="title">数字dfs</span></a><a class="item title" href="/2025/06/18/wustoj-cpp%E5%8F%82%E8%80%83%E4%BB%A3%E7%A0%81/"><span class="title">wustoj-cpp参考代码</span></a><a class="item title" href="/2025/06/18/%E8%87%AA%E5%8A%A8%E5%88%B7%E8%AF%BE/"><span class="title">自动刷课</span></a></div></widget>
+<widget class="widget-wrapper post-list"><div class="widget-header dis-select"><span class="name">最近更新</span></div><div class="widget-body fs14"><a class="item title" href="/2025/08/01/vscode%E9%85%8D%E7%BD%AE/"><span class="title">vscode配置教程</span></a><a class="item title" href="/2025/06/18/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B/"><span class="title">博客搭建教程</span></a><a class="item title" href="/2025/06/18/%E8%87%AA%E5%8A%A8%E5%88%B7%E8%AF%BE/"><span class="title">自动刷课</span></a><a class="item title" href="/2025/08/17/%E5%AF%B9%E6%8B%8D/"><span class="title">对拍</span></a><a class="item title" href="/2025/06/18/%E6%95%B0%E5%AD%97dfs/"><span class="title">数字dfs</span></a></div></widget>
 </div>
 <footer class="footer dis-select"><div class="social-wrap"><a class="social" href="https://github.com/scandishoper/Wust-acm" target="_blank" rel="external nofollow noopener noreferrer"><img no-lazy src="https://pngimg.com/uploads/github/github_PNG40.png" / onerror="javascript:this.classList.add('error');this.src='https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/image/2659360.svg';"></a><a class="social" href="https://qm.qq.com/q/PCCZPXhKGk" target="_blank" rel="external nofollow noopener noreferrer"><img no-lazy src="https://soft.macx.cn/upload/softicon1/2015213161645.png" / onerror="javascript:this.classList.add('error');this.src='https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/image/2659360.svg';"></a><a class="social" href="https://oj.wust-acm.top/" target="_blank" rel="external nofollow noopener noreferrer">assets/屏幕截图 2025-07-08 225418.png</a><a class="social" href="https://csdiy.wiki/" target="_blank" rel="external nofollow noopener noreferrer">assets/favicon.png</a></div></footer>
 </div></aside><div class="l_main" id="main">
@@ -111,7 +111,7 @@
   <div class="content">
     <div class="top bread-nav footnote"><div class="left"><div class="flex-row" id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a>
 <span class="sep"></span><a class="cap breadcrumb" id="menu" href="/topic">专栏</a><span class="sep"></span><a class="cap breadcrumb" id="proj" href="/2025/08/01/vscode%E9%85%8D%E7%BD%AE/">技术分享</a></div>
-<div class="flex-row" id="post-meta"><a class="author" href="/author/scandi/index.html">scandi</a><span class="sep"></span><span class="text created"><time datetime="2025-06-17T19:55:48.124Z">2025-06-18</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2025-08-09T14:42:55.071Z">2025-08-09</time></span></div></div></div>
+<div class="flex-row" id="post-meta"><a class="author" href="/author/scandi/index.html">scandi</a><span class="sep"></span><span class="text created"><time datetime="2025-06-17T19:55:48.124Z">2025-06-18</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2025-08-22T10:26:16.418Z">2025-08-22</time></span></div></div></div>
     
     <div class="bottom only-title">
       
@@ -123,7 +123,6 @@
     
   </div>
   </div><article class="md-text content"> <span id="more"></span>
-<h1>由于此博文转载自我个人博客，故在此，如文中图片无法正常加载，请移步我个人博客<a target="_blank" rel="noopener" href="https://scandidreams.top/2025/05/02/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/">传送门</a></h1>
 <h1>本博文记录搭建类似本博客网站的方式，可以 0 经济成本完成</h1>
 <p>整体过程 借助 hexo 框架使用现有主题直接形成网站基本框架，然后部署到 GitHub Pages 和 Cloudflare Pages 上。</p>
 <h2 id="1-准备阶段">1.准备阶段</h2>
@@ -135,7 +134,7 @@
 <p>2.安装完成后，要检查看看是否安装成功。操作如下：在键盘按下 win + R 键，输入 CMD，然后回车，打开 CMD 窗口，执行下面的命令。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">node -v</span><br></pre></td></tr></table></figure>
 <p>看到类似下面的版本信息，则说明安装成功。<br>
-<img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="assets/1.png" alt="111"></p>
+<img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/assets/1.png" alt="111"></p>
 <h3 id="2-2-安装-Git">2.2.安装 Git</h3>
 <p>1.打开 Git 官网，下载并安装和自己系统相配的 Git:<a target="_blank" rel="noopener" href="https://git-scm.com/downloads">https://git-scm.com/downloads</a></p>
 <p>2.点击电脑 window 开始按钮，可以搜索到 Git CMD，Git Bash，Git GUI。（主要使用 Git Bash</p>
@@ -143,7 +142,7 @@
 <hr>
 <h2 id="3-配置-Git-密钥并连接至-Github">3.配置 Git 密钥并连接至 Github</h2>
 <h3 id="3-1-打开-Git-Bash-如图">3.1 打开 Git Bash 如图</h3>
-<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="assets/111.png" alt="111"></p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/assets/111.png" alt="111"></p>
 <h3 id="3-2-配置用户名和邮箱">3.2 配置用户名和邮箱</h3>
 <p>用户名和邮箱可以自己随便取（不用真实也许<br>
 这里假设<br>
@@ -154,22 +153,22 @@
 <p>然后通过下面命令检查是否配置成功。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config -l</span><br></pre></td></tr></table></figure>
 <p>类似下图即配置成功<br>
-<img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="assets/1111.png" alt="1111"></p>
+<img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/assets/1111.png" alt="1111"></p>
 <h3 id="3-3-配置公钥连接-Github">3.3 配置公钥连接 Github</h3>
 <h4 id="3-3-1-执行以下命令生成-ssh-公钥，此公钥用于你的计算机连接-Github">3.3.1 执行以下命令生成 ssh 公钥，此公钥用于你的计算机连接 Github</h4>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C <span class="string">&quot;你的邮箱&quot;</span></span><br></pre></td></tr></table></figure>
 <p>提示 【Enter file in which to save the key】 直接一路回车即可。</p>
 <p>之后打开 C 盘下用户文件夹下的.ssh 的文件夹，会看到以下文件<br>
-<img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="assets/11111.png" alt="11111"><br>
+<img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/assets/11111.png" alt="11111"><br>
 用记事本打开上述图片中的公钥 【id_rsa.pub】，复制里面的内容，然后开始在 github 中配置 ssh 密钥。</p>
 <h4 id="3-3-2-将-SSH-KEY-配置到-GitHub">3.3.2 将 SSH KEY 配置到 GitHub</h4>
 <p>进入 github，点击右上角头像 选择 【settings】，进入设置页后选择 【SSH and GPG keys】，名字随便起，公钥填到 【Key】 那一栏。如图<br>
-<img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="assets/111111.png" alt="111111"></p>
+<img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/assets/111111.png" alt="111111"></p>
 <h4 id="3-3-3-测试连接，输入以下命令">3.3.3 测试连接，输入以下命令</h4>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure>
 <p>第一次连接会提示【Are you sure you want to continue connecting (yes/no/[fingerprint])?】，输入 yes 即可<br>
 如图即连接成功<br>
-<img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="assets/1111111.png" alt="1111111"></p>
+<img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/assets/1111111.png" alt="1111111"></p>
 <h3 id="如果是在公司或学校网络，可能会存在防火墙或代理限制，阻止了-SSH-连接。连接没有现实如图信息，则查看下面这篇博文尝试解决！！！">如果是在公司或学校网络，可能会存在防火墙或代理限制，阻止了 SSH 连接。连接没有现实如图信息，则查看下面这篇博文尝试解决！！！</h3>
 <p><a target="_blank" rel="noopener" href="https://scandidreams.top/2025/02/23/%E5%9C%A8%E5%AD%A6%E6%A0%A1%E5%86%85%E4%B8%8A%E4%BC%A0%E5%8D%9A%E6%96%87%E6%8A%A5%E9%94%99%E7%9A%84%E8%A7%A3%E5%86%B3/">解决博文</a></p>
 <hr>
@@ -177,61 +176,61 @@
 <h3 id="4-1-点击右上角的-按钮，选择-New-repository，创建一个-用户名-github-io-的仓库。">4.1 点击右上角的+按钮，选择 New repository，创建一个&lt;用户名&gt;.github.io 的仓库。</h3>
 <h3 id="4-2-仓库名字的格式必须为：【-用户名-github-io】-注意：前缀必须为用户名，此为预览博客需要，后期可修改仓库名-（不要忘记加-github-io">4.2 仓库名字的格式必须为：【&lt;用户名&gt;.github.io】 (注意：前缀必须为用户名，此为预览博客需要，后期可修改仓库名)（<a target="_blank" rel="noopener" href="http://xn--ihq64ib4n3s4b5jc.github.io">不要忘记加.github.io</a></h3>
 <h3 id="4-3-可见性必须选择-【Public】-方便第一次部署检查问题，点击-Creat-repository-进行创建即可">4.3 可见性必须选择 【Public】 方便第一次部署检查问题，点击 Creat repository 进行创建即可</h3>
-<h2 id="2"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="assets/2.png" alt="2"></h2>
+<h2 id="2"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/assets/2.png" alt="2"></h2>
 <hr>
 <h2 id="5-初始化-Hexo-博客">5.初始化 Hexo 博客</h2>
 <h3 id="5-1-创建一个文件夹来保存博客源码（我这里选的路径为-D-college），在文件夹内右键鼠标，选择-【Open-Git-Bash-here】">5.1 创建一个文件夹来保存博客源码（我这里选的路径为 D:/college），在文件夹内右键鼠标，选择 【Open Git Bash here】</h3>
-<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="assets/22.png" alt="1111111"></p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/assets/22.png" alt="1111111"></p>
 <h3 id="5-2-在【Git-BASH】输入如下命令安装-Hexo">5.2 在【Git BASH】输入如下命令安装 Hexo</h3>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli &amp;&amp; hexo -v</span><br></pre></td></tr></table></figure>
-<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="assets/222.png" alt="1111111"></p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/assets/222.png" alt="1111111"></p>
 <h3 id="5-3-安装完后输入【hexo-v】验证是否安装成功。">5.3 安装完后输入【hexo -v】验证是否安装成功。</h3>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo -v</span><br></pre></td></tr></table></figure>
-<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="assets/2222.png" alt="1111111"></p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/assets/2222.png" alt="1111111"></p>
 <h3 id="5-4-初始化-Hexo-项目安装相关依赖。">5.4 初始化 Hexo 项目安装相关依赖。</h3>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo init “自己取文件名”</span><br><span class="line"><span class="built_in">cd</span> “上面取的文件名”</span><br><span class="line">npm i</span><br></pre></td></tr></table></figure>
-<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="assets/22222.png" alt="1111111"></p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/assets/22222.png" alt="1111111"></p>
 <h3 id="5-5-初始化项目后，college-文件夹中-有如下结构：">5.5 初始化项目后，college 文件夹中 有如下结构：</h3>
-<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="assets/222222.png" alt="1111111"></p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/assets/222222.png" alt="1111111"></p>
 <h3 id="5-6-输入-【hexo-cl-hexo-s】-启动项目">5.6 输入 【hexo cl &amp;&amp; hexo s】 启动项目</h3>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo cl &amp;&amp; hexo s</span><br></pre></td></tr></table></figure>
 <p>出现如图<br>
-<img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="assets/3.png" alt="1111111"></p>
+<img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/assets/3.png" alt="1111111"></p>
 <p>打开浏览器，输入地址：【<a target="_blank" rel="noopener" href="http://localhost:4000/">http://localhost:4000/</a> 】 ，看到下面的效果，说明你的博客已经构建成功了。</p>
-<h2 id="1111111"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="assets/2222222.png" alt="1111111"></h2>
+<h2 id="1111111"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/assets/2222222.png" alt="1111111"></h2>
 <hr>
 <h2 id="6-将静态博客挂载到-GitHub-Pages">6.将静态博客挂载到 GitHub Pages</h2>
 <h3 id="6-1-安装-hexo-deployer-git">6.1 安装 hexo-deployer-git</h3>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
 <h3 id="6-2-修改-config-yml-文件">6.2 修改 _config.yml 文件</h3>
 <p>在 college 目录下的_config.yml，就是整个 Hexo 框架的配置文件了。可以在里面修改大部分的配置。详细可参考官方的配置描述。<br>
-<img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="assets/33.png" alt="1111111"><br>
+<img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/assets/33.png" alt="1111111"><br>
 找到最后一行的配置如图<br>
-<img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="assets/333.png" alt="1111111"><br>
+<img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/assets/333.png" alt="1111111"><br>
 修改它像下面代码这样的格式</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  <span class="built_in">type</span>: git</span><br><span class="line">  repository:</span><br><span class="line">  branch: main</span><br></pre></td></tr></table></figure>
 <p>然后将 repository 修改为你自己的 github 项目地址即可，还有分支要改为 main 代表主分支（注意缩进）。<br>
 你自己的 github 项目地址在下面这里找<br>
-<img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="assets/3333.png" alt="1111111"><br>
+<img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/assets/3333.png" alt="1111111"><br>
 总体类似下面这样<br>
-<img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="assets/33333.png" alt="1111111"></p>
+<img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/assets/33333.png" alt="1111111"></p>
 <h3 id="6-3-修改好配置后，运行如下命令，将代码部署到-GitHub（Hexo-三连）。">6.3 修改好配置后，运行如下命令，将代码部署到 GitHub（Hexo 三连）。</h3>
 <p>（在 Git Bash 上用第一行那个命令，不要全部复制上去）</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">// Git BASH终端</span><br><span class="line">hexo clean &amp;&amp; hexo generate &amp;&amp; hexo deploy</span><br><span class="line"></span><br><span class="line">// 或者</span><br><span class="line"></span><br><span class="line">// VSCODE终端</span><br><span class="line">hexo cl; hexo g; hexo d</span><br></pre></td></tr></table></figure>
 <p>如果出现【Deploy done】，则说明部署成功了。<br>
-<img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="assets/333333.png" alt="1111111"></p>
+<img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/assets/333333.png" alt="1111111"></p>
 <h3 id="稍等两分钟，打开浏览器访问：https-college-github-io-（注意！这里要用你的仓库名字替换），这时候我们就可以看到博客内容了。">稍等两分钟，打开浏览器访问：<a target="_blank" rel="noopener" href="https://college.github.io">https://college.github.io</a> （注意！这里要用你的仓库名字替换），这时候我们就可以看到博客内容了。</h3>
-<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="assets/3333333.png" alt="1111111"></p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/assets/3333333.png" alt="1111111"></p>
 <hr>
 <h2 id="7-将静态博客挂载到-Cloudflare-Pages">7.将静态博客挂载到 Cloudflare Pages</h2>
 <h3 id="7-1-打开-Cloudflare-Pages，在-【Workers-和-Pages】-中选择-【Pages】-的-【连接到-Git】-如图">7.1 打开 Cloudflare Pages，在 【Workers 和 Pages】 中选择 【Pages】 的 【连接到 Git】 如图</h3>
-<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="assets/4.png" alt="1111111"><br>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/assets/4.png" alt="1111111"><br>
 然后选择 连接 Github，登录账号，选择你要部署的仓库<br>
-<img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="assets/44.png" alt="1111111"><br>
+<img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/assets/44.png" alt="1111111"><br>
 点击保存并部署后等待部署完成即可。<br>
-<img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="assets/444.png" alt="1111111"><br>
+<img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/assets/444.png" alt="1111111"><br>
 提示【成功！您的项目已部署到以下区域：全球】后，浏览器访问：<a target="_blank" rel="noopener" href="https://college-github-io.pages.dev">https://college-github-io.pages.dev</a> ，这时候我们就可以看到博客内容了。<br>
-<img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="assets/4444.png" alt="1111111"></p>
+<img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/assets/4444.png" alt="1111111"></p>
 <h3 id="这时你也就可以将你的【-用户名-github-io】的仓库设置为【Private】私库了（不改也行">这时你也就可以将你的【&lt;用户名&gt;.github.io】的仓库设置为【Private】私库了（不改也行</h3>
 <hr>
 <h2 id="8-至此-你已经拥有自己的博客网站，不过它还很丑陋，我们接下来可以下载主题来美化它">8.至此 你已经拥有自己的博客网站，不过它还很丑陋，我们接下来可以下载主题来美化它</h2>
@@ -240,20 +239,20 @@
 <h3 id="8-1-继续在刚才的-Git-Bash-上运行下面命令-下载【next】主题">8.1 继续在刚才的 Git Bash 上运行下面命令 下载【next】主题</h3>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> hexo</span><br><span class="line">//下面这个是【next】</span><br><span class="line">git <span class="built_in">clone</span> https://github.com/theme-next/hexo-theme-next themes/next</span><br><span class="line"></span><br><span class="line">//下面这个是【anzhiyu】</span><br><span class="line">git <span class="built_in">clone</span> -b main https://github.com/anzhiyu-c/hexo-theme-anzhiyu.git themes/anzhiyu</span><br></pre></td></tr></table></figure>
 <p>如下图，即为下载成功<br>
-<img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="assets/444444.png" alt="1111111"></p>
+<img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/assets/444444.png" alt="1111111"></p>
 <h3 id="8-1-打开-vscode，-在-vscode-中打开项目文件夹">8.1 打开 vscode， 在 vscode 中打开项目文件夹</h3>
-<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="assets/44444.png" alt="1111111"></p>
-<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="assets/4444444.png" alt="1111111"></p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/assets/44444.png" alt="1111111"></p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/assets/4444444.png" alt="1111111"></p>
 <h3 id="8-2-新建终端，以后直接在-vscode-上运行命令">8.2 新建终端，以后直接在 vscode 上运行命令</h3>
-<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="assets/5.png" alt="1111111"></p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/assets/5.png" alt="1111111"></p>
 <h3 id="8-3-第一次使用需要安装-pug-以及-stylus-的渲染器">8.3 第一次使用需要安装 pug 以及 stylus 的渲染器</h3>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-renderer-pug hexo-renderer-stylus --save</span><br></pre></td></tr></table></figure>
 <h3 id="8-4-打开-config-yml-文件，修改主题为【next】或者【anzhiyu】">8.4 打开_config.yml 文件，修改主题为【next】或者【anzhiyu】</h3>
-<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="assets/55.png" alt="1111111"></p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/assets/55.png" alt="1111111"></p>
 <h3 id="8-5-覆盖配置">8.5 覆盖配置</h3>
 <p>手动将【/themes/next/_config.yml】或者【/themes/anzhiyu/_config.yml】复制到根目录下并重命名为【_config.next.yml】或者【_config.anzhiyu.yml】即可。<br>
 如图<br>
-<img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="assets/555.png" alt="1111111"></p>
+<img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/assets/555.png" alt="1111111"></p>
 <hr>
 <h2 id="9-平时编辑博客和博文的一些基本操作">9.平时编辑博客和博文的一些基本操作</h2>
 <h3 id="9-1-每次在编译器上的修改，在网站上是不能同步的，你需要在每次修改后通过下面命令上传，才能反馈给网站产生变化">9.1 每次在编译器上的修改，在网站上是不能同步的，你需要在每次修改后通过下面命令上传，才能反馈给网站产生变化</h3>
@@ -271,7 +270,7 @@
 <h3 id="9-4-当然，主题还有许多功能，可以自行查看主题官方网站（直接搜索就行">9.4 当然，主题还有许多功能，可以自行查看主题官方网站（直接搜索就行</h3>
 <h3 id="9-5-平时我个人更改博客的一些小技巧">9.5 平时我个人更改博客的一些小技巧</h3>
 <p>首先打开网站，按键盘【f12】，点击如图红色框框的东西</p>
-<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="assets/66.png" alt="1111111"></p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/assets/66.png" alt="1111111"></p>
 <p>然后再用鼠标对准网页中的元素，比如对准某张图片位置，既可以得到定义所选图片的代码，复制这些代码的部分关键词，然后再回到 vscode 的环境主题文件【_config.next.yml】或者【_config.anzhiyu.yml】中，按 ctrl+f，打开搜索功能，粘贴上刚才的代码关键词，就可以直接修改选中元素</p>
 <hr>
 <h2 id="至此！彻底结束喽，以上教程我自己实现的时候是零基础！并不需要任何高端的技能，一开始面对晦涩的名词多有不解，不过没事！我们目的本来就不是要学会它的原理，只是搭建一个较为自由的个人平台，方便自己记录些东西。刚开始可能会出现许多问题，遇到问题可以多问问-ai-详细描述你的困境，一般都能解决（我就是这样子。。。">至此！彻底结束喽，以上教程我自己实现的时候是零基础！并不需要任何高端的技能，一开始面对晦涩的名词多有不解，不过没事！我们目的本来就不是要学会它的原理，只是搭建一个较为自由的个人平台，方便自己记录些东西。刚开始可能会出现许多问题，遇到问题可以多问问 ai 详细描述你的困境，一般都能解决（我就是这样子。。。</h2>
