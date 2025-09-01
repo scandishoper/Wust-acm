@@ -2,6 +2,24 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://example.com/2025/08/31/AI%E7%BF%BB%E8%AF%91%E6%8F%92%E4%BB%B6%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B/</loc>
+    
+    <lastmod>2025-09-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/wiki/csdiy/p1.html</loc>
+    
+    <lastmod>2025-09-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://example.com/wiki/Algorithm_template/p3.html</loc>
     
     <lastmod>2025-09-01</lastmod>
@@ -20,25 +38,7 @@
   </url>
   
   <url>
-    <loc>http://example.com/wiki/csdiy/p1.html</loc>
-    
-    <lastmod>2025-08-31</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://example.com/wiki/csdiy/p.html</loc>
-    
-    <lastmod>2025-08-31</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://example.com/2025/08/31/AI%E7%BF%BB%E8%AF%91%E6%8F%92%E4%BB%B6%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B/</loc>
     
     <lastmod>2025-08-31</lastmod>
     
@@ -550,6 +550,13 @@
   </url>
   
   <url>
+    <loc>http://example.com/categories/cpp/</loc>
+    <lastmod>2025-09-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>http://example.com/categories/%E9%AB%98%E6%95%B0/</loc>
     <lastmod>2025-09-01</lastmod>
     <changefreq>weekly</changefreq>
@@ -558,13 +565,6 @@
   
   <url>
     <loc>http://example.com/categories/%E9%A2%98%E8%A7%A3/</loc>
-    <lastmod>2025-09-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://example.com/categories/cpp/</loc>
     <lastmod>2025-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
