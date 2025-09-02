@@ -522,14 +522,14 @@
   </url>
   
   <url>
-    <loc>http://example.com/tags/%E4%BD%9C%E4%B8%9A/</loc>
+    <loc>http://example.com/tags/dfs/</loc>
     <lastmod>2025-09-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://example.com/tags/dfs/</loc>
+    <loc>http://example.com/tags/%E4%BD%9C%E4%B8%9A/</loc>
     <lastmod>2025-09-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
