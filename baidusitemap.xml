@@ -1,15 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://example.com/2025/09/10/vscode%E9%85%8D%E7%BD%AE/</loc>
+    <lastmod>2025-10-09</lastmod>
+  </url>
+  <url>
+    <loc>http://example.com/2025/09/10/%E9%AB%98%E7%B2%BE%E5%BA%A6%E7%AE%97%E6%B3%95/</loc>
+    <lastmod>2025-10-09</lastmod>
+  </url>
+  <url>
     <loc>http://example.com/2025/09/10/AI%E7%BF%BB%E8%AF%91%E6%8F%92%E4%BB%B6%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B/</loc>
     <lastmod>2025-09-01</lastmod>
   </url>
   <url>
     <loc>http://example.com/2025/09/10/%E5%AF%B9%E6%8B%8D/</loc>
-    <lastmod>2025-08-22</lastmod>
-  </url>
-  <url>
-    <loc>http://example.com/2025/09/10/vscode%E9%85%8D%E7%BD%AE/</loc>
     <lastmod>2025-08-22</lastmod>
   </url>
   <url>
@@ -51,10 +55,6 @@
   <url>
     <loc>http://example.com/2025/09/10/%E5%A4%9A%E6%A0%A11%E9%A2%98%E8%A7%A3I/</loc>
     <lastmod>2025-07-16</lastmod>
-  </url>
-  <url>
-    <loc>http://example.com/2025/09/10/%E9%AB%98%E7%B2%BE%E5%BA%A6%E7%AE%97%E6%B3%95/</loc>
-    <lastmod>2025-07-15</lastmod>
   </url>
   <url>
     <loc>http://example.com/2025/09/10/%E5%BF%AB%E9%80%9F%E5%B9%82-%E9%80%86%E5%85%83-%E5%8F%96%E4%BD%99%E5%85%AC%E5%BC%8F/</loc>
