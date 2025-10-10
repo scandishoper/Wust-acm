@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://example.com/wiki/Survival_Guide/p10.html</loc>
+    
+    <lastmod>2025-10-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://example.com/wiki/csdiy/p5.html</loc>
     
     <lastmod>2025-10-10</lastmod>
@@ -577,14 +586,14 @@
   </url>
   
   <url>
-    <loc>http://example.com/categories/cpp/</loc>
+    <loc>http://example.com/categories/%E9%AB%98%E6%95%B0/</loc>
     <lastmod>2025-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://example.com/categories/%E9%AB%98%E6%95%B0/</loc>
+    <loc>http://example.com/categories/cpp/</loc>
     <lastmod>2025-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
