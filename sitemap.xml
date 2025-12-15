@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://example.com/2025/12/15/2025%E8%8F%9C%E9%B8%9F%E6%9D%AF%E9%A2%98%E8%A7%A3/</loc>
+    <loc>http://example.com/2025/12/15/%E5%B0%86%E5%86%9B%E7%9A%84%E9%A2%98%E8%A7%A3/</loc>
     
     <lastmod>2025-12-15</lastmod>
     
@@ -12,6 +12,15 @@
   
   <url>
     <loc>http://example.com/2025/12/15/everlasting%E7%9A%84%E4%B8%AA%E4%BA%BA%E9%A2%98%E8%A7%A3/</loc>
+    
+    <lastmod>2025-12-15</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2025/12/15/2025%E8%8F%9C%E9%B8%9F%E6%9D%AF%E9%A2%98%E8%A7%A3/</loc>
     
     <lastmod>2025-12-15</lastmod>
     
@@ -603,14 +612,14 @@
   </url>
   
   <url>
-    <loc>http://example.com/tags/dfs/</loc>
+    <loc>http://example.com/tags/%E4%BD%9C%E4%B8%9A/</loc>
     <lastmod>2025-12-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://example.com/tags/%E4%BD%9C%E4%B8%9A/</loc>
+    <loc>http://example.com/tags/dfs/</loc>
     <lastmod>2025-12-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
